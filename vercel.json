@@ -1,0 +1,152 @@
+{
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/services/website-solutions",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/automation-workflow",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/growth-seo",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/performance-ads",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/social-media",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/professional-services",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/website-solutions/conversion-landing-page",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/website-solutions/corporate-website",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/website-solutions/basic-ecommerce",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/website-solutions/ecommerce-plus",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/automation-workflow/automation-starter",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/automation-workflow/business-process",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/automation-workflow/telephony-ai",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/growth-seo/seo-standard",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/growth-seo/seo-plus",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/growth-seo/seo-enterprise",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/performance-ads/starter-ads",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/performance-ads/growth-ads",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/performance-ads/scale-ads",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/social-media/social-visibility",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/professional-services/strategy-consultation",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/professional-services/seo-audit",
+      "destination": "/services/"
+    },
+    {
+      "source": "/services/professional-services/maintenance-support",
+      "destination": "/services/"
+    },
+    {
+      "source": "/case-studies/back2basics",
+      "destination": "/case-studies/"
+    },
+    {
+      "source": "/case-studies/borneo-international-marathon",
+      "destination": "/case-studies/"
+    },
+    {
+      "source": "/case-studies/thurai-dental",
+      "destination": "/case-studies/"
+    },
+    {
+      "source": "/case-studies/gibb-and-co-lawyers",
+      "destination": "/case-studies/"
+    },
+    {
+      "source": "/case-studies/evo-house-singapore",
+      "destination": "/case-studies/"
+    },
+    {
+      "source": "/company",
+      "destination": "/"
+    },
+    {
+      "source": "/news",
+      "destination": "/"
+    },
+    {
+      "source": "/career",
+      "destination": "/"
+    },
+    {
+      "source": "/help",
+      "destination": "/"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/"
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    }
+  ]
+}
