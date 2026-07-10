@@ -2,6 +2,7 @@
 <html class="scroll-smooth" lang="en">
 <head>
     <meta charset="utf-8"/>
+    <script src="/js/i18n.js"></script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Company Overview | JXING Tech - Strategic Digital Systems Partner</title>
     <meta content="Learn about JXING Tech, a leading digital solutions company. Discover our vision, mission, core values, and our commitment to outstanding B2B prosperity." name="description"/>
@@ -84,21 +85,42 @@
         </div>
         <!-- Desktop Nav Links -->
         <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-            <a class="hover:text-primary transition-colors text-primary font-semibold" href="/company/">Company</a>
-            <a class="hover:text-primary transition-colors" href="/services/">Services</a>
-            <a class="hover:text-primary transition-colors" href="/pricing/">Pricing Plans</a>
-            <a class="hover:text-primary transition-colors" href="/case-studies/">Case Studies</a>
-            <a class="hover:text-primary transition-colors" href="/news/">News</a>
-            <a class="hover:text-primary transition-colors" href="/contact/">Contact</a>
+            <a class="hover:text-primary transition-colors text-primary font-semibold" href="/company/" data-i18n="nav_company">Company</a>
+            <a class="hover:text-primary transition-colors" href="/services/" data-i18n="nav_services">Services</a>
+            <a class="hover:text-primary transition-colors" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
+            <a class="hover:text-primary transition-colors" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
+            <a class="hover:text-primary transition-colors" href="/news/" data-i18n="nav_news">News</a>
+            <a class="hover:text-primary transition-colors" href="/contact/" data-i18n="nav_contact">Contact</a>
         </div>
         <!-- Actions -->
         <div class="flex items-center gap-4">
+            <!-- Language Selector -->
+            <div class="relative inline-block text-left" id="lang-switcher">
+                <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
+                    <span class="material-symbols-outlined text-lg">language</span>
+                    <span id="current-lang-flag" class="text-xs">🇺🇸</span>
+                    <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
+                </button>
+                <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
+                    <div class="py-1 p-2 space-y-1" role="none">
+                        <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
+                            <span>🇺🇸</span> EN
+                        </button>
+                        <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
+                            <span>🇲🇾</span> MS
+                        </button>
+                        <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
+                            <span>🇨🇳</span> ZH
+                        </button>
+                    </div>
+                </div>
+            </div>
             <button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
                 <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
                 <span class="material-symbols-outlined hidden dark:block">light_mode</span>
             </button>
             <a href="/contact/" class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm">
-                <span class="z-10 group-hover:text-white transition-colors">Get In Touch</span>
+                <span class="z-10 group-hover:text-white transition-colors" data-i18n="nav_get_in_touch">Get In Touch</span>
                 <div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center">
                     <span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
                 </div>
@@ -125,7 +147,7 @@
             We are <span class="text-primary italic">JXING</span>
         </h1>
         <p class="text-lg md:text-xl text-ghost/90 max-w-3xl mx-auto leading-relaxed">
-            A team of expert designers, web developers and marketers delivering digital success.
+            Your elite Full-Stack Digital Partner. We unify market intelligence, software engineering, AI workflows, and performance acquisition under a single roof.
         </p>
     </div>
 </section>
@@ -140,13 +162,13 @@
                     About JXING Tech Group
                 </div>
                 <h2 class="text-3xl lg:text-5xl font-bold text-oxford dark:text-white mb-8 leading-tight">
-                    Practical, measurable, and scalable technology.
+                    The Antidote to Fragmented Digital Scaling.
                 </h2>
                 <p class="text-oxford/70 dark:text-ghost/70 text-lg mb-6 leading-relaxed">
-                    JXING Tech is a digital solutions company that helps businesses grow through practical, measurable, and scalable technology.
+                    Most organizations engage isolated consulting firms for insights, separate software agencies to write code, and disconnected marketing vendors to drive traffic. This separation creates severe operational vulnerabilities, missed launches, and fractured pipelines.
                 </p>
                 <p class="text-sm text-oxford/60 dark:text-ghost/50 leading-relaxed mb-12">
-                    We believe that digital growth should be simple, affordable, and achievable for every business.
+                    Established in June 2025, JXING Tech acts as a unified digital partner. We bring comprehensive market intelligence, high-performance systems engineering, secure AI workflow automation, and acquisition marketing to drive corporate growth.
                 </p>
             </div>
             
@@ -208,7 +230,7 @@
                     <span class="material-symbols-outlined text-primary">visibility</span> Our Vision
                 </h3>
                 <p class="text-oxford/70 dark:text-ghost/70 leading-relaxed">
-                    To become the most trusted and innovative digital growth partner for businesses across Southeast Asia and beyond, creating architectures that last.
+                    To be the world's most trusted, innovative strategic digital technology partner, creating robust architectures that stand the test of time.
                 </p>
             </div>
             <div class="glass p-10 rounded-3xl border border-timberwolf/20 shadow-md hover:shadow-lg transition-all duration-300">
@@ -216,7 +238,7 @@
                     <span class="material-symbols-outlined text-primary">rocket_launch</span> Our Mission
                 </h3>
                 <p class="text-oxford/70 dark:text-ghost/70 leading-relaxed">
-                    To help businesses accelerate their digital success through scalable web solutions, e-commerce innovation, AI-powered automation, and data-driven marketing.
+                    To deliver intelligent digital solutions crafted with precision, creativity, and strategy to help businesses scale in an ever-evolving digital world.
                 </p>
             </div>
         </div>
@@ -246,11 +268,11 @@
                 <p class="text-ghost/80 text-sm leading-relaxed font-light">We take responsibility for outcomes. Initiative is a key part of our culture.</p>
             </div>
             <div class="bg-white/5 border border-white/5 p-8 rounded-3xl hover:border-robin/30 hover:bg-white/10 transition-all duration-300 group flex flex-col justify-start">
-                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Client First</h3>
+                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Client First Always</h3>
                 <p class="text-ghost/80 text-sm leading-relaxed font-light">We put client results above everything else. Their success is our success.</p>
             </div>
             <div class="bg-white/5 border border-white/5 p-8 rounded-3xl hover:border-robin/30 hover:bg-white/10 transition-all duration-300 group flex flex-col justify-start">
-                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Fast &amp; Fearless</h3>
+                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Fast Focused Fearless</h3>
                 <p class="text-ghost/80 text-sm leading-relaxed font-light">We act quickly, stay focused on what matters, and improve through real world feedback.</p>
             </div>
             <div class="bg-white/5 border border-white/5 p-8 rounded-3xl hover:border-robin/30 hover:bg-white/10 transition-all duration-300 group flex flex-col justify-start">
@@ -258,16 +280,149 @@
                 <p class="text-ghost/80 text-sm leading-relaxed font-light">Meaningful results matter more than activity. We measure and optimise everything.</p>
             </div>
             <div class="bg-white/5 border border-white/5 p-8 rounded-3xl hover:border-robin/30 hover:bg-white/10 transition-all duration-300 group flex flex-col justify-start">
-                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Simplify &amp; Automate</h3>
+                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Simplify and Automate</h3>
                 <p class="text-ghost/80 text-sm leading-relaxed font-light">We remove unnecessary friction and use automation to create efficient systems.</p>
             </div>
             <div class="bg-white/5 border border-white/5 p-8 rounded-3xl hover:border-robin/30 hover:bg-white/10 transition-all duration-300 group flex flex-col justify-start">
-                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Speak Openly</h3>
-                <p class="text-ghost/80 text-sm leading-relaxed font-light">We communicate with clarity and kindness. Feedback is encouraged and valued.</p>
+                <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Speak Openly Respect Deeply</h3>
+                <p class="text-ghost/80 text-sm leading-relaxed font-light">We communicate with clarity, kindness, and deep respect. Constructive feedback is our engine of improvement.</p>
             </div>
             <div class="bg-white/5 border border-white/5 p-8 rounded-3xl hover:border-robin/30 hover:bg-white/10 transition-all duration-300 group flex flex-col justify-start">
                 <h3 class="text-xl font-bold mb-4 text-robin group-hover:text-white transition-colors">Celebrate Wins</h3>
                 <p class="text-ghost/80 text-sm leading-relaxed font-light">Every achievement counts. We appreciate progress, big and small.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team & Culture Section -->
+<section class="py-24 bg-ghost dark:bg-slate-900 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20 scroll-reveal">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary mb-6">
+                Our Talents
+            </div>
+            <h2 class="text-3xl lg:text-5xl font-bold text-oxford dark:text-white">Founders &amp; Core Engineers</h2>
+            <p class="text-oxford/70 dark:text-ghost/60 mt-4 max-w-2xl mx-auto">Meet the full-stack software architects, AI engineers, and growth strategists behind JXING Tech.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Founder 1 -->
+            <div class="glass rounded-3xl p-8 border border-timberwolf/20 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800">
+                        <div class="w-full h-full flex items-center justify-center font-black text-4xl text-primary/20 bg-primary/5">JXC</div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-oxford/40 to-transparent"></div>
+                    </div>
+                    <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">Founder &amp; Lead Architect</span>
+                    <h3 class="text-xl font-bold text-oxford dark:text-white mb-2">Jia Xing Chen</h3>
+                    <p class="text-xs text-primary dark:text-robin italic mb-4">"Building resilient, zero-friction system architectures."</p>
+                    <p class="text-xs text-oxford/75 dark:text-ghost/75 leading-relaxed">Over the last 12 years, he has designed and built low-latency financial systems, secure SaaS applications, and enterprise database APIs. He oversees the agency's primary technical roadmap and zero-trust security compliance.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-timberwolf/20 flex gap-2 flex-wrap">
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">Next.js</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">React Native</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">PostgreSQL</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">DevOps</span>
+                </div>
+            </div>
+            
+            <!-- Founder 2 -->
+            <div class="glass rounded-3xl p-8 border border-timberwolf/20 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800">
+                        <div class="w-full h-full flex items-center justify-center font-black text-4xl text-primary/20 bg-primary/5">RS</div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-oxford/40 to-transparent"></div>
+                    </div>
+                    <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">Lead AI Engineer</span>
+                    <h3 class="text-xl font-bold text-oxford dark:text-white mb-2">Radu Stan</h3>
+                    <p class="text-xs text-primary dark:text-robin italic mb-4">"Connecting cognitive models with enterprise pipelines."</p>
+                    <p class="text-xs text-oxford/75 dark:text-ghost/75 leading-relaxed">Radu leads the AI and automation group. He specializes in designing custom LLM pipelines, Retrieval-Augmented Generation (RAG) structures, and serverless workflow automation. Radu ensures JXING's AI solutions are fully secure, scalable, and audit-compliant.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-timberwolf/20 flex gap-2 flex-wrap">
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">LLMs</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">RAG Systems</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">Python</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">Workflows</span>
+                </div>
+            </div>
+            
+            <!-- Founder 3 -->
+            <div class="glass rounded-3xl p-8 border border-timberwolf/20 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                <div>
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-slate-200 dark:bg-slate-800">
+                        <div class="w-full h-full flex items-center justify-center font-black text-4xl text-primary/20 bg-primary/5">SM</div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-oxford/40 to-transparent"></div>
+                    </div>
+                    <span class="text-xs font-bold text-primary uppercase tracking-widest block mb-1">Lead Growth Engineer</span>
+                    <h3 class="text-xl font-bold text-oxford dark:text-white mb-2">Sofia Martinez</h3>
+                    <p class="text-xs text-primary dark:text-robin italic mb-4">"Scaling search authority through technical performance."</p>
+                    <p class="text-xs text-oxford/75 dark:text-ghost/75 leading-relaxed">Sofia bridges software development and performance marketing. She constructs custom technical SEO architectures, manages automated paid acquisition APIs, and optimizes core web vitals to drive qualified organic traffic.</p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-timberwolf/20 flex gap-2 flex-wrap">
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">Technical SEO</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">Growth APIs</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">Analytics</span>
+                    <span class="px-2.5 py-1 bg-primary/5 text-[9px] font-bold text-primary rounded-md uppercase">Web Vitals</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-16 text-center text-sm text-oxford/60 dark:text-ghost/50 leading-relaxed max-w-3xl mx-auto bg-primary/5 p-6 rounded-2xl border border-primary/10">
+            <strong>"Follow-the-Sun" Distributed Pod framework:</strong> Our core team is based in our Kuala Lumpur headquarters at <em>Q Sentral, Level 37, Jalan Stesen Sentral 2, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Malaysia</em>, working alongside 15+ highly skilled engineers distributed globally to ensure continuous operations and rapid deployment.
+        </div>
+    </div>
+</section>
+
+<!-- Engagement & Governance Models Section -->
+<section class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16 scroll-reveal">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-robin/10 text-robin mb-6">
+                Governance &amp; Engagement
+            </div>
+            <h2 class="text-3xl lg:text-5xl font-bold text-oxford dark:text-white">Structured For Success</h2>
+            <p class="text-oxford/70 dark:text-ghost/60 mt-4 max-w-2xl mx-auto">We offer flexible deployment models aligned with your financial parameters and operational cadence.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Model A -->
+            <div class="glass p-10 rounded-[2rem] border border-timberwolf/20 hover:border-primary/30 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-4xl text-primary">payments</span>
+                        <span class="text-[10px] font-bold bg-primary/10 text-primary px-3 py-1 rounded-full uppercase">Model A</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Capital Expenditure (CapEx)</h3>
+                    <p class="text-xs text-oxford/50 dark:text-ghost/40 mb-6 uppercase tracking-wider font-semibold">Milestone Framework</p>
+                    <p class="text-sm text-oxford/70 dark:text-ghost/70 leading-relaxed mb-6">Best for defined projects, mvps, or major rebuilds. Governed by a structured waterfall milestone payment model: 30% kickoff, 30% mid-development milestone, 30% zero-trust staging lock, and 10% production launch handover.</p>
+                </div>
+                <ul class="space-y-3 text-xs text-oxford/65 dark:text-ghost/60">
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Firm fixed-price contract</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Phased deliverables &amp; sign-offs</li>
+                    <li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Perfect for new product launches</li>
+                </ul>
+            </div>
+            
+            <!-- Model B -->
+            <div class="glass p-10 rounded-[2rem] border-2 border-primary bg-primary/5 dark:bg-primary/5 hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-primary text-white text-[9px] font-bold px-4 py-1.5 rounded-bl-2xl uppercase tracking-widest">Recommended</div>
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="material-symbols-outlined text-4xl text-primary">engineering</span>
+                        <span class="text-[10px] font-bold bg-primary/10 text-primary px-3 py-1 rounded-full uppercase">Model B</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Operational Expenditure (OpEx)</h3>
+                    <p class="text-xs text-primary uppercase tracking-wider font-semibold">Productized Dedicated Subscriptions</p>
+                    <p class="text-sm text-oxford/70 dark:text-ghost/70 leading-relaxed mb-6">Unlock a dedicated Cross-Functional Developer Pod (consisting of Senior Developers, a dedicated Product Manager, and QA Engineers) working on your backlog. Highly agile, flat-rate monthly retainer with zero long-term commitments.</p>
+                </div>
+                <div class="pt-4 border-t border-timberwolf/20 flex justify-between items-center">
+                    <div>
+                        <p class="text-[10px] text-oxford/40 dark:text-ghost/40 uppercase tracking-widest">Flat Rate Retainer</p>
+                        <p class="text-xl font-bold text-primary">$4,999 / month</p>
+                    </div>
+                    <a href="/pricing/" class="bg-primary text-white text-xs font-bold px-4 py-2.5 rounded-full hover:bg-marian transition-colors">Compare Tiers</a>
+                </div>
             </div>
         </div>
     </div>
@@ -427,10 +582,18 @@
         </div>
         <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
             <p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
-            <div class="flex gap-8">
+            <div class="flex items-center gap-8">
                 <a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
                 <a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
                 <a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
+                <span class="text-white/10 hidden md:inline">|</span>
+                <div class="flex gap-3 items-center">
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+                </div>
             </div>
         </div>
     </div>

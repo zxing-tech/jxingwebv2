@@ -2,6 +2,7 @@
 
 <html class="scroll-smooth" lang="en"><head>
 <link rel="canonical" href="https://www.jxingtech.com">
+<script src="/js/i18n.js"></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>JXING Tech | Custom Web Applications &amp; Digital Systems Partner</title>
@@ -81,21 +82,42 @@
 </div>
 <!-- Desktop Nav Links -->
 <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-<a class="hover:text-primary transition-colors" href="/company/">Company</a>
-<a class="hover:text-primary transition-colors" href="/services/">Services</a>
-<a class="hover:text-primary transition-colors" href="/pricing/">Pricing Plans</a>
-<a class="hover:text-primary transition-colors" href="/case-studies/">Case Studies</a>
-<a class="hover:text-primary transition-colors" href="/news/">News</a>
-<a class="hover:text-primary transition-colors" href="/contact/">Contact</a>
+<a class="hover:text-primary transition-colors" href="/company/" data-i18n="nav_company">Company</a>
+<a class="hover:text-primary transition-colors" href="/services/" data-i18n="nav_services">Services</a>
+<a class="hover:text-primary transition-colors" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
+<a class="hover:text-primary transition-colors" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
+<a class="hover:text-primary transition-colors" href="/news/" data-i18n="nav_news">News</a>
+<a class="hover:text-primary transition-colors" href="/contact/" data-i18n="nav_contact">Contact</a>
 </div>
 <!-- Actions -->
 <div class="flex items-center gap-4">
+<!-- Language Selector -->
+<div class="relative inline-block text-left" id="lang-switcher">
+    <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
+        <span class="material-symbols-outlined text-lg">language</span>
+        <span id="current-lang-flag" class="text-xs">🇺🇸</span>
+        <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
+    </button>
+    <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
+        <div class="py-1 p-2 space-y-1" role="none">
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
+                <span>🇺🇸</span> EN
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
+                <span>🇲🇾</span> MS
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
+                <span>🇨🇳</span> ZH
+            </button>
+        </div>
+    </div>
+</div>
 <button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark'); if(window.toggleMapStyle) window.toggleMapStyle();">
 <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
 <span class="material-symbols-outlined hidden dark:block">light_mode</span>
 </button>
 <a href="/contact/" class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm">
-<span class="z-10 group-hover:text-white transition-colors">Get In Touch</span>
+<span class="z-10 group-hover:text-white transition-colors" data-i18n="nav_get_in_touch">Get In Touch</span>
 <div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center">
 <span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
 </div>
@@ -169,32 +191,40 @@
 <!-- Partner placeholders -->
 <div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
 <div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">AWS</div>
-<span class="font-semibold text-slate-400 text-sm">Select Tier</span>
+<span class="font-semibold text-slate-400 text-sm">Scalable Architecture</span>
 </div>
 <div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">G</div>
-<span class="font-semibold text-slate-400 text-sm">Cloud Platform</span>
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">AliCloud</div>
+<span class="font-semibold text-slate-400 text-sm">SEA Compliance</span>
 </div>
 <div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold text-blue-600">V</div>
-<span class="font-semibold text-slate-400 text-sm">Vercel Enterprise</span>
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">PostHog</div>
+<span class="font-semibold text-slate-400 text-sm">Event Tracking</span>
 </div>
 <div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">MS</div>
-<span class="font-semibold text-slate-400 text-sm">Microsoft Azure</span>
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold text-blue-600">Mixpanel</div>
+<span class="font-semibold text-slate-400 text-sm">Funnel Analytics</span>
+</div>
+<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">HubSpot</div>
+<span class="font-semibold text-slate-400 text-sm">CRM Pipelines</span>
+</div>
+<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">WP-VIP</div>
+<span class="font-semibold text-slate-400 text-sm">Headless Web</span>
 </div>
 <!-- Duplicate for seamless scroll -->
 <div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
 <div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">AWS</div>
-<span class="font-semibold text-slate-400 text-sm">Select Tier</span>
+<span class="font-semibold text-slate-400 text-sm">Scalable Architecture</span>
 </div>
 <div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">G</div>
-<span class="font-semibold text-slate-400 text-sm">Cloud Platform</span>
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">AliCloud</div>
+<span class="font-semibold text-slate-400 text-sm">SEA Compliance</span>
 </div>
 <div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold text-blue-600">V</div>
-<span class="font-semibold text-slate-400 text-sm">Vercel Enterprise</span>
+<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">PostHog</div>
+<span class="font-semibold text-slate-400 text-sm">Event Tracking</span>
 </div>
 </div>
 </div>
@@ -909,31 +939,32 @@
 <div class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4">System Lifecycle</div>
 <h2 class="text-3xl font-bold mb-6">Our Engineering Methodology</h2>
 <div class="w-full overflow-x-auto pb-4">
-<div class="flex justify-between items-center min-w-[800px] relative px-10">
+<div class="flex justify-between items-center min-w-[950px] relative px-10">
 <div class="absolute top-1/2 left-0 w-full h-[1px] bg-timberwolf dark:bg-white/10 -z-10"></div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</div>
-<span class="text-xs font-bold uppercase tracking-widest">Diagnose</span>
+<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4 text-center max-w-[200px]">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">01</div>
+<span class="text-xs font-bold uppercase tracking-widest">Blueprint (Phase 1)</span>
+<span class="text-[10px] text-oxford/50 dark:text-ghost/50">Market research, roadmap layout & competitive landscape</span>
 </div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div>
-<span class="text-xs font-bold uppercase tracking-widest">Blueprint</span>
+<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4 text-center max-w-[200px]">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">02</div>
+<span class="text-xs font-bold uppercase tracking-widest">Agile Sprints (Phase 2)</span>
+<span class="text-[10px] text-oxford/50 dark:text-ghost/50">Bi-weekly dev blocks with live staging deployments</span>
 </div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</div>
-<span class="text-xs font-bold uppercase tracking-widest">Build System</span>
+<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4 text-center max-w-[200px]">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">03</div>
+<span class="text-xs font-bold uppercase tracking-widest">Compliance (Phase 3)</span>
+<span class="text-[10px] text-oxford/50 dark:text-ghost/50">Performance audits, security scans & tracking checks</span>
 </div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">4</div>
-<span class="text-xs font-bold uppercase tracking-widest">Automate</span>
+<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4 text-center max-w-[200px]">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">04</div>
+<span class="text-xs font-bold uppercase tracking-widest">Handover (Phase 4)</span>
+<span class="text-[10px] text-oxford/50 dark:text-ghost/50">Safe cloud launch & 100% intellectual property transfer</span>
 </div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">5</div>
-<span class="text-xs font-bold uppercase tracking-widest">Grow</span>
-</div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">6</div>
-<span class="text-xs font-bold uppercase tracking-widest">Operate</span>
+<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4 text-center max-w-[200px]">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">05</div>
+<span class="text-xs font-bold uppercase tracking-widest">Cloud Ops (Phase 5)</span>
+<span class="text-[10px] text-oxford/50 dark:text-ghost/50">Constant monitoring & SLA-backed management</span>
 </div>
 </div>
 </div>
@@ -952,76 +983,78 @@
 <p class="text-oxford/50 dark:text-ghost/50 max-w-xs text-sm">We provide a unified layer of software, automation, and infrastructure to eliminate friction and maximize growth.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- 1. Custom Web Application Development -->
+<!-- 1. Market Research & Launch Strategy -->
+<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
+<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-3xl">fact_check</span>
+</div>
+<h3 class="text-xl font-bold mb-4">1. Launch &amp; Digital Presence Strategy</h3>
+<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Competitive intelligence, target user maps, and detailed Launch Execution Blueprints to minimize launch risk.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Launch Blueprint</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Market Entry</span>
+</div>
+</div>
+<!-- 2. Full-Stack Application Engineering -->
 <div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
 <div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
 <span class="material-symbols-outlined text-3xl">developer_mode_tv</span>
 </div>
-<h3 class="text-xl font-bold mb-4">1. Custom Web App Development</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Building complex SaaS platforms, portals, and internal tools with modern stacks like Next.js, Node, and Python.</p>
+<h3 class="text-xl font-bold mb-4">2. Full-Stack App Engineering</h3>
+<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Custom web applications, e-commerce engines, and internal portals built with clean, proprietary code.</p>
 <div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Enterprise Apps</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">SaaS Architecture</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Custom Code</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">SaaS Portals</span>
 </div>
 </div>
-<!-- 2. Website & E-Commerce Systems -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-3xl">shopping_cart</span>
-</div>
-<h3 class="text-xl font-bold mb-4">2. Website &amp; E-Commerce Systems</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Scalable e-commerce engines and conversion-optimized web systems that handle heavy transactional volume.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Headless Commerce</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Conversion Focus</span>
-</div>
-</div>
-<!-- 3. AI & Workflow Automation -->
+<!-- 3. Enterprise AI & Agentic Automation -->
 <div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
 <div class="w-12 h-12 bg-robin/10 rounded-2xl flex items-center justify-center mb-6 text-robin">
 <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
 </div>
-<h3 class="text-xl font-bold mb-4">3. AI &amp; Workflow Automation</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Deploying custom AI agents and autonomous LLM workflows that integrate deeply with your existing business logic.</p>
+<h3 class="text-xl font-bold mb-4">3. Enterprise AI &amp; Automation</h3>
+<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Deploy custom AI agents and secure LLM pipelines to automate manual, error-prone back-office operations.</p>
 <div class="flex gap-2 flex-wrap">
 <span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Agentic AI</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Process Automation</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Workflows</span>
 </div>
 </div>
-<!-- 4. Cloud Operations & Maintenance -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-marian/10 rounded-2xl flex items-center justify-center mb-6 text-marian">
-<span class="material-symbols-outlined text-3xl">cloud_sync</span>
-</div>
-<h3 class="text-xl font-bold mb-4">4. Cloud Ops &amp; Maintenance</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Fully managed hosting, security monitoring, and 99.9% uptime guarantees for your critical digital infrastructure.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Managed Cloud</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Security Ops</span>
-</div>
-</div>
-<!-- 5. SEO, AIO/GEO & Growth Infrastructure -->
+<!-- 4. Performance Marketing & User Acquisition -->
 <div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
 <div class="w-12 h-12 bg-xanthous/10 rounded-2xl flex items-center justify-center mb-6 text-xanthous">
 <span class="material-symbols-outlined text-3xl">query_stats</span>
 </div>
-<h3 class="text-xl font-bold mb-4">5. SEO, AIO/GEO &amp; Growth Infra</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Building technical foundations for search visibility, AI-Overviews (AIO), and Generative Engine Optimization (GEO).</p>
+<h3 class="text-xl font-bold mb-4">4. Performance Ads &amp; Marketing</h3>
+<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Programmatic ad campaigns, search engine optimization (SEO), and multi-channel content pipelines to scale acquisition.</p>
 <div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Entity SEO</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Search Intent</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">User Acquisition</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Paid Ads</span>
 </div>
 </div>
-<!-- 6. Technical Audits & Strategy -->
+<!-- 5. Cloud Operations & Managed Services -->
 <div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-3xl">analytics</span>
+<div class="w-12 h-12 bg-marian/10 rounded-2xl flex items-center justify-center mb-6 text-marian">
+<span class="material-symbols-outlined text-3xl">cloud_sync</span>
 </div>
-<h3 class="text-xl font-bold mb-4">6. Technical Audits &amp; Strategy</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Fractional CTO services and deep-dive technical audits to identify security leaks and performance bottlenecks.</p>
+<h3 class="text-xl font-bold mb-4">5. Cloud Operations &amp; Management</h3>
+<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Assuming complete operational responsibility for uptime, auto-scaling, firewall monitoring, and database backups.</p>
 <div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Fractional CTO</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">System Audit</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">99.9% SLA</span>
+<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Cloud Ops</span>
+</div>
+</div>
+<!-- Model B Dedicated Pod Callout -->
+<div class="glass p-8 rounded-3xl border-l-4 border-l-robin bg-robin/5 dark:bg-robin/5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-robin/20 rounded-2xl flex items-center justify-center mb-6 text-robin">
+<span class="material-symbols-outlined text-3xl">group</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Dedicated Developer Pod</h3>
+<p class="text-oxford/70 dark:text-ghost/70 text-xs leading-relaxed mb-4">Secure a dedicated cross-functional Developer Pod (Senior Engineer + Lead/QA) for flat-rate product iteration.</p>
+</div>
+<div class="flex justify-between items-center mt-2">
+<span class="text-sm font-bold text-robin">$4,999 / month</span>
+<a href="/pricing/" class="text-xs font-bold text-primary hover:underline flex items-center gap-1">Learn More <span class="material-symbols-outlined text-xs">arrow_forward</span></a>
 </div>
 </div>
 </div>
@@ -1283,13 +1316,21 @@
 </div>
 </div>
 <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
-<p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
-<div class="flex gap-8">
-<a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
-<a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
-</div>
-</div>
+            <p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
+            <div class="flex items-center gap-8">
+                <a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
+                <a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
+                <span class="text-white/10 hidden md:inline">|</span>
+                <div class="flex gap-3 items-center">
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+                </div>
+            </div>
+        </div>
 </div>
 </footer>
 <script>

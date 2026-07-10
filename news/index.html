@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
 <head>
+    <script src="/js/i18n.js"></script>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>News &amp; Insights - Strategic Digital Systems Blog | JXING Tech</title>
@@ -84,21 +85,42 @@
         </div>
         <!-- Desktop Nav Links -->
         <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-            <a class="hover:text-primary transition-colors" href="/company/">Company</a>
-            <a class="hover:text-primary transition-colors" href="/services/">Services</a>
-            <a class="hover:text-primary transition-colors" href="/pricing/">Pricing Plans</a>
-            <a class="hover:text-primary transition-colors" href="/case-studies/">Case Studies</a>
-            <a class="hover:text-primary transition-colors text-primary font-semibold" href="/news/">News</a>
-            <a class="hover:text-primary transition-colors" href="/contact/">Contact</a>
+            <a class="hover:text-primary transition-colors" href="/company/" data-i18n="nav_company">Company</a>
+            <a class="hover:text-primary transition-colors" href="/services/" data-i18n="nav_services">Services</a>
+            <a class="hover:text-primary transition-colors" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
+            <a class="hover:text-primary transition-colors" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
+            <a class="hover:text-primary transition-colors text-primary font-semibold" href="/news/" data-i18n="nav_news">News</a>
+            <a class="hover:text-primary transition-colors" href="/contact/" data-i18n="nav_contact">Contact</a>
         </div>
         <!-- Actions -->
         <div class="flex items-center gap-4">
+            <!-- Language Selector -->
+            <div class="relative inline-block text-left" id="lang-switcher">
+                <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
+                    <span class="material-symbols-outlined text-lg">language</span>
+                    <span id="current-lang-flag" class="text-xs">🇺🇸</span>
+                    <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
+                </button>
+                <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
+                    <div class="py-1 p-2 space-y-1" role="none">
+                        <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
+                            <span>🇺🇸</span> EN
+                        </button>
+                        <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
+                            <span>🇲🇾</span> MS
+                        </button>
+                        <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
+                            <span>🇨🇳</span> ZH
+                        </button>
+                    </div>
+                </div>
+            </div>
             <button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
                 <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
                 <span class="material-symbols-outlined hidden dark:block">light_mode</span>
             </button>
             <a href="/contact/" class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm">
-                <span class="z-10 group-hover:text-white transition-colors">Get In Touch</span>
+                <span class="z-10 group-hover:text-white transition-colors" data-i18n="nav_get_in_touch">Get In Touch</span>
                 <div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center">
                     <span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
                 </div>
@@ -339,10 +361,18 @@
         </div>
         <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
             <p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
-            <div class="flex gap-8">
+            <div class="flex items-center gap-8">
                 <a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
                 <a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
                 <a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
+                <span class="text-white/10 hidden md:inline">|</span>
+                <div class="flex gap-3 items-center">
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+                </div>
             </div>
         </div>
     </div>

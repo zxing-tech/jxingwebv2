@@ -2,6 +2,7 @@
 
 <html class="scroll-smooth" lang="en"><head>
 <link rel="canonical" href="https://www.jxingtech.com/case-studies">
+<script src="/js/i18n.js"></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Case Studies | JXING Tech - Strategic Digital Transformation</title>
@@ -84,7 +85,6 @@
     </style>
 </head>
 <body class="bg-ghost-white font-body text-oxford-blue antialiased">
-<!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-oxford-blue/80 backdrop-blur-md shadow-sm border-b border-timberwolf/20">
 <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 <div class="flex items-center gap-2">
@@ -94,16 +94,36 @@
 <span class="text-xl font-headline font-bold text-marian-blue">JXING Tech</span>
 </div>
 <nav class="hidden md:flex items-center space-x-8 font-body text-label font-medium">
-<a class="text-marian-blue hover:text-azure transition-colors" href="#">Company</a>
-<a class="text-marian-blue hover:text-azure transition-colors" href="#">Services</a>
-<a class="text-marian-blue hover:text-azure transition-colors" href="#">Pillars</a>
-<a class="text-marian-blue hover:text-azure transition-colors" href="#">Pricing</a>
-<a class="text-azure font-semibold border-b-2 border-azure pb-1" href="#">Case Studies</a>
-<a class="text-marian-blue hover:text-azure transition-colors" href="#">Resources</a>
+<a class="text-marian-blue hover:text-azure transition-colors" href="/company/" data-i18n="nav_company">Company</a>
+<a class="text-marian-blue hover:text-azure transition-colors" href="/services/" data-i18n="nav_services">Services</a>
+<a class="text-marian-blue hover:text-azure transition-colors" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
+<a class="text-azure font-semibold border-b-2 border-azure pb-1" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
+<a class="text-marian-blue hover:text-azure transition-colors" href="/news/" data-i18n="nav_news">News</a>
+<a class="text-marian-blue hover:text-azure transition-colors" href="/contact/" data-i18n="nav_contact">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-marian-blue hover:text-azure transition-all p-2 rounded-full hover:bg-ghost-white/50">language</button>
-<a class="hidden sm:block bg-marian-blue text-white px-6 py-2.5 rounded-full font-medium hover:bg-azure transition-all scale-95 active:scale-90" href="#contact">
+<!-- Language Selector -->
+<div class="relative inline-block text-left" id="lang-switcher">
+    <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
+        <span class="material-symbols-outlined text-lg">language</span>
+        <span id="current-lang-flag" class="text-xs">🇺🇸</span>
+        <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
+    </button>
+    <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
+        <div class="py-1 p-2 space-y-1" role="none">
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
+                <span>🇺🇸</span> EN
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
+                <span>🇲🇾</span> MS
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
+                <span>🇨🇳</span> ZH
+            </button>
+        </div>
+    </div>
+</div>
+<a class="hidden sm:block bg-marian-blue text-white px-6 py-2.5 rounded-full font-medium hover:bg-azure transition-all scale-95 active:scale-90" href="/contact/" data-i18n="nav_get_in_touch">
                     Get In Touch
                 </a>
 </div>
@@ -261,10 +281,17 @@
 </div>
 </div>
 </div>
-<div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:text-left">
+<div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
 <p class="font-body text-body text-white/50">
-                Â© 2024 JXING Tech. All Rights Reserved. Strategic Full-Stack Technology Partner.
+                © 2026 JXING Tech. All Rights Reserved. Strategic Full-Stack Technology Partner.
             </p>
+<div class="flex gap-3 items-center text-xs text-white/50">
+    <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+    <span class="text-white/10">|</span>
+    <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
+    <span class="text-white/10">|</span>
+    <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+</div>
 </div>
 </footer>
 <!-- Micro-interactions Script -->

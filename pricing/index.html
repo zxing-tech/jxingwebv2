@@ -2,6 +2,7 @@
 
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
+<script src="/js/i18n.js"></script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Pricing | JXING Tech - Strategic Technology Partner</title>
 <meta content="Transparent pricing for digital systems that scale. From technical blueprints to enterprise multi-system platforms." name="description"/>
@@ -80,16 +81,39 @@
 <span>JXING</span>
 </div>
 <div class="hidden md:flex items-center gap-8 font-headline text-body font-medium">
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/company/">Company</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/services/">Services</a>
-<a class="text-azure font-semibold border-b-2 border-azure pb-1" href="/pricing/">Pricing Plans</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/case-studies/">Case Studies</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/news/">News</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/contact/">Contact</a>
+<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/company/" data-i18n="nav_company">Company</a>
+<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/services/" data-i18n="nav_services">Services</a>
+<a class="text-azure font-semibold border-b-2 border-azure pb-1" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
+<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
+<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/news/" data-i18n="nav_news">News</a>
+<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/contact/" data-i18n="nav_contact">Contact</a>
 </div>
-<a href="/contact/" class="bg-azure text-white px-6 py-2.5 rounded-full font-semibold hover:bg-marian-blue transition-all active:scale-95 duration-200 flex items-center justify-center">
+<div class="flex items-center gap-4">
+<!-- Language Selector -->
+<div class="relative inline-block text-left" id="lang-switcher">
+    <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
+        <span class="material-symbols-outlined text-lg">language</span>
+        <span id="current-lang-flag" class="text-xs">🇺🇸</span>
+        <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
+    </button>
+    <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
+        <div class="py-1 p-2 space-y-1" role="none">
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
+                <span>🇺🇸</span> EN
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
+                <span>🇲🇾</span> MS
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
+                <span>🇨🇳</span> ZH
+            </button>
+        </div>
+    </div>
+</div>
+<a href="/contact/" class="bg-azure text-white px-6 py-2.5 rounded-full font-semibold hover:bg-marian-blue transition-all active:scale-95 duration-200 flex items-center justify-center" data-i18n="nav_get_in_touch">
             Get In Touch
         </a>
+</div>
 </div>
 </nav>
 <!-- Hero Section -->
@@ -120,161 +144,142 @@
 </div>
 </div>
 </section>
-<!-- Section 1: Project Builds (The Core Focus) -->
+<!-- Section 1: Core CapEx Project Pillars -->
 <section class="py-20 bg-ghost-white">
 <div class="max-w-7xl mx-auto px-6">
 <div class="mb-12">
 <h2 class="text-2xl font-bold font-headline mb-2 flex items-center gap-3">
 <span class="material-symbols-outlined text-azure bg-azure/10 p-2 rounded-lg">architecture</span>
-                Core Project Builds
+                Core Project Builds (CapEx)
             </h2>
-<p class="text-oxford-blue/60 max-w-2xl">End-to-end engineering of resilient digital products and platforms.</p>
+<p class="text-oxford-blue/60 max-w-2xl">Precision software systems engineered for business growth.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Technical Audit / Blueprint -->
-<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
+<!-- Pillar 1 -->
+<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
 <div class="flex justify-between items-start mb-6">
 <span class="material-symbols-outlined text-azure text-3xl">fact_check</span>
-<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Phase 01: Diagnose</div>
+<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Pillar 1</div>
 </div>
-<h3 class="text-xl font-bold mb-2 font-headline">Technical Audit / Blueprint</h3>
-<p class="text-azure font-bold text-2xl mb-6">From RM 1,188</p>
-<ul class="space-y-3 mb-8 flex-grow text-sm text-oxford-blue/70">
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> Architecture assessment</li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> Growth gap analysis</li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> Technical roadmap report</li>
-</ul>
-<button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Get Blueprint</button>
+<h3 class="text-xl font-bold mb-2 font-headline">Launch Strategy &amp; Digital Presence</h3>
+<p class="text-xs text-oxford-blue/50 mb-6 italic">Market analysis, blueprints, and high-performance launch pages.</p>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Small / MVP</span><span class="font-bold text-azure text-lg">RM 22,000</span></div>
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Medium / Growth</span><span class="font-bold text-azure text-lg">RM 52,000</span></div>
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Enterprise</span><span class="font-bold text-azure text-lg">RM 110,000</span></div>
 </div>
-<!-- Corporate Website -->
-<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
-<div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-azure text-3xl">language</span>
-<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Digital Presence</div>
 </div>
-<h3 class="text-xl font-bold mb-2 font-headline">Corporate Presence</h3>
-<p class="text-azure font-bold text-2xl mb-6">From RM 3,888</p>
-<ul class="space-y-3 mb-8 flex-grow text-sm text-oxford-blue/70">
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> High-performance Next.js site</li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> SEO-optimized structure</li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> Managed Headless CMS</li>
-</ul>
-<button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Start Build</button>
-</div>
-<!-- E-Commerce System -->
-<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col">
-<div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-azure text-3xl">shopping_bag</span>
-<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Commerce</div>
-</div>
-<h3 class="text-xl font-bold mb-2 font-headline">E-Commerce System</h3>
-<p class="text-azure font-bold text-2xl mb-6">RM 4,188 â RM 8,888+</p>
-<ul class="space-y-3 mb-8 flex-grow text-sm text-oxford-blue/70">
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> Payment &amp; Logistics API</li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> Advanced Inventory sync</li>
-<li class="flex items-start gap-3"><span class="material-symbols-outlined text-azure text-base">check</span> Multi-channel capability</li>
-</ul>
 <button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Request Scope</button>
 </div>
-<!-- Custom Web Application -->
-<div class="glass p-8 rounded-2xl border-azure shadow-xl md:col-span-2 lg:col-span-2 relative overflow-hidden group">
-<div class="absolute top-0 right-0 p-4">
-<div class="bg-azure text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest shadow-lg">High Tier</div>
-</div>
-<div class="grid md:grid-cols-2 gap-8 items-center">
+
+<!-- Pillar 2 -->
+<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
 <div>
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-azure text-4xl">dashboard_customize</span>
-</div>
-<h3 class="text-2xl font-bold mb-2 font-headline text-oxford-blue">Custom Web App / Portal</h3>
-<p class="text-oxford-blue/60 mb-6">Complex dashboards, SaaS products, and custom internal workflows tailored to your operational logic.</p>
-<p class="text-azure font-black text-3xl mb-2">Typically RM 22k â 65k+</p>
-<p class="text-xs text-oxford-blue/40 italic">Final quote based on user roles, logic complexity, and integrations.</p>
-</div>
-<div class="bg-azure/5 rounded-xl p-6 border border-azure/10">
-<h4 class="font-bold text-sm mb-4 text-azure uppercase tracking-wider">Engineering Inclusions:</h4>
-<ul class="space-y-3 text-sm text-oxford-blue/70">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-azure text-lg">check_circle</span> Custom API Infrastructure</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-azure text-lg">check_circle</span> Advanced RBAC Permissions</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-azure text-lg">check_circle</span> Third-party Logic Orchestration</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-azure text-lg">check_circle</span> Scalable Cloud Deployment</li>
-</ul>
-<button class="w-full bg-azure text-white py-4 rounded-xl font-bold mt-8 hover:bg-marian-blue transition-all shadow-md">Book Strategy Session</button>
-</div>
-</div>
-</div>
-<!-- Enterprise Platform -->
-<div class="bg-oxford-blue p-8 rounded-2xl border-white/10 shadow-2xl flex flex-col text-white">
 <div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-xanthous text-3xl">hub</span>
-<div class="bg-xanthous text-oxford-blue text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Elite Tier</div>
+<span class="material-symbols-outlined text-azure text-3xl">developer_mode_tv</span>
+<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Pillar 2</div>
 </div>
-<h3 class="text-xl font-bold mb-2 font-headline">Enterprise Multi-system</h3>
-<p class="text-white font-bold text-2xl mb-6">Custom RM 150k+</p>
-<p class="text-white/60 text-sm mb-8 flex-grow">Global architecture, cross-regional data compliance, and multi-platform integration (Web/Mobile/Desktop).</p>
-<button class="w-full bg-white/10 border border-white/20 text-white py-3 rounded-xl font-bold hover:bg-white/20 transition-all">Direct Inquiry</button>
+<h3 class="text-xl font-bold mb-2 font-headline">Full-Stack App Engineering</h3>
+<p class="text-xs text-oxford-blue/50 mb-6 italic">Custom web apps, portals, and transactional e-commerce engines.</p>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Small / MVP</span><span class="font-bold text-azure text-lg">RM 65,000</span></div>
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Medium / Growth</span><span class="font-bold text-azure text-lg">RM 150,000</span></div>
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Enterprise</span><span class="font-bold text-azure text-lg">RM 320,000</span></div>
 </div>
 </div>
-<p class="mt-12 text-center text-xs text-oxford-blue/40 max-w-3xl mx-auto italic">
-            * Note: Final pricing depends on specific workflows, complex integrations, user roles, data migration requirements, compliance (PDPA/GDPR), and long-term support service level agreements (SLAs).
-        </p>
+<button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Request Scope</button>
+</div>
+
+<!-- Pillar 3 -->
+<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="material-symbols-outlined text-azure text-3xl">precision_manufacturing</span>
+<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Pillar 3</div>
+</div>
+<h3 class="text-xl font-bold mb-2 font-headline">Enterprise AI &amp; Automation</h3>
+<p class="text-xs text-oxford-blue/50 mb-6 italic">LLM integration, autonomous agents, and process pipelines.</p>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Small / MVP</span><span class="font-bold text-azure text-lg">RM 50,000</span></div>
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Medium / Growth</span><span class="font-bold text-azure text-lg">RM 120,000</span></div>
+<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Enterprise</span><span class="font-bold text-azure text-lg">RM 250,000</span></div>
+</div>
+</div>
+<button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Request Scope</button>
+</div>
+</div>
 </div>
 </section>
-<!-- Section 2: Monthly / Retainer Support -->
+
+<!-- Section 2: Continuous Support & Retainers -->
 <section class="py-20 bg-white border-t border-timberwolf/20">
 <div class="max-w-7xl mx-auto px-6">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 <div>
 <h2 class="text-3xl font-bold font-headline mb-6 leading-tight">Continuous Operations &amp; <span class="text-azure">Managed Growth</span></h2>
-<p class="text-oxford-blue/60 mb-8 leading-relaxed">Technology is a living system. Our retainer services ensure your platform remains secure, visible, and operationally efficient long after launch.</p>
+<p class="text-oxford-blue/60 mb-8 leading-relaxed">Technology is a living system. We offer ongoing maintenance, cloud operations, and marketing retainers to secure your systems and fuel acquisition.</p>
+
 <div class="space-y-6">
-<div class="flex gap-4 p-5 rounded-2xl bg-ghost-white border border-timberwolf/30">
-<span class="material-symbols-outlined text-azure text-2xl shrink-0">build_circle</span>
-<div>
-<h4 class="font-bold text-oxford-blue">Maintenance &amp; Support</h4>
-<p class="text-sm text-oxford-blue/60">From <span class="font-bold text-azure">RM 688/year</span> (Standard sites). Custom applications quoted based on engineering complexity.</p>
-</div>
-</div>
-<div class="flex gap-4 p-5 rounded-2xl bg-ghost-white border border-timberwolf/30">
-<span class="material-symbols-outlined text-azure text-2xl shrink-0">trending_up</span>
-<div>
-<h4 class="font-bold text-oxford-blue">SEO / AIO Growth</h4>
-<p class="text-sm text-oxford-blue/60">From <span class="font-bold text-azure">RM 688/month</span>. Search Engine and AI Engine Optimization to keep your brand discoverable.</p>
-</div>
-</div>
-<div class="flex gap-4 p-5 rounded-2xl bg-ghost-white border border-timberwolf/30">
-<span class="material-symbols-outlined text-azure text-2xl shrink-0">cloud_done</span>
-<div>
-<h4 class="font-bold text-oxford-blue">Managed Cloud Ops</h4>
-<p class="text-sm text-oxford-blue/60">Quoted by <span class="font-bold text-azure">Platform Size &amp; SLA</span>. Full AWS/Azure management with 99.9% uptime guarantees.</p>
+<!-- Pillar 5 Retainers -->
+<div class="p-5 rounded-2xl bg-ghost-white border border-timberwolf/30">
+<h4 class="font-bold text-oxford-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-azure">cloud_done</span> Pillar 5: Cloud Operations Retainer</h4>
+<p class="text-xs text-oxford-blue/60 mb-4">Complete platform management with strict SLA guarantees.</p>
+<div class="space-y-2 text-sm text-oxford-blue/70">
+<div class="flex justify-between"><span>Small / MVP Infrastructure</span><span class="font-bold text-azure">RM 3,900 / mo</span></div>
+<div class="flex justify-between"><span>Medium / Growth Infrastructure</span><span class="font-bold text-azure">RM 8,700 / mo</span></div>
+<div class="flex justify-between"><span>Enterprise Infrastructure</span><span class="font-bold text-azure">RM 19,500 / mo</span></div>
 </div>
 </div>
 </div>
 </div>
+
+<!-- Pillar 4 Subscriptions -->
 <div class="glass p-8 md:p-10 rounded-2xl border-azure/20 bg-azure/5">
-<div class="flex items-center gap-2 mb-8">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-2">
 <div class="w-10 h-10 bg-azure rounded-lg flex items-center justify-center text-white">
-<span class="material-symbols-outlined">ads_click</span>
+<span class="material-symbols-outlined">query_stats</span>
 </div>
-<h3 class="text-xl font-bold font-headline">Supporting Growth Services</h3>
+<h3 class="text-xl font-bold font-headline">Pillar 4: Growth Ads &amp; Marketing</h3>
 </div>
-<p class="text-sm text-oxford-blue/70 mb-8">Strategic performance marketing to accelerate the systems we build. Only available as a secondary growth layer.</p>
+<div class="text-[10px] font-black bg-primary text-white px-3 py-1 rounded-full uppercase tracking-tighter">Guarantee Included</div>
+</div>
+<p class="text-xs text-oxford-blue/70 mb-6">Structured acquisition loops to funnel high-intent users into your applications. Backed by a <strong>30-Day Money-Back Risk Reversal Guarantee</strong>.</p>
 <div class="space-y-4 mb-8">
-<div class="flex justify-between items-center py-3 border-b border-oxford-blue/5">
-<span class="font-medium">Paid Search (SEM)</span>
-<span class="text-azure text-xs font-bold uppercase">Performance Managed</span>
+<div class="flex justify-between items-baseline py-3 border-b border-oxford-blue/5">
+<div>
+<p class="font-bold text-sm">Growth Kickstart</p>
+<p class="text-[10px] text-oxford-blue/40">Basic SEO and single network paid search</p>
 </div>
-<div class="flex justify-between items-center py-3 border-b border-oxford-blue/5">
-<span class="font-medium">Social Ads (Meta/LinkedIn)</span>
-<span class="text-azure text-xs font-bold uppercase">Strategy-led</span>
+<div class="text-right">
+<p class="font-bold text-azure">$155/mo</p>
+<p class="text-[9px] text-oxford-blue/40">+$45 setup</p>
 </div>
-<div class="flex justify-between items-center py-3">
-<span class="font-medium">Conversion Rate Opt. (CRO)</span>
-<span class="text-azure text-xs font-bold uppercase">Data-driven</span>
+</div>
+<div class="flex justify-between items-baseline py-3 border-b border-oxford-blue/5">
+<div>
+<p class="font-bold text-sm">Market Accelerator</p>
+<p class="text-[10px] text-oxford-blue/40">Multi-network advertising &amp; SEO content loops</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-azure">$239/mo</p>
+<p class="text-[9px] text-oxford-blue/40">+$70 setup</p>
+</div>
+</div>
+<div class="flex justify-between items-baseline py-3">
+<div>
+<p class="font-bold text-sm">Omni-Channel Domination</p>
+<p class="text-[10px] text-oxford-blue/40">Full funnel tracking &amp; cross-channel campaigns</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-azure">$359/mo</p>
+<p class="text-[9px] text-oxford-blue/40">+$100 setup</p>
+</div>
 </div>
 </div>
 <button class="w-full bg-azure text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-marian-blue transition-all">
-                    Talk to an Architect
+                    Talk to a Growth Specialist
                     <span class="material-symbols-outlined">chat</span>
 </button>
 </div>
@@ -306,16 +311,22 @@
                 JXING
             </div>
 <p class="font-body text-sm text-white/80 leading-relaxed">
-                © 2026 JXING Tech. Strategic Technology Partner.
-            </p>
-</div>
-<div class="space-y-4">
-<h4 class="text-white font-bold text-sm uppercase tracking-wider">Company</h4>
-<div class="flex flex-col space-y-2">
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/privacy-policy/">Privacy Policy</a>
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/terms-of-service/">Terms of Service</a>
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/help/">Help &amp; Support</a>
-</div>
+<div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
+            <p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
+            <div class="flex items-center gap-8">
+                <a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
+                <a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
+                <span class="text-white/10 hidden md:inline">|</span>
+                <div class="flex gap-3 items-center">
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
+                    <span class="text-white/10">|</span>
+                    <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+                </div>
+            </div>
+        </div>
 </div>
 <div class="space-y-4">
 <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navigation</h4>

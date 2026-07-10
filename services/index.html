@@ -2,6 +2,7 @@
 
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
+<script src="/js/i18n.js"></script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Services | JXING Tech - Custom Web App &amp; Digital Systems Partner</title>
 <meta content="JXING Tech is a Kuala Lumpur-based custom web application development and digital systems company. We build web platforms, AI workflow automations, and growth infrastructure." name="description"/>
@@ -93,16 +94,39 @@
 <span class="text-xl font-bold text-marian-blue">JXING Tech</span>
 </div>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/company/">Company</a>
-<a class="text-azure font-semibold border-b-2 border-azure pb-1 font-body text-sm" href="/services/">Services</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/pricing/">Pricing Plans</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/case-studies/">Case Studies</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/news/">News</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/contact/">Contact</a>
+<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/company/" data-i18n="nav_company">Company</a>
+<a class="text-azure font-semibold border-b-2 border-azure pb-1 font-body text-sm" href="/services/" data-i18n="nav_services">Services</a>
+<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
+<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
+<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/news/" data-i18n="nav_news">News</a>
+<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="/contact/" data-i18n="nav_contact">Contact</a>
 </div>
-<a href="/contact/" class="bg-azure text-white px-6 py-2.5 rounded-full font-medium text-sm hover:opacity-80 transition-all duration-300 active:scale-95 flex items-center justify-center">
+<div class="flex items-center gap-4">
+<!-- Language Selector -->
+<div class="relative inline-block text-left" id="lang-switcher">
+    <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
+        <span class="material-symbols-outlined text-lg">language</span>
+        <span id="current-lang-flag" class="text-xs">🇺🇸</span>
+        <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
+    </button>
+    <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
+        <div class="py-1 p-2 space-y-1" role="none">
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
+                <span>🇺🇸</span> EN
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
+                <span>🇲🇾</span> MS
+            </button>
+            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
+                <span>🇨🇳</span> ZH
+            </button>
+        </div>
+    </div>
+</div>
+<a href="/contact/" class="bg-azure text-white px-6 py-2.5 rounded-full font-medium text-sm hover:opacity-80 transition-all duration-300 active:scale-95 flex items-center justify-center" data-i18n="nav_get_in_touch">
                 Get In Touch
             </a>
+</div>
 </div>
 </nav>
 <main class="pt-24 pb-20">
@@ -147,167 +171,172 @@
 <h2 class="text-3xl font-bold text-marian-blue mb-2">Core Engineering Capabilities</h2>
 <p class="text-marian-blue/50">Comprehensive technical architecture for modern enterprise growth.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- 1. Custom Web Application Development -->
+<<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 1. Market Research, Digital Presence & Launch Strategy -->
 <div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
 <div class="mb-6 flex justify-between items-start">
 <div class="w-12 h-12 bg-azure/10 rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">apps</span>
+<span class="material-symbols-outlined text-azure">fact_check</span>
 </div>
-<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Priority</span>
+<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Pillar 01</span>
 </div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Custom Web Application Development</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Scalable portals, dashboards, admin systems, SaaS MVPs, and internal business applications built on robust stacks.</p>
+<h4 class="text-xl font-bold text-marian-blue mb-3">Digital Presence &amp; Launch Strategy</h4>
+<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Competitive intelligence, target user mapping, and Launch Execution Blueprints to align technology with your roadmap.</p>
 <div class="mt-auto">
 <div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
+<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Phase Focus</p>
 <div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">React/Next.js</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">SaaS Architecture</span>
+<span class="text-xs font-medium text-marian-blue/70">Launch Blueprint</span>
+<span class="text-xs font-medium text-marian-blue/70">•</span>
+<span class="text-xs font-medium text-marian-blue/70">Market Entry</span>
 </div>
 </div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/custom-web-apps">
-<span class="font-bold text-sm text-marian-blue">View Systems</span>
+<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/website-solutions/">
+<span class="font-bold text-sm text-marian-blue">View Launch Solutions</span>
 <div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </div>
 </a>
 </div>
 </div>
-<!-- 2. Website & E-Commerce Systems -->
+
+<!-- 2. Full-Stack Application Engineering -->
 <div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
 <div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">shopping_bag</span>
+<div class="w-12 h-12 bg-azure/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-azure">developer_mode_tv</span>
 </div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">High ROAS</span>
+<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Pillar 02</span>
 </div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Website &amp; E-Commerce Systems</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">High-converting landing pages, e-commerce stores, and CMS consoles integrated with advanced conversion tracking.</p>
+<h4 class="text-xl font-bold text-marian-blue mb-3">Full-Stack Application Engineering</h4>
+<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Custom portals, dashboards, SaaS platforms, and enterprise e-commerce systems engineered with clean, proprietary code.</p>
 <div class="mt-auto">
 <div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
+<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Phase Focus</p>
 <div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Headless CMS</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">Performance</span>
+<span class="text-xs font-medium text-marian-blue/70">Next.js/React</span>
+<span class="text-xs font-medium text-marian-blue/70">•</span>
+<span class="text-xs font-medium text-marian-blue/70">SaaS Portals</span>
 </div>
 </div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/website-solutions">
-<span class="font-bold text-sm text-marian-blue">Explore Commerce</span>
+<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/professional-services/">
+<span class="font-bold text-sm text-marian-blue">View Software Systems</span>
 <div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </div>
 </a>
 </div>
 </div>
-<!-- 3. AI & Workflow Automation -->
+
+<!-- 3. Enterprise AI & Agentic Automation -->
 <div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
 <div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">smart_toy</span>
+<div class="w-12 h-12 bg-azure/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-azure">precision_manufacturing</span>
 </div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Efficiency</span>
+<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Pillar 03</span>
 </div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">AI &amp; Workflow Automation</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Deploying AI agents, document parsing, and WhatsApp/CRM routing to replace manual business processes.</p>
+<h4 class="text-xl font-bold text-marian-blue mb-3">Enterprise AI &amp; Agentic Automation</h4>
+<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Custom LLM integrations, Retrieval-Augmented Generation, and secure workflow automation replacing human friction.</p>
 <div class="mt-auto">
 <div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
+<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Phase Focus</p>
 <div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Knowledge Assistants</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">LLM Ops</span>
+<span class="text-xs font-medium text-marian-blue/70">Agentic AI</span>
+<span class="text-xs font-medium text-marian-blue/70">•</span>
+<span class="text-xs font-medium text-marian-blue/70">LLM Pipelines</span>
 </div>
 </div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/automation-workflow">
-<span class="font-bold text-sm text-marian-blue">View Automations</span>
+<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/automation-workflow/">
+<span class="font-bold text-sm text-marian-blue">View AI Automations</span>
 <div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </div>
 </a>
 </div>
 </div>
-<!-- 4. Cloud Operations & Maintenance -->
+
+<!-- 4. Performance Marketing & User Acquisition -->
 <div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
 <div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">cloud_sync</span>
-</div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Stability</span>
-</div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Cloud Operations &amp; Maintenance</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Proactive hosting, monitoring, security updates, and incident response to ensure 99.9% system uptime.</p>
-<div class="mt-auto">
-<div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
-<div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">AWS/GCP</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">24/7 Monitoring</span>
-</div>
-</div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/cloud-operations">
-<span class="font-bold text-sm text-marian-blue">View Ops</span>
-<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</div>
-</a>
-</div>
-</div>
-<!-- 5. SEO, AIO/GEO & Growth Infrastructure -->
-<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
-<div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
+<div class="w-12 h-12 bg-azure/10 rounded-xl flex items-center justify-center">
 <span class="material-symbols-outlined text-azure">query_stats</span>
 </div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Visibility</span>
+<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Pillar 04</span>
 </div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">SEO, AIO/GEO &amp; Growth Infrastructure</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Engineered visibility via technical SEO, schema, and AI-answer optimization for Gen-AI search engines.</p>
+<h4 class="text-xl font-bold text-marian-blue mb-3">Performance Marketing &amp; Ads</h4>
+<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Paid search &amp; social management, technical SEO, and conversion rate optimization backed by a 30-day risk reversal guarantee.</p>
 <div class="mt-auto">
 <div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
+<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Phase Focus</p>
 <div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Entity SEO</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">AI-Answer Engine</span>
+<span class="text-xs font-medium text-marian-blue/70">User Acquisition</span>
+<span class="text-xs font-medium text-marian-blue/70">•</span>
+<span class="text-xs font-medium text-marian-blue/70">SEO &amp; PPC</span>
 </div>
 </div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/seo-aio-growth">
-<span class="font-bold text-sm text-marian-blue">View Strategy</span>
+<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/performance-ads/">
+<span class="font-bold text-sm text-marian-blue">View Growth Services</span>
 <div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </div>
 </a>
 </div>
 </div>
-<!-- 6. Strategy & Technical Audits -->
+
+<!-- 5. Cloud Operations & Managed Services -->
 <div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
 <div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">architecture</span>
+<div class="w-12 h-12 bg-azure/10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-azure">cloud_sync</span>
 </div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Architecture</span>
+<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Pillar 05</span>
 </div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Strategy &amp; Technical Audits</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">High-level discovery, competitor analysis, feasibility studies, and detailed system architecture roadmaps.</p>
+<h4 class="text-xl font-bold text-marian-blue mb-3">Cloud Operations &amp; Management</h4>
+<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Uptime monitoring, database backups, security patches, and rapid incident response backed by strict SLAs.</p>
 <div class="mt-auto">
 <div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
+<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Phase Focus</p>
 <div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Blueprint Phase</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">Debt Review</span>
+<span class="text-xs font-medium text-marian-blue/70">99.9% Uptime</span>
+<span class="text-xs font-medium text-marian-blue/70">•</span>
+<span class="text-xs font-medium text-marian-blue/70">SLA Response</span>
 </div>
 </div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/strategy-audits">
-<span class="font-bold text-sm text-marian-blue">Book Discovery</span>
+<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/professional-services/maintenance-support/">
+<span class="font-bold text-sm text-marian-blue">View Cloud Operations</span>
 <div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
 <span class="material-symbols-outlined text-lg">arrow_forward</span>
 </div>
 </a>
+</div>
+</div>
+
+<!-- Dedicated Pod -->
+<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300 border-2 border-azure/40 bg-azure/5">
+<div class="mb-6 flex justify-between items-start">
+<div class="w-12 h-12 bg-azure/20 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-azure">group</span>
+</div>
+<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Subscription</span>
+</div>
+<h4 class="text-xl font-bold text-marian-blue mb-3">Dedicated Developer Pod</h4>
+<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Flat-rate monthly operational pod access to Senior Developers, Product Managers, and QA resources.</p>
+<div class="mt-auto">
+<div class="bg-white/50 p-4 rounded-xl mb-6">
+<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Pricing Model</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs font-bold text-primary">$4,999 / month</span>
+</div>
+</div>
+<a class="cta-icon-fill group w-full justify-between pr-2" href="/pricing/">
+<span class="font-bold text-sm text-marian-blue">View Pricing Retainers</span>
+<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -418,10 +447,18 @@
 </div>
 <div class="max-w-7xl mx-auto px-8 py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
 <p class="text-timberwolf text-xs">© 2026 JXING Tech. Strategic Technology Partner. Crafted by JXING Tech Group Sdn Bhd.</p>
-<div class="flex gap-6">
+<div class="flex items-center gap-6">
 <a class="text-timberwolf hover:text-azure transition-colors text-xs" href="/privacy-policy/">Privacy Policy</a>
 <a class="text-timberwolf hover:text-azure transition-colors text-xs" href="/terms-of-service/">Terms of Service</a>
 <a class="text-timberwolf hover:text-azure transition-colors text-xs" href="/help/">Help &amp; Support</a>
+<span class="text-white/10 hidden md:inline">|</span>
+<div class="flex gap-3 items-center text-xs text-timberwolf">
+    <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+    <span class="text-white/10">|</span>
+    <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
+    <span class="text-white/10">|</span>
+    <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+</div>
 </div>
 </div>
 </footer>
