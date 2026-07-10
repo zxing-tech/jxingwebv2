@@ -79,13 +79,12 @@
 </div>
 <!-- Desktop Nav Links -->
 <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-<a class="text-primary font-semibold" href="#">Company</a>
-<a class="hover:text-primary transition-colors" href="#">Services</a>
-<a class="hover:text-primary transition-colors" href="#">Pillars</a>
-<a class="hover:text-primary transition-colors" href="#">Pricing</a>
-<a class="hover:text-primary transition-colors" href="#">Case Studies</a>
-<a class="hover:text-primary transition-colors" href="#">Resources</a>
-<a class="hover:text-primary transition-colors" href="#">Tech Stack</a>
+<a class="hover:text-primary transition-colors" href="/company/">Company</a>
+<a class="hover:text-primary transition-colors" href="/services/">Services</a>
+<a class="hover:text-primary transition-colors" href="/pricing/">Pricing Plans</a>
+<a class="hover:text-primary transition-colors" href="/case-studies/">Case Studies</a>
+<a class="hover:text-primary transition-colors" href="/news/">News</a>
+<a class="hover:text-primary transition-colors" href="/contact/">Contact</a>
 </div>
 <!-- Actions -->
 <div class="flex items-center gap-4">
@@ -93,12 +92,12 @@
 <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
 <span class="material-symbols-outlined hidden dark:block">light_mode</span>
 </button>
-<button class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm">
+<a href="/contact/" class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm">
 <span class="z-10 group-hover:text-white transition-colors">Get In Touch</span>
 <div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center">
 <span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
 </div>
-</button>
+</a>
 </div>
 </div>
 </nav>
@@ -117,7 +116,7 @@
             Custom Web Applications &amp; Digital Systems Built to <span class="text-primary italic">Scale</span>
 </h1>
 <p class="text-lg md:text-xl text-oxford/70 dark:text-ghost/70 max-w-3xl mx-auto mb-10 leading-relaxed">
-            JXING Tech designs, builds, automates, and operates web-based platforms for businesses that need reliable software, workflows, and growth infrastructure â not just a website.
+            JXING Tech designs, builds, automates, and operates web-based platforms for businesses that need reliable software, workflows, and growth infrastructure — not just a website.
         </p>
 <!-- Proof Chips / Hero Pills -->
 <div class="flex flex-wrap justify-center gap-3 mb-12">
@@ -129,15 +128,15 @@
 </div>
 <!-- CTAs -->
 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-<button class="cta-expand group relative flex items-center justify-between gap-8 bg-marian text-white pl-8 pr-1 py-4 rounded-full font-bold text-lg min-w-[240px] shadow-xl shadow-marian/20">
+<a href="/contact/" class="cta-expand group relative flex items-center justify-between gap-8 bg-marian text-white pl-8 pr-1 py-4 rounded-full font-bold text-lg min-w-[240px] shadow-xl shadow-marian/20">
 <span class="z-10">Start Technical Audit</span>
 <div class="icon-box w-12 h-12 rounded-full flex items-center justify-center bg-primary">
 <span class="material-symbols-outlined text-white">bolt</span>
 </div>
-</button>
-<button class="px-8 py-4 rounded-full border border-oxford/20 dark:border-white/20 font-bold hover:bg-oxford/5 dark:hover:bg-white/5 transition-all text-lg">
+</a>
+<a href="/services/" class="px-8 py-4 rounded-full border border-oxford/20 dark:border-white/20 font-bold hover:bg-oxford/5 dark:hover:bg-white/5 transition-all text-lg flex items-center justify-center">
                 Explore Capabilities
-            </button>
+            </a>
 </div>
 <!-- Hero Visual -->
 <div class="relative max-w-5xl mx-auto mt-8 scroll-reveal">
@@ -198,6 +197,221 @@
 </div>
 </div>
 </section>
+</section>
+
+<!-- Global Footprint Interactive Map Section -->
+<section class="py-24 bg-ghost dark:bg-oxford transition-colors duration-300 relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-robin/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary mb-6">
+                Global Footprint
+            </div>
+            <h2 class="text-3xl lg:text-5xl font-bold text-oxford dark:text-white">Engineering Prosperity Globally</h2>
+            <p class="text-oxford/70 dark:text-ghost/60 mt-4 max-w-2xl mx-auto">Explore the custom-engineered systems, portals, and SEO infrastructure running for our clients worldwide.</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+            <!-- Map Container (2/3 width) -->
+            <div class="w-full lg:w-2/3 glass p-6 rounded-[2.5rem] border border-timberwolf/25 dark:border-white/5 shadow-xl relative">
+                <!-- Quick Selection Buttons -->
+                <div class="flex flex-wrap gap-2 mb-6 justify-center">
+                    <button onclick="selectLocation('kl')" id="btn-kl" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white transition-all shadow-md">Kuala Lumpur 🇲🇾</button>
+                    <button onclick="selectLocation('sg')" id="btn-sg" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Singapore 🇸🇬</button>
+                    <button onclick="selectLocation('sf')" id="btn-sf" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">San Francisco 🇺🇸</button>
+                    <button onclick="selectLocation('ldn')" id="btn-ldn" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">London 🇬🇧</button>
+                    <button onclick="selectLocation('dxb')" id="btn-dxb" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Dubai 🇦🇪</button>
+                    <button onclick="selectLocation('syd')" id="btn-syd" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Sydney 🇦🇺</button>
+                </div>
+
+                <div class="relative w-full aspect-[2/1] min-h-[300px]">
+                    <svg viewBox="0 0 1000 500" class="w-full h-full text-oxford/10 dark:text-white/5 select-none" fill="currentColor">
+                        <!-- Stylized Geometric Continents -->
+                        <!-- North America -->
+                        <polygon points="80,80 280,60 300,120 220,180 180,240 100,180" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
+                        <!-- South America -->
+                        <polygon points="200,240 250,250 280,320 230,440 200,440 170,300" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
+                        <!-- Eurasia -->
+                        <polygon points="400,60 850,50 880,180 720,280 620,260 520,300 450,220 410,140" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
+                        <!-- Africa -->
+                        <polygon points="430,220 520,220 570,300 520,400 450,380 400,280" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
+                        <!-- Australia -->
+                        <polygon points="750,340 850,340 880,400 800,420" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
+
+                        <!-- Hotspots -->
+                        <!-- San Francisco -->
+                        <g class="cursor-pointer group" onclick="selectLocation('sf')">
+                            <circle cx="150" cy="120" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
+                            <circle cx="150" cy="120" r="6" id="dot-sf" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
+                            <circle cx="150" cy="120" r="12" class="fill-none stroke-primary/50 animate-ping" />
+                        </g>
+                        <!-- London -->
+                        <g class="cursor-pointer group" onclick="selectLocation('ldn')">
+                            <circle cx="450" cy="110" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
+                            <circle cx="450" cy="110" r="6" id="dot-ldn" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
+                            <circle cx="450" cy="110" r="12" class="fill-none stroke-primary/50 animate-ping" />
+                        </g>
+                        <!-- Dubai -->
+                        <g class="cursor-pointer group" onclick="selectLocation('dxb')">
+                            <circle cx="560" cy="200" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
+                            <circle cx="560" cy="200" r="6" id="dot-dxb" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
+                            <circle cx="560" cy="200" r="12" class="fill-none stroke-primary/50 animate-ping" />
+                        </g>
+                        <!-- Kuala Lumpur -->
+                        <g class="cursor-pointer group" onclick="selectLocation('kl')">
+                            <circle cx="720" cy="270" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
+                            <circle cx="720" cy="270" r="6" id="dot-kl" class="fill-robin transition-all stroke-white dark:stroke-slate-900 stroke-2" />
+                            <circle cx="720" cy="270" r="12" class="fill-none stroke-robin/50 animate-ping" />
+                        </g>
+                        <!-- Singapore -->
+                        <g class="cursor-pointer group" onclick="selectLocation('sg')">
+                            <circle cx="730" cy="290" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
+                            <circle cx="730" cy="290" r="6" id="dot-sg" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
+                            <circle cx="730" cy="290" r="12" class="fill-none stroke-primary/50 animate-ping" />
+                        </g>
+                        <!-- Sydney -->
+                        <g class="cursor-pointer group" onclick="selectLocation('syd')">
+                            <circle cx="820" cy="380" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
+                            <circle cx="820" cy="380" r="6" id="dot-syd" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
+                            <circle cx="820" cy="380" r="12" class="fill-none stroke-primary/50 animate-ping" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Dynamic Detail Card (1/3 width) -->
+            <div class="w-full lg:w-1/3">
+                <div id="client-card" class="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] shadow-xl border border-timberwolf/25 dark:border-white/10 min-h-[380px] flex flex-col justify-between transition-all duration-300">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span id="card-tag" class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider">Growth Systems</span>
+                            <span id="card-country" class="text-sm font-semibold text-oxford/50 dark:text-ghost/50">Kuala Lumpur, MY</span>
+                        </div>
+                        <h3 id="card-title" class="text-2xl font-bold text-oxford dark:text-white mb-2">Thurai Dental Group</h3>
+                        <p id="card-service" class="text-xs text-primary dark:text-robin font-semibold uppercase tracking-wider mb-6">Patient Scheduling & Local SEO</p>
+                        <p id="card-desc" class="text-sm text-oxford/70 dark:text-ghost/70 font-light leading-relaxed mb-6">
+                            Integrated Twilio & WhatsApp Business API appointment scheduling logic with hyper-localized SEO strategy targeting dental treatments across multiple branch networks.
+                        </p>
+                    </div>
+                    
+                    <div class="pt-6 border-t border-timberwolf/10 dark:border-white/5 flex items-center justify-between">
+                        <div>
+                            <p class="text-[10px] uppercase font-bold tracking-widest text-oxford/40 dark:text-ghost/40">Verified Outcome</p>
+                            <p id="card-metric" class="text-xl font-bold text-primary dark:text-robin mt-1">3x Monthly Booking Leads</p>
+                        </div>
+                        <span class="material-symbols-outlined text-primary dark:text-robin text-2xl">verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const locations = {
+        kl: {
+            title: "Thurai Dental Group",
+            service: "Patient Scheduling & Local SEO",
+            tag: "AI Automation",
+            country: "Kuala Lumpur, MY 🇲🇾",
+            desc: "Integrated Twilio & WhatsApp Business API appointment scheduling logic with hyper-localized SEO strategy targeting dental treatments across multiple branch networks.",
+            metric: "3x Monthly Leads",
+            color: "#59C3C3"
+        },
+        sg: {
+            title: "Evo House",
+            service: "Luxury Property Loop & PPC",
+            tag: "Growth Systems",
+            country: "Singapore 🇸🇬",
+            desc: "Ultra-premium dark mode property presentation with custom multi-step HNW qualified investor questionnaire syncing directly with internal sales team CRM pipelines.",
+            metric: "$24M+ SGD Pipeline",
+            color: "#007DEB"
+        },
+        sf: {
+            title: "TechSphere Solutions",
+            service: "Cloud Ops & Multi-Platform Ads",
+            tag: "Cloud Operations",
+            country: "San Francisco, US 🇺🇸",
+            desc: "Engineered scalable Kubernetes cloud cluster deployment to handle sudden traffic peaks alongside multi-channel performance ad targeting across Google & TikTok.",
+            metric: "0% Server Downtime",
+            color: "#007DEB"
+        },
+        ldn: {
+            title: "Gibb & Co Lawyers",
+            service: "Secure Client Intake Portal",
+            tag: "Secure Portals",
+            country: "London, UK 🇬🇧",
+            desc: "Deployed end-to-end encrypted client document collection portal with automated validation checks and compliance audit logs to streamline legal case intakes.",
+            metric: "90% Faster Intake",
+            color: "#007DEB"
+        },
+        dxb: {
+            title: "Apex Capital Partners",
+            service: "Headless Web & Investor Portal",
+            tag: "Website Solutions",
+            country: "Dubai, AE 🇦🇪",
+            desc: "Bespoke high-performance headless portal unified with Strapi CMS and customized investor portfolio tracking dashboard with real-time valuation widgets.",
+            metric: "100% Auto Compliance",
+            color: "#007DEB"
+        },
+        syd: {
+            title: "Horizon Sports",
+            service: "High-Volume Headless E-Commerce",
+            tag: "E-Commerce Plus",
+            country: "Sydney, AU 🇦🇺",
+            desc: "Custom headless Shopify implementation with fast cloud distribution network (CDN) and AI-driven automated supply chain and order notification system.",
+            metric: "+180% Order Volume",
+            color: "#007DEB"
+        }
+    };
+
+    function selectLocation(id) {
+        // Update selection details
+        const data = locations[id];
+        if (!data) return;
+
+        // Transition animation for card
+        const card = document.getElementById('client-card');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(10px)';
+
+        setTimeout(() => {
+            document.getElementById('card-title').innerText = data.title;
+            document.getElementById('card-service').innerText = data.service;
+            document.getElementById('card-tag').innerText = data.tag;
+            document.getElementById('card-country').innerText = data.country;
+            document.getElementById('card-desc').innerText = data.desc;
+            document.getElementById('card-metric').innerText = data.metric;
+
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 150);
+
+        // Update active buttons
+        document.querySelectorAll('.loc-btn').forEach(btn => {
+            btn.className = "loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5";
+        });
+        const activeBtn = document.getElementById('btn-' + id);
+        if (activeBtn) {
+            activeBtn.className = "loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white transition-all shadow-md";
+        }
+
+        // Highlight selected dot in SVG
+        document.querySelectorAll('circle[id^="dot-"]').forEach(dot => {
+            dot.setAttribute('fill', '#007DEB');
+            dot.setAttribute('r', '6');
+        });
+        const activeDot = document.getElementById('dot-' + id);
+        if (activeDot) {
+            activeDot.setAttribute('fill', id === 'kl' ? '#59C3C3' : '#007DEB');
+            activeDot.setAttribute('r', '8');
+        }
+    }
+</script>
+
 <!-- Service Continuity (The Lifecycle) -->
 <section class="py-20 bg-ghost/50 dark:bg-oxford/20">
 <div class="max-w-7xl mx-auto px-6">
@@ -542,49 +756,48 @@
 <span class="text-xl font-bold tracking-tight">JXING</span>
 </div>
 <p class="text-sm text-ghost/50 leading-relaxed max-w-xs mb-4">JXING Tech (Lucky Star) is a custom web application and digital systems partner focused on engineering outstanding prosperity.</p>
-<p class="text-xs text-ghost/30 italic">"JXING" means Lucky Star (èæ), representing our goal of delivering Outstanding Prosperity through strategic technology.</p>
+<p class="text-xs text-ghost/30 italic">"JXING" means Lucky Star (聚星), representing our goal of delivering Outstanding Prosperity through strategic technology.</p>
 </div>
-<div>
+    <div>
 <h4 class="font-bold mb-6">Capabilities</h4>
 <ul class="space-y-4 text-sm text-ghost/50">
-<li><a class="hover:text-primary" href="#">Web App Development</a></li>
-<li><a class="hover:text-primary" href="#">E-Commerce Systems</a></li>
-<li><a class="hover:text-primary" href="#">AI &amp; Automation</a></li>
-<li><a class="hover:text-primary" href="#">Cloud Operations</a></li>
-<li><a class="hover:text-primary" href="#">SEO/AIO Infrastructure</a></li>
+<li><a class="hover:text-primary" href="/services/website-solutions/">Website &amp; E-Commerce</a></li>
+<li><a class="hover:text-primary" href="/services/automation-workflow/">AI &amp; Automation</a></li>
+<li><a class="hover:text-primary" href="/services/growth-seo/">SEO &amp; AI Integration</a></li>
+<li><a class="hover:text-primary" href="/services/professional-services/maintenance-support/">Cloud Operations</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-bold mb-6">Company</h4>
 <ul class="space-y-4 text-sm text-ghost/50">
-<li><a class="hover:text-primary" href="#">About JXING</a></li>
-<li><a class="hover:text-primary" href="#">Success Stories</a></li>
-<li><a class="hover:text-primary" href="#">Whitepapers</a></li>
-<li><a class="hover:text-primary" href="https://www.jxingtech.com">www.jxingtech.com</a></li>
+<li><a class="hover:text-primary" href="/company/">About JXING</a></li>
+<li><a class="hover:text-primary" href="/case-studies/">Case Studies</a></li>
+<li><a class="hover:text-primary" href="/career/">Careers</a></li>
+<li><a class="hover:text-primary" href="/news/">News &amp; Insights</a></li>
 </ul>
 </div>
 <div>
 <h4 class="font-bold mb-6">Contact</h4>
 <ul class="space-y-4 text-sm text-ghost/50">
 <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">mail</span> hello@jxingtech.com</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">location_on</span> San Francisco, CA</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">location_on</span> Kuala Lumpur, Malaysia</li>
 <li class="pt-4 flex gap-4">
-<div class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+<a href="https://www.linkedin.com/company/jxingtech" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer" aria-label="LinkedIn">
 <span class="material-symbols-outlined text-xs">share</span>
-</div>
-<div class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
+</a>
+<a href="/contact/" class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer" aria-label="Contact">
 <span class="material-symbols-outlined text-xs">link</span>
-</div>
+</a>
 </li>
 </ul>
 </div>
 </div>
 <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
-<p>Â© 2024 JXING Tech. All Rights Reserved.</p>
+<p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
 <div class="flex gap-8">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+<a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
 </div>
 </div>
 </div>

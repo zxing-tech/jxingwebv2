@@ -1,455 +1,122 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services | JXING Tech - Custom Web App &amp; Digital Systems Partner</title>
-<meta content="JXING Tech is a Kuala Lumpur-based custom web application development and digital systems company. We build web platforms, AI workflow automations, and growth infrastructure." name="description"/>
-<link href="https://www.jxingtech.com/services" rel="canonical"/>
-<!-- Fonts & Icons -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              'azure': '#007DEB',
-              'primary': '#007DEB',
-              'marian-blue': '#003F88',
-              'oxford-blue': '#0A1640',
-              'background-light': '#f5f7f8',
-              'background-dark': '#0f1a23',
-              'ghost-white': '#F0F3F9',
-              'timberwolf': '#D3D3D3',
-              'xanthous': '#FFC759',
-              'robin-egg-blue': '#59C3C3',
-            },
-            borderRadius: {
-              'DEFAULT': '0.5rem',
-              'lg': '1rem',
-              'xl': '1.5rem',
-              '2xl': '2rem',
-              'full': '9999px',
-            },
-            fontFamily: {
-              'headline': ['Poppins', 'sans-serif'],
-              'display': ['Public Sans', 'sans-serif'],
-              'body': ['Poppins', 'sans-serif'],
-              'label': ['Poppins', 'sans-serif'],
-            },
-          },
-        },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(211, 213, 211, 0.3);
-        }
-        .cta-icon-fill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .cta-icon-fill:hover .icon-box {
-            background-color: #007DEB;
-            color: white;
-            transform: translateX(4px);
-        }
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(0, 63, 136, 0.1);
-        }
-        .lifecycle-step::after {
-            content: 'arrow_forward';
-            font-family: 'Material Symbols Outlined';
-            font-size: 1.25rem;
-            margin: 0 1rem;
-            color: #D3D3D3;
-        }
-        .lifecycle-step:last-child::after {
-            content: none;
-        }
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Basic E-Commerce | Website Solutions | JXING Tech</title>
+    <meta content="A robust online store with up to 25 products, secure Malaysian payment gateways, and inventory management." name="description"/>
+    <link href="https://www.jxingtech.com/services/website-solutions/basic-ecommerce" rel="canonical"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{primary:"#007DEB",marian:"#003F88",oxford:"#0A1640",ghost:"#F0F3F9",timberwolf:"#D3D3D3",robin:"#59C3C3"}}}}</script>
+    <style>
+        body{font-family:'Poppins',sans-serif;background-color:#F0F3F9}
+        .glass{background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.3)}
+        .dark .glass{background:rgba(10,22,64,0.8);border:1px solid rgba(255,255,255,0.1)}
+        .cta-expand{position:relative;overflow:hidden;transition:all 0.3s ease}
+        .cta-expand .icon-box{background-color:#007DEB;transition:all 0.4s cubic-bezier(0.4,0,0.2,1)}
+        .cta-expand:hover .icon-box{width:100%;height:100%;border-radius:0}
+        .cta-expand span{position:relative;z-index:10}
+        .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
     </style>
 </head>
-<body class="bg-ghost-white font-body text-oxford-blue antialiased">
-<!-- TopNavBar -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-timberwolf/20 shadow-sm">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 bg-azure rounded-lg flex items-center justify-center text-white font-bold text-xl">X</div>
-<span class="text-xl font-bold text-marian-blue">JXING Tech</span>
-</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="#">Company</a>
-<a class="text-azure font-semibold border-b-2 border-azure pb-1 font-body text-sm" href="#">Services</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="#">Pillars</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="#">Pricing</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="#">Case Studies</a>
-<a class="text-marian-blue hover:text-azure transition-colors font-body text-sm font-medium" href="#">Resources</a>
-</div>
-<button class="bg-azure text-white px-6 py-2.5 rounded-full font-medium text-sm hover:opacity-80 transition-all duration-300 active:scale-95">
-                Get In Touch
-            </button>
-</div>
+<body class="text-oxford dark:text-ghost transition-colors duration-300">
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] max-w-7xl">
+    <div class="glass h-16 px-6 flex items-center justify-between rounded-full shadow-lg border border-white/40 dark:border-slate-700/30">
+        <div class="flex items-center gap-2"><div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold">X</div><span class="text-xl font-bold tracking-tight text-oxford dark:text-white">JXING</span></div>
+        <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
+            <a class="hover:text-primary transition-colors" href="/company/">Company</a><a class="hover:text-primary transition-colors text-primary font-semibold" href="/services/">Services</a><a class="hover:text-primary transition-colors" href="/pricing/">Pricing Plans</a><a class="hover:text-primary transition-colors" href="/case-studies/">Case Studies</a><a class="hover:text-primary transition-colors" href="/news/">News</a><a class="hover:text-primary transition-colors" href="/contact/">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')"><span class="material-symbols-outlined block dark:hidden">dark_mode</span><span class="material-symbols-outlined hidden dark:block">light_mode</span></button>
+            <a href="/contact/" class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm"><span class="z-10 group-hover:text-white transition-colors">Get In Touch</span><div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center"><span class="material-symbols-outlined text-white text-sm">arrow_forward</span></div></a>
+        </div>
+    </div>
 </nav>
-<main class="pt-24 pb-20">
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-6 pt-16 pb-12 text-center">
-<div class="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full border border-timberwolf/30 shadow-sm mb-8">
-<span class="w-2 h-2 bg-azure rounded-full"></span>
-<span class="text-[10px] font-bold uppercase tracking-wider text-marian-blue">FULL-STACK SYSTEMS PARTNER</span>
-</div>
-<h1 class="text-5xl md:text-7xl font-bold text-marian-blue max-w-5xl mx-auto leading-[1.1] mb-8">
-                Digital systems that <span class="text-azure">build, automate,</span> launch, and scale.
-            </h1>
-<p class="text-xl text-marian-blue/70 max-w-3xl mx-auto mb-10 leading-relaxed">
-                From custom web apps and e-commerce platforms to AI workflows, cloud operations, and SEO/AIO growth, JXING connects the full lifecycle under one technical partner.
-            </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-6">
-<button class="bg-marian-blue text-white px-8 py-4 rounded-full font-semibold flex items-center gap-3 hover:bg-oxford-blue transition-all active:scale-95 group">
-                    Explore Our Capabilities
-                    <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">expand_more</span>
-</button>
-</div>
+
+<section class="relative pt-44 pb-24 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+        <img alt="" class="absolute inset-0 w-full h-full object-cover brightness-[0.35]" src="https://res.cloudinary.com/dyzxj3ypa/image/upload/q_auto,f_auto/v1767897715/Unlock_Your_Growth_with_Our_Core_Digital_Solutions_eascie.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-oxford/10 to-oxford/70"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center text-white">
+        <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-white/10">
+                <li><a href="/" class="hover:text-primary">Home</a></li>
+                <li class="flex items-center"><span class="mx-2 opacity-50">/</span><a href="/services/" class="hover:text-primary">Services</a></li>
+                <li class="flex items-center"><span class="mx-2 opacity-50">/</span><a href="/services/website-solutions/" class="hover:text-primary">Website Solutions</a></li>
+                <li class="flex items-center"><span class="mx-2 opacity-50">/</span><span class="opacity-80">Basic E-Commerce</span></li>
+            </ol>
+        </nav>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 max-w-5xl mx-auto">Basic E-Commerce</h1>
+        <p class="text-lg md:text-xl text-ghost/90 max-w-2xl mx-auto leading-relaxed">Sell online confidently.</p>
+    </div>
 </section>
-<!-- Lifecycle Strip -->
-<section class="max-w-7xl mx-auto px-6 mb-24">
-<div class="bg-white border border-timberwolf/20 rounded-2xl p-6 shadow-sm overflow-x-auto">
-<div class="flex items-center justify-between min-w-[900px] px-4">
-<span class="text-[10px] font-black text-marian-blue/40 uppercase tracking-[0.2em] whitespace-nowrap mr-8">The Engineering Lifecycle</span>
-<div class="flex items-center text-sm font-bold text-marian-blue/80 whitespace-nowrap">
-<div class="lifecycle-step flex items-center">Diagnose</div>
-<div class="lifecycle-step flex items-center">Blueprint</div>
-<div class="lifecycle-step flex items-center text-azure">Build Web/App System</div>
-<div class="lifecycle-step flex items-center">Automate</div>
-<div class="lifecycle-step flex items-center">Grow via SEO/AIO/GEO</div>
-<div class="lifecycle-step flex items-center">Operate/Maintain</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Main Engineering Grid -->
-<section class="max-w-7xl mx-auto px-6 mb-24" id="grid">
-<div class="mb-12">
-<h2 class="text-3xl font-bold text-marian-blue mb-2">Core Engineering Capabilities</h2>
-<p class="text-marian-blue/50">Comprehensive technical architecture for modern enterprise growth.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-<!-- 1. Custom Web Application Development -->
-<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
-<div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-azure/10 rounded-xl flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">apps</span>
-</div>
-<span class="px-3 py-1 bg-azure text-[10px] font-bold text-white rounded-full uppercase">Priority</span>
-</div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Custom Web Application Development</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Scalable portals, dashboards, admin systems, SaaS MVPs, and internal business applications built on robust stacks.</p>
-<div class="mt-auto">
-<div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
-<div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">React/Next.js</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">SaaS Architecture</span>
-</div>
-</div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/custom-web-apps">
-<span class="font-bold text-sm text-marian-blue">View Systems</span>
-<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</div>
-</a>
-</div>
-</div>
-<!-- 2. Website & E-Commerce Systems -->
-<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
-<div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">shopping_bag</span>
-</div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">High ROAS</span>
-</div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Website &amp; E-Commerce Systems</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">High-converting landing pages, e-commerce stores, and CMS consoles integrated with advanced conversion tracking.</p>
-<div class="mt-auto">
-<div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
-<div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Headless CMS</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">Performance</span>
-</div>
-</div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/website-solutions">
-<span class="font-bold text-sm text-marian-blue">Explore Commerce</span>
-<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</div>
-</a>
-</div>
-</div>
-<!-- 3. AI & Workflow Automation -->
-<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
-<div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">smart_toy</span>
-</div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Efficiency</span>
-</div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">AI &amp; Workflow Automation</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Deploying AI agents, document parsing, and WhatsApp/CRM routing to replace manual business processes.</p>
-<div class="mt-auto">
-<div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
-<div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Knowledge Assistants</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">LLM Ops</span>
-</div>
-</div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/automation-workflow">
-<span class="font-bold text-sm text-marian-blue">View Automations</span>
-<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</div>
-</a>
-</div>
-</div>
-<!-- 4. Cloud Operations & Maintenance -->
-<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
-<div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">cloud_sync</span>
-</div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Stability</span>
-</div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Cloud Operations &amp; Maintenance</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Proactive hosting, monitoring, security updates, and incident response to ensure 99.9% system uptime.</p>
-<div class="mt-auto">
-<div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
-<div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">AWS/GCP</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">24/7 Monitoring</span>
-</div>
-</div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/cloud-operations">
-<span class="font-bold text-sm text-marian-blue">View Ops</span>
-<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</div>
-</a>
-</div>
-</div>
-<!-- 5. SEO, AIO/GEO & Growth Infrastructure -->
-<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
-<div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">query_stats</span>
-</div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Visibility</span>
-</div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">SEO, AIO/GEO &amp; Growth Infrastructure</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">Engineered visibility via technical SEO, schema, and AI-answer optimization for Gen-AI search engines.</p>
-<div class="mt-auto">
-<div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
-<div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Entity SEO</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">AI-Answer Engine</span>
-</div>
-</div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/seo-aio-growth">
-<span class="font-bold text-sm text-marian-blue">View Strategy</span>
-<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</div>
-</a>
-</div>
-</div>
-<!-- 6. Strategy & Technical Audits -->
-<div class="service-card glass-card p-8 rounded-2xl flex flex-col transition-all duration-300">
-<div class="mb-6 flex justify-between items-start">
-<div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center">
-<span class="material-symbols-outlined text-azure">architecture</span>
-</div>
-<span class="px-3 py-1 bg-azure/5 text-[10px] font-bold text-azure rounded-full border border-azure/10 uppercase">Architecture</span>
-</div>
-<h4 class="text-xl font-bold text-marian-blue mb-3">Strategy &amp; Technical Audits</h4>
-<p class="text-sm text-marian-blue/60 leading-relaxed mb-6">High-level discovery, competitor analysis, feasibility studies, and detailed system architecture roadmaps.</p>
-<div class="mt-auto">
-<div class="bg-ghost-white p-4 rounded-xl mb-6">
-<p class="text-[10px] font-bold text-marian-blue/40 uppercase mb-2">Technical Focus</p>
-<div class="flex flex-wrap gap-2">
-<span class="text-xs font-medium text-marian-blue/70">Blueprint Phase</span>
-<span class="text-xs font-medium text-marian-blue/70">â¢</span>
-<span class="text-xs font-medium text-marian-blue/70">Debt Review</span>
-</div>
-</div>
-<a class="cta-icon-fill group w-full justify-between pr-2" href="/services/strategy-audits">
-<span class="font-bold text-sm text-marian-blue">Book Discovery</span>
-<div class="icon-box w-10 h-10 rounded-full border border-azure flex items-center justify-center text-azure transition-all">
-<span class="material-symbols-outlined text-lg">arrow_forward</span>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- AI-Readable Summary Block -->
-<section class="max-w-7xl mx-auto px-6 mb-24">
-<div class="bg-white/40 border border-azure/20 rounded-2xl p-10 flex flex-col md:flex-row items-center gap-10">
-<div class="w-20 h-20 bg-azure rounded-2xl flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-white text-4xl">info</span>
-</div>
-<div class="text-lg text-marian-blue/80 leading-relaxed italic font-medium">
-                    "JXING Tech is a Kuala Lumpur-based custom web application development and digital systems company. JXING builds web platforms, e-commerce systems, internal portals, AI workflow automations, SEO/AIO growth infrastructure, and managed cloud operations for SMEs and growing enterprises."
+
+<section class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-8"><a href="/services/website-solutions/" class="inline-flex items-center gap-2 text-sm font-medium text-oxford/50 dark:text-ghost/50 hover:text-primary transition-colors"><span class="material-symbols-outlined text-base">arrow_back</span> Back to Website Solutions</a></div>
+        <div class="flex flex-col lg:flex-row gap-16 items-start">
+            <div class="lg:w-2/3">
+                <h2 class="text-3xl font-bold text-oxford dark:text-white mb-6">Service Overview</h2>
+                <p class="text-oxford/70 dark:text-ghost/70 text-lg leading-relaxed mb-10">A robust online store with up to 25 products, secure Malaysian payment gateways, and inventory management.</p>
+                <div class="bg-ghost dark:bg-slate-900 rounded-3xl p-8 border border-oxford/10 dark:border-white/10 mb-10">
+                    <h3 class="text-xl font-bold text-oxford dark:text-white mb-6">Key Benefits</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary dark:text-robin text-xl">check_circle</span><span class="text-oxford/80 dark:text-ghost/80 font-medium">Secure Payment Gateways</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary dark:text-robin text-xl">check_circle</span><span class="text-oxford/80 dark:text-ghost/80 font-medium">Inventory Management</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary dark:text-robin text-xl">check_circle</span><span class="text-oxford/80 dark:text-ghost/80 font-medium">Mobile-Responsive Store</span></div>
+                        <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary dark:text-robin text-xl">check_circle</span><span class="text-oxford/80 dark:text-ghost/80 font-medium">Analytics Dashboard</span></div>
+                    </div>
                 </div>
-</div>
+                <div class="mb-10">
+                    <h3 class="text-2xl font-bold text-oxford dark:text-white mb-6">Deliverables</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">01.</span><span class="text-oxford dark:text-ghost/90">Custom E-Commerce Design (Not Template)</span></li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">02.</span><span class="text-oxford dark:text-ghost/90">Up to 25 Product Listings (Client Provides Content)</span></li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">03.</span><span class="text-oxford dark:text-ghost/90">Malaysian Payment Gateway (FPX, Credit Card, eWallet)</span></li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">04.</span><span class="text-oxford dark:text-ghost/90">Inventory &amp; Order Management</span></li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">05.</span><span class="text-oxford dark:text-ghost/90">GA4 Analytics Setup</span></li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">06.</span><span class="text-oxford dark:text-ghost/90">Full On-Page SEO (All Pages)</span></li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">07.</span><span class="text-oxford dark:text-ghost/90">Hosting &amp; SSL (1st Year Included)</span></li>
+                        <li class="flex items-start gap-4 p-4 rounded-xl hover:bg-ghost dark:hover:bg-slate-800 transition-colors border border-transparent hover:border-oxford/5"><span class="font-mono text-primary dark:text-robin font-bold">08.</span><span class="text-oxford dark:text-ghost/90">3 Revision Rounds</span></li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 dark:bg-yellow-900/10 p-6 rounded-2xl border border-yellow-200 dark:border-yellow-700/30">
+                    <h4 class="font-bold text-yellow-800 dark:text-yellow-500 mb-2">Terms of Service</h4>
+                    <p class="text-sm text-yellow-700 dark:text-yellow-600/80">40% deposit, 40% mid-milestone, 20% upon launch.</p>
+                </div>
+            </div>
+            <div class="lg:w-1/3 w-full lg:sticky lg:top-32">
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-2xl border border-oxford/10 dark:border-white/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-3"><div class="w-20 h-20 bg-primary/5 rounded-full blur-2xl"></div></div>
+                    <p class="text-sm font-semibold text-oxford/50 dark:text-ghost/50 uppercase tracking-wider mb-2">One-time</p>
+                    <div class="flex items-baseline gap-1 mb-6"><span class="text-4xl lg:text-5xl font-bold text-oxford dark:text-white">RM 5,988</span></div>
+                    <p class="text-oxford/60 dark:text-ghost/60 text-sm mb-8 leading-relaxed">Ready to move forward? Book a consultation to discuss your specific requirements and get started.</p>
+                    <a href="/contact/" class="cta-expand group relative flex items-center justify-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-4 rounded-xl font-bold text-sm w-full"><span class="z-10 group-hover:text-white transition-colors">Book Consultation</span><div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center"><span class="material-symbols-outlined text-white text-sm">arrow_forward</span></div></a>
+                    <div class="mt-6 text-center"><a href="/contact/" class="text-sm text-primary hover:underline">Or contact sales team</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-<!-- Supporting Growth Services (Subtler Section) -->
-<section class="max-w-7xl mx-auto px-6 mb-32">
-<div class="flex flex-col md:flex-row items-center justify-between gap-8 py-16 border-t border-timberwolf/30">
-<div class="max-w-md">
-<h3 class="text-2xl font-bold text-marian-blue mb-4">Supporting Growth Services</h3>
-<p class="text-marian-blue/60 text-sm">Targeted marketing and brand services to accelerate the systems we build.</p>
-</div>
-<div class="flex flex-wrap gap-6">
-<div class="bg-white p-6 rounded-xl border border-timberwolf/20 flex gap-4 items-center w-72 group hover:border-azure/40 transition-all">
-<span class="material-symbols-outlined text-azure text-3xl">ads_click</span>
-<div>
-<h5 class="font-bold text-marian-blue text-sm">Performance Ads</h5>
-<p class="text-xs text-marian-blue/50">ROAS-focused paid media</p>
-</div>
-</div>
-<div class="bg-white p-6 rounded-xl border border-timberwolf/20 flex gap-4 items-center w-72 group hover:border-azure/40 transition-all">
-<span class="material-symbols-outlined text-azure text-3xl">groups</span>
-<div>
-<h5 class="font-bold text-marian-blue text-sm">Social Management</h5>
-<p class="text-xs text-marian-blue/50">Brand storytelling &amp; community</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Final CTA Section -->
-<section class="max-w-7xl mx-auto px-6">
-<div class="bg-marian-blue rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
-<div class="absolute inset-0 opacity-10 pointer-events-none">
-<div class="absolute -top-24 -left-24 w-96 h-96 bg-azure rounded-full blur-[100px]"></div>
-<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-robin-egg-blue rounded-full blur-[100px]"></div>
-</div>
-<div class="relative z-10">
-<h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Need help choosing?</h2>
-<p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Not sure which track is right for your business? Consult our AI Digital Architect for a custom recommendation tailored to your growth goals.
-                    </p>
-<div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
-<button class="w-full md:w-auto bg-azure text-white px-10 py-4 rounded-full font-bold shadow-lg shadow-azure/20 hover:scale-105 transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">psychology</span>
-                            Ask AI Digital Architect
-                        </button>
-<button class="w-full md:w-auto bg-white text-marian-blue px-10 py-4 rounded-full font-bold hover:bg-timberwolf transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">calendar_month</span>
-                            Book Cal.com Audit
-                        </button>
-</div>
-<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-6 py-2.5 rounded-full">
-<span class="material-symbols-outlined text-xanthous text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
-<span class="text-xs font-bold text-white uppercase tracking-widest">Limited technical audit slots this week</span>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-oxford-blue w-full rounded-t-xl">
-<div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="col-span-1 md:col-span-1">
-<div class="text-2xl font-bold text-white mb-6">JXING Tech</div>
-<p class="text-timberwolf text-sm leading-relaxed mb-6">
-                    A global digital powerhouse specializing in strategic software, AI automation, and performance-led market expansion.
-                </p>
-</div>
-<div>
-<h5 class="text-white font-medium mb-6">Services</h5>
-<ul class="space-y-4">
-<li><a class="text-timberwolf hover:text-azure transition-colors text-sm" href="/services/custom-web-apps">App Engineering</a></li>
-<li><a class="text-timberwolf hover:text-azure transition-colors text-sm" href="/services/automation-workflow">AI Automation</a></li>
-<li><a class="text-timberwolf hover:text-azure transition-colors text-sm" href="/services/website-solutions">Web Systems</a></li>
-<li><a class="text-timberwolf hover:text-azure transition-colors text-sm" href="/services/seo-aio-growth">SEO &amp; AIO Growth</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-white font-medium mb-6">Company</h5>
-<ul class="space-y-4">
-<li><a class="text-timberwolf hover:text-azure transition-colors text-sm" href="#">Cloud Operations</a></li>
-<li><a class="text-timberwolf hover:text-azure transition-colors text-sm" href="#">Privacy Policy</a></li>
-<li><a class="text-timberwolf hover:text-azure transition-colors text-sm" href="#">Terms of Service</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-white font-medium mb-6">Newsletter</h5>
-<p class="text-timberwolf text-xs mb-4">Get the latest strategic insights.</p>
-<form class="flex gap-2">
-<input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white text-sm w-full focus:outline-none focus:ring-1 focus:ring-azure" placeholder="Email" type="email"/>
-<button class="bg-azure text-white p-2 rounded-lg hover:opacity-80 transition-all">
-<span class="material-symbols-outlined">send</span>
-</button>
-</form>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-8 py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="text-timberwolf text-xs">Â© 2024 JXING Tech. Strategic Technology Partner.</p>
-<div class="flex gap-6">
-<a class="text-white hover:text-azure transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
-<a class="text-white hover:text-azure transition-colors" href="#"><span class="material-symbols-outlined text-lg">terminal</span></a>
-<a class="text-white hover:text-azure transition-colors" href="#"><span class="material-symbols-outlined text-lg">shield</span></a>
-</div>
-</div>
+
+<footer class="bg-oxford text-white py-16 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div><div class="flex items-center gap-2 mb-4"><div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold">X</div><span class="text-xl font-bold">JXING</span></div><p class="text-sm text-ghost/50 leading-relaxed max-w-xs">JXING Tech is a custom web application and digital systems partner focused on engineering outstanding prosperity.</p></div>
+            <div><h4 class="font-bold mb-6">Services</h4><ul class="space-y-3 text-sm text-ghost/50"><li><a class="hover:text-primary" href="/services/website-solutions/">Website Solutions</a></li><li><a class="hover:text-primary" href="/services/automation-workflow/">AI &amp; Automation</a></li><li><a class="hover:text-primary" href="/services/growth-seo/">SEO &amp; Growth</a></li><li><a class="hover:text-primary" href="/services/performance-ads/">Performance Ads</a></li></ul></div>
+            <div><h4 class="font-bold mb-6">Company</h4><ul class="space-y-3 text-sm text-ghost/50"><li><a class="hover:text-primary" href="/company/">About JXING</a></li><li><a class="hover:text-primary" href="/case-studies/">Case Studies</a></li><li><a class="hover:text-primary" href="/career/">Careers</a></li><li><a class="hover:text-primary" href="/news/">News</a></li></ul></div>
+            <div><h4 class="font-bold mb-6">Contact</h4><ul class="space-y-3 text-sm text-ghost/50"><li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">mail</span> hello@jxingtech.com</li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">phone</span> +60 10-288 2827</li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">location_on</span> Kuala Lumpur, Malaysia</li></ul></div>
+        </div>
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-ghost/30">
+            <p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
+            <div class="flex gap-6"><a class="hover:text-white" href="/privacy-policy/">Privacy Policy</a><a class="hover:text-white" href="/terms-of-service/">Terms of Service</a><a class="hover:text-white" href="/help/">Help</a></div>
+        </div>
+    </div>
 </footer>
-<!-- Micro-interactions Script -->
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.service-card');
-            
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = `all 0.6s cubic-bezier(0.22, 1, 0.36, 1) ${index * 0.1}s`;
-                observer.observe(card);
-            });
-        });
-    </script>
-</body></html>
+</body>
+</html>

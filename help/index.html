@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<link rel="canonical" href="https://www.jxingtech.com">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>JXING Tech | Custom Web Applications &amp; Digital Systems Partner</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Help &amp; Support | JXING Tech - Strategic Technology Partner</title>
+    <meta content="Get help and support from JXING Tech. Find answers to frequently asked questions, contact support, and access technical resources." name="description"/>
+    <link href="https://www.jxingtech.com/help" rel="canonical"/>
+    
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -38,12 +45,11 @@
             },
         }
     </script>
-<style>
+    <style>
         body { font-family: 'Poppins', sans-serif; background-color: #F0F3F9; }
         .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.3); }
         .dark .glass { background: rgba(10, 22, 64, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); }
         .glass-dark { background: rgba(10, 22, 64, 0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        
         .cta-expand {
             position: relative;
             overflow: hidden;
@@ -59,567 +65,322 @@
             border-radius: 0;
         }
         .cta-expand span { position: relative; z-index: 10; }
-        
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-
         .scroll-reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
         .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="text-oxford dark:text-ghost transition-colors duration-300">
+
 <!-- TopAppBar Navigation -->
 <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] max-w-7xl">
-<div class="glass h-16 px-6 flex items-center justify-between rounded-full shadow-lg border border-white/40 dark:border-slate-700/30">
-<!-- Brand Logo -->
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold">X</div>
-<span class="text-xl font-bold tracking-tight text-oxford dark:text-white">JXING</span>
-</div>
-<!-- Desktop Nav Links -->
-<div class="hidden lg:flex items-center gap-6 text-sm font-medium">
-<a class="text-primary font-semibold" href="#">Company</a>
-<a class="hover:text-primary transition-colors" href="#">Services</a>
-<a class="hover:text-primary transition-colors" href="#">Pillars</a>
-<a class="hover:text-primary transition-colors" href="#">Pricing</a>
-<a class="hover:text-primary transition-colors" href="#">Case Studies</a>
-<a class="hover:text-primary transition-colors" href="#">Resources</a>
-<a class="hover:text-primary transition-colors" href="#">Tech Stack</a>
-</div>
-<!-- Actions -->
-<div class="flex items-center gap-4">
-<button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
-<span class="material-symbols-outlined block dark:hidden">dark_mode</span>
-<span class="material-symbols-outlined hidden dark:block">light_mode</span>
-</button>
-<button class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm">
-<span class="z-10 group-hover:text-white transition-colors">Get In Touch</span>
-<div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
-</div>
-</button>
-</div>
-</div>
+    <div class="glass h-16 px-6 flex items-center justify-between rounded-full shadow-lg border border-white/40 dark:border-slate-700/30">
+        <!-- Brand Logo -->
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold">X</div>
+            <span class="text-xl font-bold tracking-tight text-oxford dark:text-white">JXING</span>
+        </div>
+        <!-- Desktop Nav Links -->
+        <div class="hidden lg:flex items-center gap-6 text-sm font-medium">
+            <a class="hover:text-primary transition-colors" href="/company/">Company</a>
+            <a class="hover:text-primary transition-colors" href="/services/">Services</a>
+            <a class="hover:text-primary transition-colors" href="/pricing/">Pricing Plans</a>
+            <a class="hover:text-primary transition-colors" href="/case-studies/">Case Studies</a>
+            <a class="hover:text-primary transition-colors" href="/news/">News</a>
+            <a class="hover:text-primary transition-colors" href="/contact/">Contact</a>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+            <button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+                <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+                <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+            </button>
+            <a href="/contact/" class="cta-expand group relative flex items-center gap-2 bg-oxford dark:bg-white text-white dark:text-oxford px-6 py-2.5 rounded-full font-semibold text-sm">
+                <span class="z-10 group-hover:text-white transition-colors">Get In Touch</span>
+                <div class="icon-box absolute right-1 w-8 h-8 rounded-full flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white text-sm">arrow_forward</span>
+                </div>
+            </a>
+        </div>
+    </div>
 </nav>
+
 <!-- Hero Section -->
 <section class="relative pt-44 pb-24 overflow-hidden">
-<div class="absolute inset-0 -z-10">
-<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-50 animate-pulse"></div>
-<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-robin/10 rounded-full blur-3xl opacity-50"></div>
-</div>
-<div class="max-w-7xl mx-auto px-6 text-center">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-bold uppercase tracking-wider mb-8">
-<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
-            Outpace Your Competition. Built for Digital Dominance
-        </div>
-<h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-oxford dark:text-white leading-[1.1] mb-8 max-w-5xl mx-auto">
-            Custom Web Applications &amp; Digital Systems Built to <span class="text-primary italic">Scale</span>
-</h1>
-<p class="text-lg md:text-xl text-oxford/70 dark:text-ghost/70 max-w-3xl mx-auto mb-10 leading-relaxed">
-            JXING Tech designs, builds, automates, and operates web-based platforms for businesses that need reliable software, workflows, and growth infrastructure â not just a website.
+    <div class="absolute inset-0 -z-10">
+        <img alt="We are JXING Support team" class="absolute inset-0 w-full h-full object-cover filter brightness-[0.35]" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-oxford/10 to-oxford/70"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center text-white">
+        <!-- Breadcrumb -->
+        <nav class="flex justify-center mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-white/10">
+                <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+                <li class="flex items-center"><span class="mx-2 opacity-50">/</span><span class="opacity-80">Help &amp; Support</span></li>
+            </ol>
+        </nav>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 max-w-5xl mx-auto">
+            Help &amp; <span class="text-primary italic">Support</span>
+        </h1>
+        <p class="text-lg md:text-xl text-ghost/90 max-w-3xl mx-auto leading-relaxed">
+            Get the help you need. Whether it's a consultation, a support ticket, or a quick question — we're here for you.
         </p>
-<!-- Proof Chips / Hero Pills -->
-<div class="flex flex-wrap justify-center gap-3 mb-12">
-<span class="px-5 py-2 rounded-full border border-timberwolf dark:border-slate-700 text-sm font-medium">Custom Web Applications</span>
-<span class="px-5 py-2 rounded-full border border-timberwolf dark:border-slate-700 text-sm font-medium">E-Commerce Systems</span>
-<span class="px-5 py-2 rounded-full border border-timberwolf dark:border-slate-700 text-sm font-medium">AI Workflow Automation</span>
-<span class="px-5 py-2 rounded-full border border-timberwolf dark:border-slate-700 text-sm font-medium">Cloud Operations</span>
-<span class="px-5 py-2 rounded-full border border-timberwolf dark:border-slate-700 text-sm font-medium">SEO / AIO / GEO Growth</span>
-</div>
-<!-- CTAs -->
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-<button class="cta-expand group relative flex items-center justify-between gap-8 bg-marian text-white pl-8 pr-1 py-4 rounded-full font-bold text-lg min-w-[240px] shadow-xl shadow-marian/20">
-<span class="z-10">Start Technical Audit</span>
-<div class="icon-box w-12 h-12 rounded-full flex items-center justify-center bg-primary">
-<span class="material-symbols-outlined text-white">bolt</span>
-</div>
-</button>
-<button class="px-8 py-4 rounded-full border border-oxford/20 dark:border-white/20 font-bold hover:bg-oxford/5 dark:hover:bg-white/5 transition-all text-lg">
-                Explore Capabilities
-            </button>
-</div>
-<!-- Hero Visual -->
-<div class="relative max-w-5xl mx-auto mt-8 scroll-reveal">
-<div class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-robin/20 rounded-3xl blur-2xl opacity-40"></div>
-<div class="relative glass rounded-3xl p-4 shadow-2xl overflow-hidden group">
-<img alt="JXING Strategic Tech Dashboard" class="w-full rounded-2xl shadow-lg border border-white/20 transition-transform duration-700 group-hover:scale-[1.01]" src="https://lh3.googleusercontent.com/aida/AP1WRLub2_sWZwkvG5ZLlBRgsCqH63wPGdP5EP6sFch5G4qBw8qKeuO3Ujv1y1NpxPpVixYldbqM352uAlAZLm2cZAUB7OsIFOa752gD7TzE2_uJPpADdjpZ9h4X0Rlv-jJNhUftZ0xpSzzKSl3EhAHEx9HX0DM71YjfRVtpGueRdFcSqwk7SSEp3D00hp2LnQ8--hWPLidLnqpY4to7jjU6s0aOiTl-FO7jiKB6uJaaqLCpGd_psG1z8KFG28c"/>
-<!-- Floating Overlay: AI Chat Bubble -->
-<div class="absolute bottom-10 right-10 w-72 glass-dark p-4 rounded-2xl border border-white/10 shadow-2xl animate-bounce duration-[3000ms]">
-<div class="flex items-center gap-3 mb-3">
-<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-white text-xs" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
-</div>
-<p class="text-[10px] uppercase font-bold tracking-widest text-primary">System Architect</p>
-</div>
-<p class="text-xs text-white/90 leading-relaxed">Infrastructure check complete. Database latency optimized. System ready for peak traffic...</p>
-</div>
-</div>
-</div>
-</div>
+    </div>
 </section>
-<!-- Partners Carousel -->
-<section class="py-12 bg-white dark:bg-oxford/30 border-y border-timberwolf/20 dark:border-white/5 overflow-hidden">
-<div class="max-w-7xl mx-auto px-6 mb-8 text-center">
-<p class="text-xs font-bold text-oxford/40 dark:text-ghost/40 uppercase tracking-[0.2em]">Our Global Strategic Presence &amp; Partnerships</p>
-</div>
-<div class="flex overflow-hidden group">
-<div class="flex gap-16 animate-infinite-scroll group-hover:pause py-4">
-<!-- Partner placeholders -->
-<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">AWS</div>
-<span class="font-semibold text-slate-400 text-sm">Select Tier</span>
-</div>
-<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">G</div>
-<span class="font-semibold text-slate-400 text-sm">Cloud Platform</span>
-</div>
-<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold text-blue-600">V</div>
-<span class="font-semibold text-slate-400 text-sm">Vercel Enterprise</span>
-</div>
-<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">MS</div>
-<span class="font-semibold text-slate-400 text-sm">Microsoft Azure</span>
-</div>
-<!-- Duplicate for seamless scroll -->
-<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">AWS</div>
-<span class="font-semibold text-slate-400 text-sm">Select Tier</span>
-</div>
-<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold">G</div>
-<span class="font-semibold text-slate-400 text-sm">Cloud Platform</span>
-</div>
-<div class="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer">
-<div class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center font-bold text-blue-600">V</div>
-<span class="font-semibold text-slate-400 text-sm">Vercel Enterprise</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Service Continuity (The Lifecycle) -->
-<section class="py-20 bg-ghost/50 dark:bg-oxford/20">
-<div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col items-center text-center mb-16">
-<div class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4">System Lifecycle</div>
-<h2 class="text-3xl font-bold mb-6">Our Engineering Methodology</h2>
-<div class="w-full overflow-x-auto pb-4">
-<div class="flex justify-between items-center min-w-[800px] relative px-10">
-<div class="absolute top-1/2 left-0 w-full h-[1px] bg-timberwolf dark:bg-white/10 -z-10"></div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</div>
-<span class="text-xs font-bold uppercase tracking-widest">Diagnose</span>
-</div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div>
-<span class="text-xs font-bold uppercase tracking-widest">Blueprint</span>
-</div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</div>
-<span class="text-xs font-bold uppercase tracking-widest">Build System</span>
-</div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">4</div>
-<span class="text-xs font-bold uppercase tracking-widest">Automate</span>
-</div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">5</div>
-<span class="text-xs font-bold uppercase tracking-widest">Grow</span>
-</div>
-<div class="flex flex-col items-center gap-3 bg-[#F0F3F9] dark:bg-[#0f1a23] px-4">
-<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold">6</div>
-<span class="text-xs font-bold uppercase tracking-widest">Operate</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Core Solutions / Service Hierarchy -->
-<section class="py-24 max-w-7xl mx-auto px-6">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-<div class="max-w-2xl">
-<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-4">
-<span class="w-2 h-2 rounded-full bg-primary"></span> Custom Web Application &amp; Digital Systems Partner
-            </div>
-<h2 class="text-3xl md:text-5xl font-bold text-oxford dark:text-white leading-tight">High-performance engineering for the modern enterprise.</h2>
-</div>
-<p class="text-oxford/50 dark:text-ghost/50 max-w-xs text-sm">We provide a unified layer of software, automation, and infrastructure to eliminate friction and maximize growth.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- 1. Custom Web Application Development -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-3xl">developer_mode_tv</span>
-</div>
-<h3 class="text-xl font-bold mb-4">1. Custom Web App Development</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Building complex SaaS platforms, portals, and internal tools with modern stacks like Next.js, Node, and Python.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Enterprise Apps</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">SaaS Architecture</span>
-</div>
-</div>
-<!-- 2. Website & E-Commerce Systems -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-3xl">shopping_cart</span>
-</div>
-<h3 class="text-xl font-bold mb-4">2. Website &amp; E-Commerce Systems</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Scalable e-commerce engines and conversion-optimized web systems that handle heavy transactional volume.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Headless Commerce</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Conversion Focus</span>
-</div>
-</div>
-<!-- 3. AI & Workflow Automation -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-robin/10 rounded-2xl flex items-center justify-center mb-6 text-robin">
-<span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
-</div>
-<h3 class="text-xl font-bold mb-4">3. AI &amp; Workflow Automation</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Deploying custom AI agents and autonomous LLM workflows that integrate deeply with your existing business logic.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Agentic AI</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Process Automation</span>
-</div>
-</div>
-<!-- 4. Cloud Operations & Maintenance -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-marian/10 rounded-2xl flex items-center justify-center mb-6 text-marian">
-<span class="material-symbols-outlined text-3xl">cloud_sync</span>
-</div>
-<h3 class="text-xl font-bold mb-4">4. Cloud Ops &amp; Maintenance</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Fully managed hosting, security monitoring, and 99.9% uptime guarantees for your critical digital infrastructure.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Managed Cloud</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Security Ops</span>
-</div>
-</div>
-<!-- 5. SEO, AIO/GEO & Growth Infrastructure -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-xanthous/10 rounded-2xl flex items-center justify-center mb-6 text-xanthous">
-<span class="material-symbols-outlined text-3xl">query_stats</span>
-</div>
-<h3 class="text-xl font-bold mb-4">5. SEO, AIO/GEO &amp; Growth Infra</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Building technical foundations for search visibility, AI-Overviews (AIO), and Generative Engine Optimization (GEO).</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Entity SEO</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Search Intent</span>
-</div>
-</div>
-<!-- 6. Technical Audits & Strategy -->
-<div class="glass p-8 rounded-3xl border-l-4 border-l-primary hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 scroll-reveal">
-<div class="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 text-primary">
-<span class="material-symbols-outlined text-3xl">analytics</span>
-</div>
-<h3 class="text-xl font-bold mb-4">6. Technical Audits &amp; Strategy</h3>
-<p class="text-oxford/60 dark:text-ghost/60 text-sm leading-relaxed mb-6">Fractional CTO services and deep-dive technical audits to identify security leaks and performance bottlenecks.</p>
-<div class="flex gap-2 flex-wrap">
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">Fractional CTO</span>
-<span class="px-3 py-1 bg-ghost dark:bg-slate-800 rounded-lg text-[10px] font-bold uppercase">System Audit</span>
-</div>
-</div>
-</div>
-<!-- Supporting Growth Services (Secondary Marketing) -->
-<div class="mt-20 p-10 rounded-3xl border border-timberwolf/30 dark:border-white/10 bg-white/30 dark:bg-white/5 scroll-reveal">
-<h4 class="text-lg font-bold mb-8 text-center uppercase tracking-widest text-oxford/40 dark:text-white/40">Supporting Growth Services</h4>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-<div class="flex items-start gap-4">
-<div class="p-2 bg-marian/10 rounded-xl text-marian">
-<span class="material-symbols-outlined">ads_click</span>
-</div>
-<div>
-<h5 class="font-bold mb-1">Performance Ads</h5>
-<p class="text-xs text-oxford/60 dark:text-ghost/60">Multi-channel paid acquisition to fuel the systems we build for you.</p>
-</div>
-</div>
-<div class="flex items-start gap-4">
-<div class="p-2 bg-robin/10 rounded-xl text-robin">
-<span class="material-symbols-outlined">group</span>
-</div>
-<div>
-<h5 class="font-bold mb-1">Brand &amp; Social Authority</h5>
-<p class="text-xs text-oxford/60 dark:text-ghost/60">Content and social strategy to establish market dominance and trust.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Strategic Pillars -->
-<section class="py-24 bg-oxford text-white relative overflow-hidden">
-<div class="absolute inset-0 opacity-10 pointer-events-none">
-<div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, #FFFFFF 1px, transparent 0); background-size: 40px 40px;"></div>
-</div>
-<div class="max-w-7xl mx-auto px-6 relative z-10">
-<div class="text-center mb-20 scroll-reveal">
-<h2 class="text-3xl md:text-5xl font-bold mb-6">The Five Pillars of <span class="text-primary">JXING Tech</span></h2>
-<p class="text-ghost/60 max-w-2xl mx-auto">Our methodology for transforming business requirements into market-dominating digital systems.</p>
-</div>
-<div class="flex flex-col lg:flex-row gap-8">
-<!-- Pillar 1 -->
-<div class="flex-1 glass-dark border border-white/10 p-10 rounded-[2.5rem] group hover:bg-marian/50 transition-all duration-500 scroll-reveal">
-<div class="text-5xl font-bold text-white/10 mb-8 group-hover:text-primary transition-colors">01</div>
-<h3 class="text-xl font-bold mb-4">Architecture &amp; Launch Strategy</h3>
-<p class="text-ghost/50 text-sm leading-loose">We design systems with the end in mind. Every project begins with an architectural blueprint aligned with your business roadmap.</p>
-</div>
-<!-- Pillar 2 -->
-<div class="flex-1 glass-dark border border-white/10 p-10 rounded-[2.5rem] group hover:bg-marian/50 transition-all duration-500 scroll-reveal">
-<div class="text-5xl font-bold text-white/10 mb-8 group-hover:text-primary transition-colors">02</div>
-<h3 class="text-xl font-bold mb-4">Full-Stack Application Engineering</h3>
-<p class="text-ghost/50 text-sm leading-loose">Battle-tested code that prioritizes speed, security, and the flexibility to pivot as your business evolves.</p>
-</div>
-<!-- Pillar 3 -->
-<div class="flex-1 glass-dark border border-white/10 p-10 rounded-[2.5rem] group hover:bg-marian/50 transition-all duration-500 scroll-reveal">
-<div class="text-5xl font-bold text-white/10 mb-8 group-hover:text-primary transition-colors">03</div>
-<h3 class="text-xl font-bold mb-4">Enterprise AI &amp; Agentic Automation</h3>
-<p class="text-ghost/50 text-sm leading-loose">Deploying custom LLMs and autonomous agents that learn your business logic to replace human-intensive friction with efficiency.</p>
-</div>
-</div>
-<div class="flex flex-col lg:flex-row gap-8 mt-8">
-<div class="flex-[1.5] glass-dark border border-white/10 p-10 rounded-[2.5rem] group hover:bg-marian/50 transition-all duration-500 scroll-reveal">
-<div class="text-5xl font-bold text-white/10 mb-8 group-hover:text-primary transition-colors">04</div>
-<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-<div class="max-w-md">
-<h3 class="text-xl font-bold mb-4">SEO/AIO Growth Infrastructure</h3>
-<p class="text-ghost/50 text-sm leading-loose">Bridging the gap between engineering and visibility. We build the growth engines that funnel high-intent users into your systems.</p>
-</div>
-<div class="flex gap-4">
-<div class="text-center">
-<div class="text-2xl font-bold text-primary">#1</div>
-<div class="text-[10px] uppercase text-ghost/40">Rank Goal</div>
-</div>
-<div class="text-center">
-<div class="text-2xl font-bold text-primary">99%</div>
-<div class="text-[10px] uppercase text-ghost/40">Search Coverage</div>
-</div>
-</div>
-</div>
-</div>
-<div class="flex-1 glass-dark border border-white/10 p-10 rounded-[2.5rem] group hover:bg-marian/50 transition-all duration-500 scroll-reveal">
-<div class="text-5xl font-bold text-white/10 mb-8 group-hover:text-primary transition-colors">05</div>
-<h3 class="text-xl font-bold mb-4">Cloud Operations &amp; Maintenance</h3>
-<p class="text-ghost/50 text-sm leading-loose">Proactive monitoring and constant optimization. Your system grows with you, managed by experts who built it.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- AI Architect Section -->
-<section class="py-24 max-w-7xl mx-auto px-6 scroll-reveal">
-<div class="glass rounded-[3rem] p-12 lg:p-20 relative overflow-hidden">
-<div class="absolute top-0 right-0 w-1/2 h-full -z-10 opacity-20">
-<div class="w-full h-full bg-gradient-to-l from-primary to-transparent"></div>
-</div>
-<div class="grid lg:grid-cols-2 gap-16 items-center">
-<div>
-<div class="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-6">
-                    Interactive Assessment
+
+<!-- Support Options -->
+<section class="py-24 bg-ghost dark:bg-oxford transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            <!-- Option 1 -->
+            <div class="glass p-10 rounded-[2.5rem] border border-timberwolf/20 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 flex flex-col justify-between items-start">
+                <div class="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8">
+                    <span class="material-symbols-outlined text-3xl">calendar_today</span>
                 </div>
-<h2 class="text-4xl font-bold text-oxford dark:text-white mb-8">Consult with our AI System Architect.</h2>
-<p class="text-oxford/60 dark:text-ghost/60 mb-10 leading-relaxed">Describe your technical requirements, and our AI model (trained on modern engineering frameworks and market data) will draft a preliminary technology roadmap and system architecture for you instantly.</p>
-<div class="space-y-6">
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-sm">check_circle</span>
-</div>
-<p class="text-sm font-medium">Free Tech-Stack Vulnerability Scan</p>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-sm">check_circle</span>
-</div>
-<p class="text-sm font-medium">Infrastructure Cost Analysis</p>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-sm">check_circle</span>
-</div>
-<p class="text-sm font-medium">Automation Opportunity Report</p>
-</div>
-</div>
-</div>
-<div class="bg-white dark:bg-oxford shadow-2xl rounded-3xl p-8 border border-timberwolf/50 dark:border-white/10">
-<div class="flex items-center gap-3 mb-8 border-b border-timberwolf/20 pb-4">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
-</div>
-<div>
-<p class="font-bold text-sm">Strategy Assistant</p>
-<p class="text-[10px] text-oxford/40 dark:text-ghost/40">Online and ready</p>
-</div>
-</div>
-<div class="space-y-4 mb-8">
-<div class="bg-ghost dark:bg-slate-800 p-4 rounded-2xl rounded-tl-none mr-12">
-<p class="text-xs">Hello! I'm the JXING Digital Architect. What's the primary goal for your next technical initiative?</p>
-</div>
-<div class="flex flex-wrap gap-2">
-<button class="px-4 py-2 border border-primary/30 rounded-full text-xs hover:bg-primary hover:text-white transition-all">Build Custom SaaS</button>
-<button class="px-4 py-2 border border-primary/30 rounded-full text-xs hover:bg-primary hover:text-white transition-all">Automate Ops</button>
-<button class="px-4 py-2 border border-primary/30 rounded-full text-xs hover:bg-primary hover:text-white transition-all">Migrate to Cloud</button>
-</div>
-</div>
-<div class="relative">
-<input class="w-full px-6 py-4 rounded-2xl border border-timberwolf dark:border-slate-700 bg-transparent text-sm focus:ring-primary focus:border-primary" placeholder="Describe your project goal..." type="text"/>
-<button class="absolute right-2 top-2 w-10 h-10 bg-primary rounded-xl text-white flex items-center justify-center">
-<span class="material-symbols-outlined text-sm">send</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Resources -->
-<section class="py-24 max-w-7xl mx-auto px-6">
-<div class="text-center mb-16 scroll-reveal">
-<h2 class="text-3xl md:text-5xl font-bold mb-6 text-oxford dark:text-white">Gated Intelligence.</h2>
-<p class="text-oxford/50 dark:text-ghost/50">Technical frameworks for engineering-led growth.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 border border-timberwolf/30 dark:border-white/5 overflow-hidden scroll-reveal">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-4xl">download_for_offline</span>
-</div>
-<div class="text-xs font-bold text-primary mb-4">Technical Blueprint</div>
-<h3 class="text-lg font-bold mb-4">SaaS Stack 2025</h3>
-<p class="text-xs text-oxford/60 dark:text-ghost/60 mb-8 leading-relaxed">Our internal guide for selecting high-scale cloud architectures.</p>
-<button class="text-sm font-bold text-oxford dark:text-white group-hover:text-primary flex items-center gap-2">Download <span class="material-symbols-outlined text-sm">arrow_right_alt</span></button>
-</div>
-<div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 border border-timberwolf/30 dark:border-white/5 overflow-hidden scroll-reveal">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-4xl">lock</span>
-</div>
-<div class="text-xs font-bold text-robin mb-4">Security Whitepaper</div>
-<h3 class="text-lg font-bold mb-4">Zero-Trust Apps</h3>
-<p class="text-xs text-oxford/60 dark:text-ghost/60 mb-8 leading-relaxed">Securing custom web applications against the top 10 OWASP threats.</p>
-<button class="text-sm font-bold text-oxford dark:text-white group-hover:text-primary flex items-center gap-2">Download <span class="material-symbols-outlined text-sm">arrow_right_alt</span></button>
-</div>
-<div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 border border-timberwolf/30 dark:border-white/5 overflow-hidden scroll-reveal">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-4xl">bolt</span>
-</div>
-<div class="text-xs font-bold text-xanthous mb-4">AI Framework</div>
-<h3 class="text-lg font-bold mb-4">Agentic Automation</h3>
-<p class="text-xs text-oxford/60 dark:text-ghost/60 mb-8 leading-relaxed">How to integrate LLM agents into your existing CRM and ERP systems.</p>
-<button class="text-sm font-bold text-oxford dark:text-white group-hover:text-primary flex items-center gap-2">Download <span class="material-symbols-outlined text-sm">arrow_right_alt</span></button>
-</div>
-<div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 border border-timberwolf/30 dark:border-white/5 overflow-hidden scroll-reveal">
-<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-100 transition-opacity">
-<span class="material-symbols-outlined text-4xl">cloud_done</span>
-</div>
-<div class="text-xs font-bold text-primary mb-4">Cloud Ops</div>
-<h3 class="text-lg font-bold mb-4">Serverless Scaling</h3>
-<p class="text-xs text-oxford/60 dark:text-ghost/60 mb-8 leading-relaxed">Maximizing system availability while minimizing cloud infrastructure costs.</p>
-<button class="text-sm font-bold text-oxford dark:text-white group-hover:text-primary flex items-center gap-2">Download <span class="material-symbols-outlined text-sm">arrow_right_alt</span></button>
-</div>
-</div>
-</section>
-<!-- Final CTA -->
-<section class="py-24 bg-marian text-white">
-<div class="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
-<div class="px-4 py-1 bg-primary/20 border border-primary/30 rounded-full text-[10px] font-bold tracking-widest uppercase mb-8">
-            Ready to build your next growth system?
+                <h3 class="text-2xl font-bold text-oxford dark:text-white mb-4">Book a Consultation</h3>
+                <p class="text-oxford/70 dark:text-ghost/75 mb-8 leading-relaxed">
+                    Schedule a 1-on-1 session with our strategists to discuss new projects, feature requests, or business growth roadmaps.
+                </p>
+                <a href="/contact/" class="cta-expand inline-flex items-center justify-center transition-all duration-300 font-semibold text-[15px] rounded-xl relative overflow-hidden bg-primary text-white p-1.5 ps-1.5 pe-6 shadow-lg mt-auto">
+                    <span class="absolute start-0 top-0 bottom-0 w-12 rounded-lg bg-white transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:w-full"></span>
+                    <span class="relative z-10 flex items-center gap-3">
+                        <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-white text-primary">
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </span>
+                        <span class="font-semibold text-[15px] tracking-wide transition-colors duration-300 group-hover:text-primary">Schedule Now</span>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Option 2 -->
+            <div class="glass p-10 rounded-[2.5rem] border border-timberwolf/20 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 flex flex-col justify-between items-start">
+                <div class="w-16 h-16 rounded-2xl bg-robin/10 text-robin flex items-center justify-center mb-8">
+                    <span class="material-symbols-outlined text-3xl">dashboard</span>
+                </div>
+                <h3 class="text-2xl font-bold text-oxford dark:text-white mb-4">Client Dashboard</h3>
+                <p class="text-oxford/70 dark:text-ghost/75 mb-8 leading-relaxed">
+                    Active clients can log in to their dashboard to submit support tickets, track project progress, and access technical resources.
+                </p>
+                <a href="https://client-dashboard.jxing.my/" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl border border-primary text-primary hover:bg-primary hover:text-white transition-all font-semibold mt-auto flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-sm">login</span> Client Login
+                </a>
+            </div>
+
+            <!-- Option 3 -->
+            <div class="bg-oxford dark:bg-slate-900 p-10 rounded-[2.5rem] text-white shadow-xl hover:shadow-2xl transition-all hover:-translate-y-2 flex flex-col justify-between items-start border border-white/5">
+                <div class="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-8">
+                    <span class="material-symbols-outlined text-3xl">chat</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Instant Assistance</h3>
+                <p class="text-ghost/80 mb-8 leading-relaxed">
+                    Need a quick answer? Connect with our support representatives instantly via WhatsApp for general inquiries.
+                </p>
+                <a href="https://wa.me/60102882827" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-bold text-robin hover:text-white transition-colors mt-auto text-lg">
+                    Chat on WhatsApp <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
         </div>
-<h2 class="text-4xl md:text-6xl font-bold mb-10 max-w-4xl">Don't just keep up. Own the future of your market.</h2>
-<div class="flex flex-col sm:flex-row items-center gap-4">
-<button class="cta-expand group relative flex items-center justify-between gap-12 bg-white text-oxford pl-8 pr-1 py-4 rounded-full font-bold text-lg min-w-[280px]">
-<span class="z-10 group-hover:text-white transition-colors">Start Technical Audit</span>
-<div class="icon-box w-12 h-12 rounded-full flex items-center justify-center bg-primary">
-<span class="material-symbols-outlined text-white">settings_ethernet</span>
-</div>
-</button>
-<button class="px-8 py-4 rounded-full border border-white/20 font-bold hover:bg-white/10 transition-all">View All Capabilities</button>
-</div>
-<p class="mt-12 text-sm text-ghost/40">Only 2 onboarding slots left for Enterprise Managed Services this month.</p>
-</div>
+
+        <!-- Excellence & Tiers -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-oxford dark:text-white mb-8">Committed to Support Excellence</h2>
+                <p class="text-lg text-oxford/70 dark:text-ghost/70 mb-12 leading-relaxed">
+                    We believe in providing reliable, tier-based support that aligns with your business criticality. Our standard operations ensure coverage during peak business hours, while our enterprise contracts offer around-the-clock peace of mind.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex gap-4 p-6 rounded-3xl bg-white dark:bg-slate-900 shadow-sm border border-timberwolf/10 dark:border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex-shrink-0 flex items-center justify-center">
+                            <span class="material-symbols-outlined">schedule</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-oxford dark:text-white mb-1">Standard Business Hours</h4>
+                            <p class="text-oxford/60 dark:text-ghost/50 text-sm">Monday to Friday, 9:00 AM – 6:00 PM (MYT). All tickets responded to within 24 hours.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 p-6 rounded-3xl bg-white dark:bg-slate-900 shadow-sm border border-timberwolf/10 dark:border-white/5">
+                        <div class="w-12 h-12 rounded-xl bg-robin/10 text-robin flex-shrink-0 flex items-center justify-center">
+                            <span class="material-symbols-outlined">verified_user</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-oxford dark:text-white mb-1">Service Level Agreement</h4>
+                            <p class="text-oxford/60 dark:text-ghost/50 text-sm">Enterprise clients receive prioritised support with guaranteed response times as defined in their MSA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-oxford p-10 rounded-[3rem] text-white relative overflow-hidden shadow-2xl border border-white/5">
+                <div class="absolute top-0 right-0 p-8 opacity-10">
+                    <span class="material-symbols-outlined text-[120px]">help_center</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-8 relative z-10">Support Tiers</h3>
+                <div class="space-y-4 relative z-10">
+                    <div class="bg-white/5 hover:bg-white/10 p-6 rounded-2xl border border-white/10 transition-colors">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-robin text-lg">8x5 Support</span>
+                            <span class="material-symbols-outlined text-ghost/40 text-sm">lock</span>
+                        </div>
+                        <p class="text-sm font-semibold mb-1">Standard Business Hours Coverage</p>
+                        <p class="text-xs text-ghost/50">Ideal for growth-stage businesses.</p>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-6 rounded-2xl border border-white/10 transition-colors">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-robin text-lg">8x6 Support</span>
+                            <span class="material-symbols-outlined text-ghost/40 text-sm">lock</span>
+                        </div>
+                        <p class="text-sm font-semibold mb-1">Mon-Sat Coverage</p>
+                        <p class="text-xs text-ghost/50">Added support for weekend operations.</p>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-6 rounded-2xl border border-white/10 transition-colors">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-bold text-robin text-lg">24x7 Support</span>
+                            <span class="material-symbols-outlined text-ghost/40 text-sm">lock</span>
+                        </div>
+                        <p class="text-sm font-semibold mb-1">Critical Infrastructure Coverage</p>
+                        <p class="text-xs text-ghost/50">Round-the-clock monitoring and response.</p>
+                    </div>
+                </div>
+                <div class="mt-10 p-6 rounded-2xl bg-primary/20 border border-primary/30">
+                    <p class="text-sm italic text-ghost/90">
+                        "Specialized support tiers are assigned based on your service agreement. For information regarding your current tier, please refer to your master service agreement (MSA)."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- FAQs Section -->
+<section class="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
+            <div class="lg:w-1/3">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary mb-6">
+                    FAQ
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-oxford dark:text-white mb-6">Frequently Asked Questions</h2>
+                <p class="text-oxford/70 dark:text-ghost/60">Can't find the answer you're looking for? Reach out to our customer support team.</p>
+            </div>
+            
+            <div class="lg:w-2/3">
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <div class="border rounded-2xl transition-all duration-300 overflow-hidden border-primary bg-ghost/30 dark:bg-slate-900/50">
+                        <button class="flex items-center justify-between w-full p-6 text-left" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-primary dark:text-robin">What is the best way to contact you?</span>
+                            <span class="p-2 rounded-full transition-colors bg-primary text-white flex items-center justify-center">
+                                <span class="material-symbols-outlined text-sm transition-transform duration-300 rotate-180">expand_less</span>
+                            </span>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 text-oxford/70 dark:text-ghost/70 leading-relaxed text-sm">
+                                The contact form on our <a href="/contact/" class="text-primary underline font-semibold">Contact Page</a> is the quickest way to reach the right department. You can also email us directly at hello@jxingtech.com.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="border rounded-2xl transition-all duration-300 overflow-hidden border-timberwolf/45 dark:border-slate-800 bg-transparent">
+                        <button class="flex items-center justify-between w-full p-6 text-left" onclick="toggleFaq(this)">
+                            <span class="font-bold text-lg text-oxford dark:text-white">Do you offer free consultations?</span>
+                            <span class="p-2 rounded-full transition-colors bg-ghost dark:bg-slate-800 text-oxford/50 dark:text-ghost/50 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-sm transition-transform duration-300">expand_more</span>
+                            </span>
+                        </button>
+                        <div class="faq-content max-h-0 hidden transition-all duration-300 ease-in-out">
+                            <p class="px-6 pb-6 text-oxford/70 dark:text-ghost/70 leading-relaxed text-sm">
+                                Yes, we offer a free initial 30-minute consultation to discuss your project requirements, scope, and technical roadmap.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="bg-oxford text-white py-20 border-t border-white/5">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-2 mb-6">
-<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold">X</div>
-<span class="text-xl font-bold tracking-tight">JXING</span>
-</div>
-<p class="text-sm text-ghost/50 leading-relaxed max-w-xs mb-4">JXING Tech (Lucky Star) is a custom web application and digital systems partner focused on engineering outstanding prosperity.</p>
-<p class="text-xs text-ghost/30 italic">"JXING" means Lucky Star (èæ), representing our goal of delivering Outstanding Prosperity through strategic technology.</p>
-</div>
-<div>
-<h4 class="font-bold mb-6">Capabilities</h4>
-<ul class="space-y-4 text-sm text-ghost/50">
-<li><a class="hover:text-primary" href="#">Web App Development</a></li>
-<li><a class="hover:text-primary" href="#">E-Commerce Systems</a></li>
-<li><a class="hover:text-primary" href="#">AI &amp; Automation</a></li>
-<li><a class="hover:text-primary" href="#">Cloud Operations</a></li>
-<li><a class="hover:text-primary" href="#">SEO/AIO Infrastructure</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6">Company</h4>
-<ul class="space-y-4 text-sm text-ghost/50">
-<li><a class="hover:text-primary" href="#">About JXING</a></li>
-<li><a class="hover:text-primary" href="#">Success Stories</a></li>
-<li><a class="hover:text-primary" href="#">Whitepapers</a></li>
-<li><a class="hover:text-primary" href="https://www.jxingtech.com">www.jxingtech.com</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6">Contact</h4>
-<ul class="space-y-4 text-sm text-ghost/50">
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">mail</span> hello@jxingtech.com</li>
-<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">location_on</span> San Francisco, CA</li>
-<li class="pt-4 flex gap-4">
-<div class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-<span class="material-symbols-outlined text-xs">share</span>
-</div>
-<div class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-<span class="material-symbols-outlined text-xs">link</span>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
-<p>Â© 2024 JXING Tech. All Rights Reserved.</p>
-<div class="flex gap-8">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
-</div>
-</div>
-</div>
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold">X</div>
+                    <span class="text-xl font-bold tracking-tight">JXING</span>
+                </div>
+                <p class="text-sm text-ghost/50 leading-relaxed max-w-xs mb-4">JXING Tech (Lucky Star) is a custom web application and digital systems partner focused on engineering outstanding prosperity.</p>
+                <p class="text-xs text-ghost/30 italic">"JXING" means Lucky Star (聚星), representing our goal of delivering Outstanding Prosperity through strategic technology.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Capabilities</h4>
+                <ul class="space-y-4 text-sm text-ghost/50">
+                    <li><a class="hover:text-primary" href="/services/website-solutions/">Website &amp; E-Commerce</a></li>
+                    <li><a class="hover:text-primary" href="/services/automation-workflow/">AI &amp; Automation</a></li>
+                    <li><a class="hover:text-primary" href="/services/growth-seo/">SEO &amp; AI Integration</a></li>
+                    <li><a class="hover:text-primary" href="/services/professional-services/maintenance-support/">Cloud Operations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Company</h4>
+                <ul class="space-y-4 text-sm text-ghost/50">
+                    <li><a class="hover:text-primary" href="/company/">About JXING</a></li>
+                    <li><a class="hover:text-primary" href="/case-studies/">Case Studies</a></li>
+                    <li><a class="hover:text-primary" href="/career/">Careers</a></li>
+                    <li><a class="hover:text-primary" href="/news/">News &amp; Insights</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contact</h4>
+                <ul class="space-y-4 text-sm text-ghost/50">
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">mail</span> hello@jxingtech.com</li>
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">location_on</span> Kuala Lumpur, Malaysia</li>
+                    <li class="pt-4 flex gap-4">
+                        <a href="https://www.linkedin.com/company/jxingtech" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer" aria-label="LinkedIn">
+                            <span class="material-symbols-outlined text-xs">share</span>
+                        </a>
+                        <a href="/contact/" class="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer" aria-label="Contact">
+                            <span class="material-symbols-outlined text-xs">link</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
+            <p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
+                <a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
+            </div>
+        </div>
+    </div>
 </footer>
+
 <script>
-    // Simple scroll reveal logic
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-
-    // Infinite scroll animation for partner logos
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes infinite-scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+    function toggleFaq(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('.material-symbols-outlined');
+        const parent = button.parentElement;
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            content.style.maxHeight = content.scrollHeight + 'px';
+            icon.textContent = 'expand_less';
+            icon.classList.add('rotate-180');
+            parent.classList.add('border-primary');
+            parent.classList.remove('border-timberwolf/45', 'dark:border-slate-800');
+        } else {
+            content.classList.add('hidden');
+            content.style.maxHeight = '0px';
+            icon.textContent = 'expand_more';
+            icon.classList.remove('rotate-180');
+            parent.classList.remove('border-primary');
+            parent.classList.add('border-timberwolf/45', 'dark:border-slate-800');
         }
-        .animate-infinite-scroll {
-            animation: infinite-scroll 25s linear infinite;
-            width: max-content;
-        }
-        .pause {
-            animation-play-state: paused;
-        }
-    `;
-    document.head.appendChild(style);
+    }
 </script>
-</body></html>
+</body>
+</html>
