@@ -8,6 +8,8 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.css" rel="stylesheet" />
+<script src="https://unpkg.com/maplibre-gl@4.7.0/dist/maplibre-gl.js"></script>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -88,7 +90,7 @@
 </div>
 <!-- Actions -->
 <div class="flex items-center gap-4">
-<button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<button class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors" onclick="document.documentElement.classList.toggle('dark'); if(window.toggleMapStyle) window.toggleMapStyle();">
 <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
 <span class="material-symbols-outlined hidden dark:block">light_mode</span>
 </button>
@@ -142,7 +144,7 @@
 <div class="relative max-w-5xl mx-auto mt-8 scroll-reveal">
 <div class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-robin/20 rounded-3xl blur-2xl opacity-40"></div>
 <div class="relative glass rounded-3xl p-4 shadow-2xl overflow-hidden group">
-<img alt="JXING Strategic Tech Dashboard" class="w-full rounded-2xl shadow-lg border border-white/20 transition-transform duration-700 group-hover:scale-[1.01]" src="https://lh3.googleusercontent.com/aida/AP1WRLub2_sWZwkvG5ZLlBRgsCqH63wPGdP5EP6sFch5G4qBw8qKeuO3Ujv1y1NpxPpVixYldbqM352uAlAZLm2cZAUB7OsIFOa752gD7TzE2_uJPpADdjpZ9h4X0Rlv-jJNhUftZ0xpSzzKSl3EhAHEx9HX0DM71YjfRVtpGueRdFcSqwk7SSEp3D00hp2LnQ8--hWPLidLnqpY4to7jjU6s0aOiTl-FO7jiKB6uJaaqLCpGd_psG1z8KFG28c"/>
+<img alt="JXING Strategic Tech Dashboard" class="w-full rounded-2xl shadow-lg border border-white/20 transition-transform duration-700 group-hover:scale-[1.01]" src="/images/dashboard_mockup.png"/>
 <!-- Floating Overlay: AI Chat Bubble -->
 <div class="absolute bottom-10 right-10 w-72 glass-dark p-4 rounded-2xl border border-white/10 shadow-2xl animate-bounce duration-[3000ms]">
 <div class="flex items-center gap-3 mb-3">
@@ -206,103 +208,83 @@
         <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-robin/5 rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
+        <div class="text-center mb-12">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-primary/10 text-primary mb-6">
                 Global Footprint
             </div>
             <h2 class="text-3xl lg:text-5xl font-bold text-oxford dark:text-white">Engineering Prosperity Globally</h2>
-            <p class="text-oxford/70 dark:text-ghost/60 mt-4 max-w-2xl mx-auto">Explore the custom-engineered systems, portals, and SEO infrastructure running for our clients worldwide.</p>
+            <p class="text-oxford/70 dark:text-ghost/60 mt-4 max-w-2xl mx-auto">Explore custom web systems, AI workflows, and strategic marketing deployed for our clients worldwide.</p>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-12 items-center">
-            <!-- Map Container (2/3 width) -->
-            <div class="w-full lg:w-2/3 glass p-6 rounded-[2.5rem] border border-timberwolf/25 dark:border-white/5 shadow-xl relative">
-                <!-- Quick Selection Buttons -->
-                <div class="flex flex-wrap gap-2 mb-6 justify-center">
-                    <button onclick="selectLocation('kl')" id="btn-kl" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white transition-all shadow-md">Kuala Lumpur 🇲🇾</button>
-                    <button onclick="selectLocation('sg')" id="btn-sg" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Singapore 🇸🇬</button>
-                    <button onclick="selectLocation('sf')" id="btn-sf" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">San Francisco 🇺🇸</button>
-                    <button onclick="selectLocation('ldn')" id="btn-ldn" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">London 🇬🇧</button>
-                    <button onclick="selectLocation('dxb')" id="btn-dxb" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Dubai 🇦🇪</button>
-                    <button onclick="selectLocation('syd')" id="btn-syd" class="loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Sydney 🇦🇺</button>
+        <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+            <!-- Left Side: Interactive Map & Controls (2/3 width) -->
+            <div class="w-full lg:w-2/3 flex flex-col gap-6">
+                <!-- Country Filters & Navigation Tabs -->
+                <div class="glass p-4 rounded-3xl border border-timberwolf/25 dark:border-white/5 shadow-md">
+                    <div class="flex flex-wrap gap-2 justify-start items-center">
+                        <span class="text-xs font-bold uppercase tracking-wider text-oxford/40 dark:text-ghost/40 mr-2">Filter Region:</span>
+                        <button onclick="filterCountry('All')" id="tab-All" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white transition-all shadow-md">All 🌐</button>
+                        <button onclick="filterCountry('Malaysia')" id="tab-Malaysia" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Malaysia 🇲🇾</button>
+                        <button onclick="filterCountry('Singapore')" id="tab-Singapore" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Singapore 🇸🇬</button>
+                        <button onclick="filterCountry('Australia')" id="tab-Australia" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Australia 🇦🇺</button>
+                        <button onclick="filterCountry('United Kingdom')" id="tab-United Kingdom" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">United Kingdom 🇬🇧</button>
+                        <button onclick="filterCountry('United States')" id="tab-United States" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">United States 🇺🇸</button>
+                        <button onclick="filterCountry('South Africa')" id="tab-South Africa" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">South Africa 🇿🇦</button>
+                        <button onclick="filterCountry('Indonesia')" id="tab-Indonesia" class="country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5">Indonesia 🇮🇩</button>
+                    </div>
+                    
+                    <!-- Dynamic client pills selection for active country -->
+                    <div class="mt-4 pt-4 border-t border-timberwolf/10 dark:border-white/5">
+                        <div class="text-[10px] font-bold uppercase tracking-widest text-oxford/30 dark:text-ghost/30 mb-2">Select Customer:</div>
+                        <div id="client-pills-container" class="flex flex-wrap gap-2 max-h-[120px] overflow-y-auto custom-scrollbar pr-2 py-1">
+                            <!-- Injected Dynamically -->
+                        </div>
+                    </div>
                 </div>
 
-                <div class="relative w-full aspect-[2/1] min-h-[300px]">
-                    <svg viewBox="0 0 1000 500" class="w-full h-full text-oxford/10 dark:text-white/5 select-none" fill="currentColor">
-                        <!-- Stylized Geometric Continents -->
-                        <!-- North America -->
-                        <polygon points="80,80 280,60 300,120 220,180 180,240 100,180" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
-                        <!-- South America -->
-                        <polygon points="200,240 250,250 280,320 230,440 200,440 170,300" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
-                        <!-- Eurasia -->
-                        <polygon points="400,60 850,50 880,180 720,280 620,260 520,300 450,220 410,140" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
-                        <!-- Africa -->
-                        <polygon points="430,220 520,220 570,300 520,400 450,380 400,280" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
-                        <!-- Australia -->
-                        <polygon points="750,340 850,340 880,400 800,420" class="fill-primary/5 dark:fill-white/5 stroke-primary/10 dark:stroke-white/10" stroke-width="1.5" />
-
-                        <!-- Hotspots -->
-                        <!-- San Francisco -->
-                        <g class="cursor-pointer group" onclick="selectLocation('sf')">
-                            <circle cx="150" cy="120" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
-                            <circle cx="150" cy="120" r="6" id="dot-sf" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
-                            <circle cx="150" cy="120" r="12" class="fill-none stroke-primary/50 animate-ping" />
-                        </g>
-                        <!-- London -->
-                        <g class="cursor-pointer group" onclick="selectLocation('ldn')">
-                            <circle cx="450" cy="110" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
-                            <circle cx="450" cy="110" r="6" id="dot-ldn" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
-                            <circle cx="450" cy="110" r="12" class="fill-none stroke-primary/50 animate-ping" />
-                        </g>
-                        <!-- Dubai -->
-                        <g class="cursor-pointer group" onclick="selectLocation('dxb')">
-                            <circle cx="560" cy="200" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
-                            <circle cx="560" cy="200" r="6" id="dot-dxb" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
-                            <circle cx="560" cy="200" r="12" class="fill-none stroke-primary/50 animate-ping" />
-                        </g>
-                        <!-- Kuala Lumpur -->
-                        <g class="cursor-pointer group" onclick="selectLocation('kl')">
-                            <circle cx="720" cy="270" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
-                            <circle cx="720" cy="270" r="6" id="dot-kl" class="fill-robin transition-all stroke-white dark:stroke-slate-900 stroke-2" />
-                            <circle cx="720" cy="270" r="12" class="fill-none stroke-robin/50 animate-ping" />
-                        </g>
-                        <!-- Singapore -->
-                        <g class="cursor-pointer group" onclick="selectLocation('sg')">
-                            <circle cx="730" cy="290" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
-                            <circle cx="730" cy="290" r="6" id="dot-sg" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
-                            <circle cx="730" cy="290" r="12" class="fill-none stroke-primary/50 animate-ping" />
-                        </g>
-                        <!-- Sydney -->
-                        <g class="cursor-pointer group" onclick="selectLocation('syd')">
-                            <circle cx="820" cy="380" r="16" class="fill-primary/10 dark:fill-white/5 group-hover:fill-primary/20 transition-all" />
-                            <circle cx="820" cy="380" r="6" id="dot-syd" class="fill-primary transition-all stroke-white dark:stroke-slate-900 stroke-2" />
-                            <circle cx="820" cy="380" r="12" class="fill-none stroke-primary/50 animate-ping" />
-                        </g>
-                    </svg>
+                <!-- Map Canvas -->
+                <div class="glass p-3 rounded-[2.5rem] border border-timberwolf/25 dark:border-white/5 shadow-xl relative overflow-hidden flex-grow min-h-[450px]">
+                    <div id="map" class="w-full h-full rounded-[2rem] bg-slate-100 dark:bg-slate-950 overflow-hidden"></div>
                 </div>
             </div>
 
-            <!-- Dynamic Detail Card (1/3 width) -->
-            <div class="w-full lg:w-1/3">
-                <div id="client-card" class="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] shadow-xl border border-timberwolf/25 dark:border-white/10 min-h-[380px] flex flex-col justify-between transition-all duration-300">
-                    <div>
-                        <div class="flex justify-between items-center mb-6">
-                            <span id="card-tag" class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider">Growth Systems</span>
-                            <span id="card-country" class="text-sm font-semibold text-oxford/50 dark:text-ghost/50">Kuala Lumpur, MY</span>
+            <!-- Right Side: Details Card (1/3 width) -->
+            <div class="w-full lg:w-1/3 flex flex-col justify-stretch">
+                <div id="client-card" class="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] shadow-xl border border-timberwolf/25 dark:border-white/10 flex-grow flex flex-col justify-between transition-all duration-300">
+                    <div class="flex flex-col gap-6">
+                        <div class="flex justify-between items-start gap-4">
+                            <span id="card-tag" class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-wider shrink-0">Growth Systems</span>
+                            <span id="card-country" class="text-sm font-semibold text-oxford/50 dark:text-ghost/50 text-right">Kuala Lumpur, MY</span>
                         </div>
-                        <h3 id="card-title" class="text-2xl font-bold text-oxford dark:text-white mb-2">Thurai Dental Group</h3>
-                        <p id="card-service" class="text-xs text-primary dark:text-robin font-semibold uppercase tracking-wider mb-6">Patient Scheduling & Local SEO</p>
-                        <p id="card-desc" class="text-sm text-oxford/70 dark:text-ghost/70 font-light leading-relaxed mb-6">
-                            Integrated Twilio & WhatsApp Business API appointment scheduling logic with hyper-localized SEO strategy targeting dental treatments across multiple branch networks.
-                        </p>
+                        <div>
+                            <h3 id="card-title" class="text-2xl font-bold text-oxford dark:text-white mb-1">Thurai Dental Group</h3>
+                            <p id="card-service" class="text-xs text-primary dark:text-robin font-semibold uppercase tracking-wider mb-4">Patient Scheduling & Local SEO</p>
+                            <p id="card-desc" class="text-sm text-oxford/70 dark:text-ghost/70 font-light leading-relaxed mb-6">
+                                Integrated Twilio & WhatsApp Business API appointment scheduling logic with hyper-localized SEO strategy targeting dental treatments across multiple branch networks.
+                            </p>
+                        </div>
+                        
+                        <!-- Client Services Badges list -->
+                        <div>
+                            <p class="text-[10px] uppercase font-bold tracking-widest text-oxford/40 dark:text-ghost/40 mb-2">Scope of Services</p>
+                            <div id="card-tags-container" class="flex flex-wrap gap-1.5">
+                                <!-- Injected Dynamically -->
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="pt-6 border-t border-timberwolf/10 dark:border-white/5 flex items-center justify-between">
-                        <div>
-                            <p class="text-[10px] uppercase font-bold tracking-widest text-oxford/40 dark:text-ghost/40">Verified Outcome</p>
-                            <p id="card-metric" class="text-xl font-bold text-primary dark:text-robin mt-1">3x Monthly Booking Leads</p>
+                    <div class="pt-6 mt-8 border-t border-timberwolf/10 dark:border-white/5 flex flex-col gap-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] uppercase font-bold tracking-widest text-oxford/40 dark:text-ghost/40">Verified Outcome</p>
+                                <p id="card-metric" class="text-xl font-bold text-primary dark:text-robin mt-1">3x Monthly Booking Leads</p>
+                            </div>
+                            <span class="material-symbols-outlined text-primary dark:text-robin text-2xl">verified</span>
                         </div>
-                        <span class="material-symbols-outlined text-primary dark:text-robin text-2xl">verified</span>
+                        
+                        <div id="card-btn-container" class="w-full">
+                            <!-- Link to case studies or contact -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,104 +292,612 @@
     </div>
 </section>
 
+<style>
+    /* Custom map styling & markers */
+    .custom-marker {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        position: relative;
+    }
+    .marker-dot {
+        width: 12px;
+        height: 12px;
+        background-color: #007DEB;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 2;
+    }
+    .dark .marker-dot {
+        border-color: #0A1640;
+    }
+    .custom-marker.active .marker-dot {
+        background-color: #59C3C3;
+        width: 16px;
+        height: 16px;
+    }
+    
+    @keyframes marker-pulse {
+        0% { transform: scale(0.6); opacity: 0.8; }
+        100% { transform: scale(2.4); opacity: 0; }
+    }
+    .pulse-ring {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        border: 2px solid #007DEB;
+        border-radius: 50%;
+        animation: marker-pulse 1.8s infinite ease-out;
+        pointer-events: none;
+        z-index: 1;
+        display: none;
+    }
+    .custom-marker.active .pulse-ring {
+        display: block;
+        border-color: #59C3C3;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 99px;
+    }
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+    }
+</style>
+
 <script>
-    const locations = {
-        kl: {
-            title: "Thurai Dental Group",
-            service: "Patient Scheduling & Local SEO",
-            tag: "AI Automation",
-            country: "Kuala Lumpur, MY 🇲🇾",
+    const clientsData = [
+        {
+            id: "thurai",
+            name: "Thurai Dental Group",
+            city: "Kuala Lumpur",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.718, 3.160],
+            tags: ["Web Solutions", "Growth SEO", "Social Media"],
+            tagStr: "Web & Local SEO",
             desc: "Integrated Twilio & WhatsApp Business API appointment scheduling logic with hyper-localized SEO strategy targeting dental treatments across multiple branch networks.",
             metric: "3x Monthly Leads",
-            color: "#59C3C3"
+            serviceDesc: "Website Development, SEO, Social Media Integration",
+            caseStudyUrl: "/case-studies/thurai-dental/"
         },
-        sg: {
-            title: "Evo House",
-            service: "Luxury Property Loop & PPC",
-            tag: "Growth Systems",
-            country: "Singapore 🇸🇬",
-            desc: "Ultra-premium dark mode property presentation with custom multi-step HNW qualified investor questionnaire syncing directly with internal sales team CRM pipelines.",
+        {
+            id: "evohouse",
+            name: "Evo House Singapore",
+            city: "Singapore",
+            country: "Singapore",
+            flag: "🇸🇬",
+            coords: [103.851, 1.290],
+            tags: ["Social Media", "Performance Ads"],
+            tagStr: "Luxury Property Loop & PPC",
+            desc: "Designed an ultra-premium dark mode property presentation with custom multi-step HNW qualified investor questionnaire syncing directly with internal sales team CRM pipelines.",
             metric: "$24M+ SGD Pipeline",
-            color: "#007DEB"
+            serviceDesc: "Social Media Campaign & Performance Marketing",
+            caseStudyUrl: "/case-studies/evo-house-singapore/"
         },
-        sf: {
-            title: "TechSphere Solutions",
-            service: "Cloud Ops & Multi-Platform Ads",
-            tag: "Cloud Operations",
-            country: "San Francisco, US 🇺🇸",
-            desc: "Engineered scalable Kubernetes cloud cluster deployment to handle sudden traffic peaks alongside multi-channel performance ad targeting across Google & TikTok.",
-            metric: "0% Server Downtime",
-            color: "#007DEB"
+        {
+            id: "velotoze",
+            name: "Velotoze",
+            city: "Santa Rosa, California",
+            country: "United States",
+            flag: "🇺🇸",
+            coords: [-122.714, 38.440],
+            tags: ["Performance Ads", "Professional Services"],
+            tagStr: "E-Commerce Paid Acquisition",
+            desc: "Engineered high-converting search and social ad funnel combined with automated email retention workflows for premium cycling accessories.",
+            metric: "10k+ Active Subscribers",
+            serviceDesc: "Customer Engagement & Paid Advertising Funnels"
         },
-        ldn: {
-            title: "Gibb & Co Lawyers",
-            service: "Secure Client Intake Portal",
-            tag: "Secure Portals",
-            country: "London, UK 🇬🇧",
-            desc: "Deployed end-to-end encrypted client document collection portal with automated validation checks and compliance audit logs to streamline legal case intakes.",
-            metric: "90% Faster Intake",
-            color: "#007DEB"
+        {
+            id: "gibb",
+            name: "Gibb & Co Lawyers",
+            city: "Ipoh, Perak",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.090, 4.592],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "Secure Portals & SEO",
+            desc: "Developed a secure client intake portal with end-to-end encrypted document upload, compliant audit trails, and localized search engine optimization.",
+            metric: "90% Onboarding Efficiency",
+            serviceDesc: "Web Development, Client Portal, SEO",
+            caseStudyUrl: "/case-studies/gibb-and-co-lawyers/"
         },
-        dxb: {
-            title: "Apex Capital Partners",
-            service: "Headless Web & Investor Portal",
-            tag: "Website Solutions",
-            country: "Dubai, AE 🇦🇪",
-            desc: "Bespoke high-performance headless portal unified with Strapi CMS and customized investor portfolio tracking dashboard with real-time valuation widgets.",
-            metric: "100% Auto Compliance",
-            color: "#007DEB"
+        {
+            id: "borneo_marathon",
+            name: "Borneo International Marathon",
+            city: "Kota Kinabalu, Sabah",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [116.075, 5.980],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "High-Volume Registration",
+            desc: "Engineered a high-performance serverless registration system capable of handling concurrent checkout peaks during entry launches.",
+            metric: "12,000+ Registered Runners",
+            serviceDesc: "Web Development, Database Engineering, SEO",
+            caseStudyUrl: "/case-studies/borneo-international-marathon/"
         },
-        syd: {
-            title: "Horizon Sports",
-            service: "High-Volume Headless E-Commerce",
-            tag: "E-Commerce Plus",
-            country: "Sydney, AU 🇦🇺",
-            desc: "Custom headless Shopify implementation with fast cloud distribution network (CDN) and AI-driven automated supply chain and order notification system.",
-            metric: "+180% Order Volume",
-            color: "#007DEB"
+        {
+            id: "rentsmart",
+            name: "RentSmart Asia",
+            city: "Miri, Sarawak",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [113.991, 4.389],
+            tags: ["Web Solutions", "Social Media", "Growth SEO", "Performance Ads"],
+            tagStr: "Peer-to-Peer Rental App",
+            desc: "Engineered custom rental booking platform with identity verification checks, automated escrow payouts, and cross-channel marketing campaigns.",
+            metric: "Sustained Booking Growth",
+            serviceDesc: "Web Dev, Social Media, SEO, Paid Ads"
+        },
+        {
+            id: "vibeje",
+            name: "Vibeje",
+            city: "Miri, Sarawak",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [113.985, 4.400],
+            tags: ["Web Solutions", "Social Media", "Growth SEO", "Performance Ads"],
+            tagStr: "SME Digital Platform",
+            desc: "Created a centralized business operations portal supporting local digital marketing campaigns and organic search strategy.",
+            metric: "+250% Search Visibility",
+            serviceDesc: "Web Dev, SEO, Ads & Social Management"
+        },
+        {
+            id: "rentalmates",
+            name: "Rentalmates",
+            city: "Coogee, NSW",
+            country: "Australia",
+            flag: "🇦🇺",
+            coords: [151.256, -33.920],
+            tags: ["Web Solutions", "Social Media", "Growth SEO", "Performance Ads"],
+            tagStr: "P2P Co-living Platform",
+            desc: "Designed and deployed custom rental matching algorithms connecting tenants based on lifestyle preferences with unified messaging.",
+            metric: "15k+ Match Requests",
+            serviceDesc: "Web Dev, Social Media, SEO, Performance Ads"
+        },
+        {
+            id: "ambani",
+            name: "Ambani Group",
+            city: "Kuala Lumpur",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.696, 3.150],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "Corporate Brand Authority",
+            desc: "Engineered secure high-end corporate website and built long-term SEO positioning for professional business consultancy services.",
+            metric: "Page 1 Keyword Rankings",
+            serviceDesc: "Web Development, Corporate Branding, SEO"
+        },
+        {
+            id: "shansohal",
+            name: "Shan Sohal Accountants",
+            city: "Surbiton, Surrey",
+            country: "United Kingdom",
+            flag: "🇬🇧",
+            coords: [-0.303, 51.393],
+            tags: ["Web Solutions"],
+            tagStr: "Accounting Hub",
+            desc: "Developed a modern, client-focused web platform for a UK tax consultancy, featuring interactive calculator widgets and secure document intake.",
+            metric: "+40% Direct Inquiries",
+            serviceDesc: "Web Development, Client Engagement Widgets"
+        },
+        {
+            id: "borneo_half",
+            name: "Borneo Half Marathon",
+            city: "Kota Kinabalu, Sabah",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [116.085, 5.970],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "Sports Registration Setup",
+            desc: "Deployed sister event portal using the serverless registration codebase optimized for high mobile conversion rates.",
+            metric: "Zero Reg Downtime",
+            serviceDesc: "Web Development, SEO, Stripe Payments"
+        },
+        {
+            id: "back2basics",
+            name: "Back2Basics Portal",
+            city: "Ipoh, Perak",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.100, 4.585],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "Growth Portal",
+            desc: "Crafted personal growth resources platform coupled with advanced content optimization strategy targeting wellness keywords.",
+            metric: "+420% Organic Traffic",
+            serviceDesc: "Web Development, Content Optimization, SEO",
+            caseStudyUrl: "/case-studies/back2basics/"
+        },
+        {
+            id: "loqa",
+            name: "LOQA Lifestyle",
+            city: "Durban",
+            country: "South Africa",
+            flag: "🇿🇦",
+            coords: [31.021, -29.858],
+            tags: ["Web Solutions"],
+            tagStr: "Brand Digital Presence",
+            desc: "Launched responsive web presence for South African lifestyle brand incorporating sleek modern layouts and fast CDN caching.",
+            metric: "99.9% Lighthouse Perf",
+            serviceDesc: "Web Development, Content Distribution"
+        },
+        {
+            id: "theraverse",
+            name: "Theraverse",
+            city: "Cheras, Kuala Lumpur",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.768, 3.100],
+            tags: ["Web Solutions"],
+            tagStr: "Digital Mental Health",
+            desc: "Designed and built an interactive web app and information portal connecting patients to registered counseling professionals securely.",
+            metric: "100% HIPAA Compliance",
+            serviceDesc: "Web Development, Health Portal Design"
+        },
+        {
+            id: "primegroup",
+            name: "Prime Group Lending",
+            city: "Ryde, NSW",
+            country: "Australia",
+            flag: "🇦🇺",
+            coords: [151.108, -33.815],
+            tags: ["Web Solutions"],
+            tagStr: "Mortgage Lead Portal",
+            desc: "Developed a digital mortgage broker intake portal featuring live amortization charts and automated credit score validation scripts.",
+            metric: "3.5x Client Conversions",
+            serviceDesc: "Web Development, Interactive Loan Calculators"
+        },
+        {
+            id: "rxtransfer",
+            name: "RX Transfer Logistics",
+            city: "Reading",
+            country: "United Kingdom",
+            flag: "🇬🇧",
+            coords: [-0.972, 51.454],
+            tags: ["Social Media", "Growth SEO"],
+            tagStr: "Logistics Search Growth",
+            desc: "Conducted high-value SEO audit and implemented schema markups coupled with target local campaigns to drive logistics leads.",
+            metric: "+150% Inbound Queries",
+            serviceDesc: "Technical SEO Audit, B2B Marketing Campaign"
+        },
+        {
+            id: "wtravel",
+            name: "WTravel Tours",
+            city: "Cheras, Kuala Lumpur",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.758, 3.090],
+            tags: ["Web Solutions"],
+            tagStr: "Tour Booking Engine",
+            desc: "Integrated dynamic tour package checkout portal with real-time currency conversion rates and instant PDF itinerary builder.",
+            metric: "Automated Booking Flow",
+            serviceDesc: "Web Development, Checkout Integration"
+        },
+        {
+            id: "shefa",
+            name: "Shefa Group",
+            city: "KL Eco City, Kuala Lumpur",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.674, 3.118],
+            tags: ["Web Solutions"],
+            tagStr: "Enterprise Portal",
+            desc: "Built high-performance corporate platform hosting internal operational applications and external client relationship panels.",
+            metric: "Secure SSO & Admin Panels",
+            serviceDesc: "Web Development, Enterprise Dashboards"
+        },
+        {
+            id: "sepeda",
+            name: "Sepeda Amal Borneo",
+            city: "Jalan Pahang, Kuala Lumpur",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.700, 3.180],
+            tags: ["Web Solutions"],
+            tagStr: "Charity Portal",
+            desc: "Deployed non-profit charity ride portal featuring interactive fundraising campaign trackers and online donation system.",
+            metric: "RM 250k+ Funds Raised",
+            serviceDesc: "Web Development, Donation API Setup"
+        },
+        {
+            id: "ecobalance",
+            name: "EcoBalance",
+            city: "Petaling Jaya, Selangor",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.620, 3.120],
+            tags: ["Performance Ads"],
+            tagStr: "Eco E-Commerce Paid Ads",
+            desc: "Optimized paid social media and search campaigns with hyper-targeted custom audience segmentation to drive sustainable product sales.",
+            metric: "4.2x Ads ROAS",
+            serviceDesc: "Meta & Google Paid Advertising Management"
+        },
+        {
+            id: "firstman",
+            name: "FirstMan Videos",
+            city: "Kelana Jaya, Selangor",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.595, 3.100],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "Creative Showcase",
+            desc: "Bespoke media portfolio web application optimized for fast delivery of high-definition video assets on all client devices.",
+            metric: "Page Speed Score 98",
+            serviceDesc: "Headless Web Development, Video Optimization"
+        },
+        {
+            id: "grabgaming",
+            name: "GrabGaming",
+            city: "Petaling Jaya, Selangor",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.610, 3.130],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "Gaming Community Hub",
+            desc: "Constructed local esports community portal featuring user-generated profiles, tournament schedule tracking, and search visibility.",
+            metric: "20k+ Registered Users",
+            serviceDesc: "Community Platform Dev & Local SEO"
+        },
+        {
+            id: "stmary",
+            name: "St. Mary's Cathedral",
+            city: "Kuala Lumpur",
+            country: "Malaysia",
+            flag: "🇲🇾",
+            coords: [101.693, 3.151],
+            tags: ["Web Solutions"],
+            tagStr: "Community Website",
+            desc: "Developed modern parish portal with sermon audio archives, live event streams, and automated weekly newsletter integration.",
+            metric: "+80% Parishioner Reach",
+            serviceDesc: "Web Development, Audio & Email Automation"
+        },
+        {
+            id: "selftrack",
+            name: "Selftrack GPS",
+            city: "Pretoria",
+            country: "South Africa",
+            flag: "🇿🇦",
+            coords: [28.188, -25.747],
+            tags: ["Web Solutions", "Growth SEO", "Social Media", "Performance Ads"],
+            tagStr: "GPS Portal & Growth Marketing",
+            desc: "Custom product landing page development integrated with online sales tracking dashboards and targeted search campaign management.",
+            metric: "+200% Qualified Leads",
+            serviceDesc: "Web Dev, Google Ads, SEO, Social Ads"
+        },
+        {
+            id: "gkki",
+            name: "GKKI Jakarta",
+            city: "Jakarta",
+            country: "Indonesia",
+            flag: "🇮🇩",
+            coords: [106.827, -6.175],
+            tags: ["Web Solutions", "Growth SEO"],
+            tagStr: "Community Portal",
+            desc: "Constructed comprehensive organizational hub for regional community operations with member databases and search engine optimization.",
+            metric: "5k+ Monthly Active Visits",
+            serviceDesc: "Web Development, Member Directory, SEO"
         }
+    ];
+
+    let map = null;
+    let activeClientId = null;
+    const markers = {};
+
+    const styles = {
+        light: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+        dark: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json'
     };
 
-    function selectLocation(id) {
-        // Update selection details
-        const data = locations[id];
-        if (!data) return;
+    document.addEventListener('DOMContentLoaded', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        
+        map = new maplibregl.Map({
+            container: 'map',
+            style: isDark ? styles.dark : styles.light,
+            center: [50, 15],
+            zoom: 1.4,
+            minZoom: 1,
+            maxZoom: 12,
+            attributionControl: false
+        });
 
-        // Transition animation for card
+        // Disable scroll-zoom by default for seamless page scrolling; enable on click/interaction
+        map.scrollZoom.disable();
+        map.on('click', () => { map.scrollZoom.enable(); });
+        map.on('mouseleave', () => { map.scrollZoom.disable(); });
+        
+        map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'bottom-right');
+
+        map.on('load', () => {
+            plotMarkers();
+            filterCountry('All');
+        });
+    });
+
+    window.toggleMapStyle = function() {
+        if (!map) return;
+        const isDark = document.documentElement.classList.contains('dark');
+        const newStyle = isDark ? styles.dark : styles.light;
+        map.setStyle(newStyle);
+        
+        map.once('style.load', () => {
+            plotMarkers();
+            if (activeClientId) {
+                selectClient(activeClientId, false);
+            }
+        });
+    };
+
+    function plotMarkers() {
+        // Clear existing markers if any
+        Object.keys(markers).forEach(key => {
+            markers[key].remove();
+            delete markers[key];
+        });
+
+        clientsData.forEach(client => {
+            const el = document.createElement('div');
+            el.className = 'custom-marker';
+            el.id = `marker-${client.id}`;
+            
+            const dot = document.createElement('div');
+            dot.className = 'marker-dot';
+            el.appendChild(dot);
+            
+            const ring = document.createElement('div');
+            ring.className = 'pulse-ring';
+            el.appendChild(ring);
+            
+            const marker = new maplibregl.Marker({ element: el })
+                .setLngLat(client.coords)
+                .addTo(map);
+                
+            markers[client.id] = marker;
+            
+            el.addEventListener('click', (e) => {
+                e.stopPropagation();
+                selectClient(client.id, true);
+            });
+        });
+    }
+
+    function selectClient(id, flyTo = false) {
+        const client = clientsData.find(c => c.id === id);
+        if (!client) return;
+
+        activeClientId = id;
+
+        // Highlight marker
+        document.querySelectorAll('.custom-marker').forEach(el => el.classList.remove('active'));
+        const activeMarkerEl = document.getElementById(`marker-${id}`);
+        if (activeMarkerEl) activeMarkerEl.classList.add('active');
+
+        // Transition details card
         const card = document.getElementById('client-card');
         card.style.opacity = '0';
         card.style.transform = 'translateY(10px)';
 
         setTimeout(() => {
-            document.getElementById('card-title').innerText = data.title;
-            document.getElementById('card-service').innerText = data.service;
-            document.getElementById('card-tag').innerText = data.tag;
-            document.getElementById('card-country').innerText = data.country;
-            document.getElementById('card-desc').innerText = data.desc;
-            document.getElementById('card-metric').innerText = data.metric;
+            document.getElementById('card-title').innerText = client.name;
+            document.getElementById('card-service').innerText = client.serviceDesc;
+            document.getElementById('card-tag').innerText = client.tagStr;
+            document.getElementById('card-country').innerText = `${client.city}, ${client.flag}`;
+            document.getElementById('card-desc').innerText = client.desc;
+            document.getElementById('card-metric').innerText = client.metric;
+
+            // Connected Case Study Routing
+            const btnContainer = document.getElementById('card-btn-container');
+            if (client.caseStudyUrl) {
+                btnContainer.innerHTML = `
+                    <a href="${client.caseStudyUrl}" class="w-full flex items-center justify-center gap-2 bg-primary text-white hover:bg-marian px-6 py-3 rounded-full font-bold text-sm transition-colors shadow-md">
+                        <span>Read Case Study</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                `;
+            } else {
+                btnContainer.innerHTML = `
+                    <a href="/contact/" class="w-full flex items-center justify-center gap-2 border-2 border-primary/20 hover:border-primary text-primary hover:bg-primary/5 px-6 py-3 rounded-full font-bold text-sm transition-all">
+                        <span>Inquire About This Service</span>
+                        <span class="material-symbols-outlined text-sm">chat_bubble</span>
+                    </a>
+                `;
+            }
+
+            // Client Services Badges list
+            const tagsContainer = document.getElementById('card-tags-container');
+            tagsContainer.innerHTML = client.tags.map(tag => `
+                <span class="text-[10px] font-semibold bg-primary/5 text-primary dark:bg-white/5 dark:text-robin px-2.5 py-1 rounded-full border border-primary/10 dark:border-white/5">${tag}</span>
+            `).join('');
 
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
         }, 150);
 
-        // Update active buttons
-        document.querySelectorAll('.loc-btn').forEach(btn => {
-            btn.className = "loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5";
+        // Highlight selected client pill
+        document.querySelectorAll('.client-pill').forEach(pill => {
+            pill.className = "client-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5 flex items-center gap-1.5";
         });
-        const activeBtn = document.getElementById('btn-' + id);
-        if (activeBtn) {
-            activeBtn.className = "loc-btn px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white transition-all shadow-md";
+        const activePill = document.getElementById(`pill-${id}`);
+        if (activePill) {
+            activePill.className = "client-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-primary text-white transition-all shadow-md flex items-center gap-1.5";
+            // Scroll selected pill into view inside container
+            activePill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
         }
 
-        // Highlight selected dot in SVG
-        document.querySelectorAll('circle[id^="dot-"]').forEach(dot => {
-            dot.setAttribute('fill', '#007DEB');
-            dot.setAttribute('r', '6');
+        if (flyTo) {
+            map.flyTo({
+                center: client.coords,
+                zoom: Math.max(map.getZoom(), 5),
+                essential: true
+            });
+        }
+    }
+
+    function filterCountry(countryName) {
+        // Highlight active tab
+        document.querySelectorAll('.country-btn').forEach(btn => {
+            btn.className = "country-btn px-4 py-2 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5";
         });
-        const activeDot = document.getElementById('dot-' + id);
-        if (activeDot) {
-            activeDot.setAttribute('fill', id === 'kl' ? '#59C3C3' : '#007DEB');
-            activeDot.setAttribute('r', '8');
+        const activeTab = document.getElementById(`tab-${countryName}`);
+        if (activeTab) {
+            activeTab.className = "country-btn px-4 py-2 rounded-full text-xs font-semibold bg-primary text-white transition-all shadow-md";
+        }
+
+        // Render client pills
+        const pillsContainer = document.getElementById('client-pills-container');
+        const filteredClients = countryName === "All"
+            ? clientsData
+            : clientsData.filter(c => c.country === countryName);
+
+        pillsContainer.innerHTML = filteredClients.map(client => `
+            <button onclick="selectClient('${client.id}', true)" id="pill-${client.id}" class="client-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-slate-800 text-oxford/70 dark:text-ghost/70 hover:bg-primary/10 transition-all border border-timberwolf/10 dark:border-white/5 flex items-center gap-1.5">
+                <span>${client.flag}</span>
+                <span>${client.name}</span>
+            </button>
+        `).join('');
+
+        // Select active client
+        const containsActive = filteredClients.some(c => c.id === activeClientId);
+        if (containsActive) {
+            selectClient(activeClientId, false);
+        } else if (filteredClients.length > 0) {
+            selectClient(filteredClients[0].id, false);
+        }
+
+        // Fly map to country cluster centroid
+        if (map && filteredClients.length > 0) {
+            if (countryName === "All") {
+                map.flyTo({
+                    center: [60, 15],
+                    zoom: 1.4,
+                    essential: true
+                });
+            } else {
+                let sumLng = 0, sumLat = 0;
+                filteredClients.forEach(c => {
+                    sumLng += c.coords[0];
+                    sumLat += c.coords[1];
+                });
+                const center = [sumLng / filteredClients.length, sumLat / filteredClients.length];
+                const zoom = countryName === "Malaysia" ? 5.5 : (countryName === "Singapore" ? 9 : 4.5);
+                map.flyTo({
+                    center: center,
+                    zoom: zoom,
+                    essential: true
+                });
+            }
         }
     }
 </script>
