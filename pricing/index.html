@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<script src="/js/i18n.js"></script>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Pricing | JXING Tech - Strategic Technology Partner</title>
-<meta content="Transparent pricing for digital systems that scale. From technical blueprints to enterprise multi-system platforms." name="description"/>
-<link href="https://www.jxingtech.com/pricing" rel="canonical"/>
-<!-- Google Fonts: Poppins & Public Sans -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Material Symbols -->
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/pricing-data.js"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pricing Plans - Transparent &amp; Flexible | JXING Tech</title>
+    <meta content="Explore JXING Tech transparent pricing plans for web development, SEO, automation, and digital marketing services. Find the perfect plan for your business needs." name="description"/>
+    <link href="https://www.jxingtech.com/pricing" rel="canonical"/>
+    
+    <!-- Google Fonts: Poppins & Public Sans -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
               'azure': '#007DEB',
+              'primary': '#007DEB',
               'marian-blue': '#003F88',
               'oxford-blue': '#0A1640',
               'ghost-white': '#F0F3F9',
@@ -46,7 +50,7 @@
         },
       }
     </script>
-<style>
+    <style>
       .glass {
         background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(12px);
@@ -67,287 +71,487 @@
         font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         vertical-align: middle;
       }
-      .btn-hover-fill:hover .material-symbols-outlined {
-        font-variation-settings: 'FILL' 1;
-      }
     </style>
 </head>
-<body class="bg-ghost-white font-body text-oxford-blue antialiased">
+<body class="bg-ghost-white font-body text-oxford-blue antialiased dark:bg-slate-950 dark:text-white transition-colors duration-300">
+
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-oxford-blue/80 backdrop-blur-md border-b border-timberwolf/20 shadow-sm">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/85 backdrop-blur-md border-b border-timberwolf/20 shadow-sm transition-colors">
 <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-<div class="text-xl font-bold text-marian-blue dark:text-white flex items-center gap-2">
-<div class="w-8 h-8 bg-azure rounded-lg flex items-center justify-center text-white font-black">X</div>
-<span>JXING</span>
-</div>
-<div class="hidden md:flex items-center gap-8 font-headline text-body font-medium">
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/company/" data-i18n="nav_company">Company</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/services/" data-i18n="nav_services">Services</a>
-<a class="text-azure font-semibold border-b-2 border-azure pb-1" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/news/" data-i18n="nav_news">News</a>
-<a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/contact/" data-i18n="nav_contact">Contact</a>
-</div>
-<div class="flex items-center gap-4">
-<!-- Language Selector -->
-<div class="relative inline-block text-left" id="lang-switcher">
-    <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
-        <span class="material-symbols-outlined text-lg">language</span>
-        <span id="current-lang-flag" class="text-xs">🇺🇸</span>
-        <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
-    </button>
-    <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
-        <div class="py-1 p-2 space-y-1" role="none">
-            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
-                <span>🇺🇸</span> EN
-            </button>
-            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
-                <span>🇲🇾</span> MS
-            </button>
-            <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
-                <span>🇨🇳</span> ZH
-            </button>
-        </div>
+    <div class="text-xl font-bold text-marian-blue dark:text-white flex items-center gap-2">
+        <div class="w-8 h-8 bg-azure rounded-lg flex items-center justify-center text-white font-black">X</div>
+        <span>JXING</span>
     </div>
-</div>
-<a href="/contact/" class="bg-azure text-white px-6 py-2.5 rounded-full font-semibold hover:bg-marian-blue transition-all active:scale-95 duration-200 flex items-center justify-center" data-i18n="nav_get_in_touch">
-            Get In Touch
-        </a>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative pt-32 pb-16 overflow-hidden tech-grid">
-<div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border-azure/20 text-azure font-bold text-xs tracking-widest mb-6">
-<span class="w-2 h-2 rounded-full bg-azure animate-pulse"></span>
-            PRICING GUIDE
-        </div>
-<h1 class="text-4xl md:text-6xl font-bold font-headline text-oxford-blue max-w-4xl mx-auto leading-tight mb-6">
-            Transparent starting points for <span class="text-azure">digital systems</span> that scale.
-        </h1>
-<p class="text-lg md:text-xl text-oxford-blue/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-            From architecture blueprints to multi-system enterprise engineering, we build for continuity.
-        </p>
-<div class="flex flex-wrap justify-center items-center gap-4 text-sm font-bold text-oxford-blue/40 uppercase tracking-widest">
-<span>Diagnose</span>
-<span class="material-symbols-outlined text-azure">arrow_forward</span>
-<span>Blueprint</span>
-<span class="material-symbols-outlined text-azure">arrow_forward</span>
-<span>Build</span>
-<span class="material-symbols-outlined text-azure">arrow_forward</span>
-<span>Automate</span>
-<span class="material-symbols-outlined text-azure">arrow_forward</span>
-<span>Grow</span>
-<span class="material-symbols-outlined text-azure">arrow_forward</span>
-<span>Operate</span>
-</div>
-</div>
-</section>
-<!-- Section 1: Core CapEx Project Pillars -->
-<section class="py-20 bg-ghost-white">
-<div class="max-w-7xl mx-auto px-6">
-<div class="mb-12">
-<h2 class="text-2xl font-bold font-headline mb-2 flex items-center gap-3">
-<span class="material-symbols-outlined text-azure bg-azure/10 p-2 rounded-lg">architecture</span>
-                Core Project Builds (CapEx)
-            </h2>
-<p class="text-oxford-blue/60 max-w-2xl">Precision software systems engineered for business growth.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Pillar 1 -->
-<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-azure text-3xl">fact_check</span>
-<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Pillar 1</div>
-</div>
-<h3 class="text-xl font-bold mb-2 font-headline">Launch Strategy &amp; Digital Presence</h3>
-<p class="text-xs text-oxford-blue/50 mb-6 italic">Market analysis, blueprints, and high-performance launch pages.</p>
-<div class="space-y-4 mb-6">
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Small / MVP</span><span class="font-bold text-azure text-lg">RM 22,000</span></div>
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Medium / Growth</span><span class="font-bold text-azure text-lg">RM 52,000</span></div>
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Enterprise</span><span class="font-bold text-azure text-lg">RM 110,000</span></div>
-</div>
-</div>
-<button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Request Scope</button>
-</div>
+    <div class="hidden md:flex items-center gap-8 font-headline text-body font-medium">
+        <a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/company/" data-i18n="nav_company">Company</a>
+        <a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/services/" data-i18n="nav_services">Services</a>
+        <a class="text-azure font-semibold border-b-2 border-azure pb-1" href="/pricing/" data-i18n="nav_pricing">Pricing Plans</a>
+        <a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/case-studies/" data-i18n="nav_cases">Case Studies</a>
+        <a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/news/" data-i18n="nav_news">News</a>
+        <a class="text-marian-blue dark:text-ghost-white hover:text-azure transition-colors" href="/contact/" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+        <!-- Theme Toggle -->
+        <button onclick="document.documentElement.classList.toggle('dark')" aria-label="Toggle Theme" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center justify-center">
+            <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+            <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+        </button>
 
-<!-- Pillar 2 -->
-<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-azure text-3xl">developer_mode_tv</span>
-<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Pillar 2</div>
-</div>
-<h3 class="text-xl font-bold mb-2 font-headline">Full-Stack App Engineering</h3>
-<p class="text-xs text-oxford-blue/50 mb-6 italic">Custom web apps, portals, and transactional e-commerce engines.</p>
-<div class="space-y-4 mb-6">
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Small / MVP</span><span class="font-bold text-azure text-lg">RM 65,000</span></div>
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Medium / Growth</span><span class="font-bold text-azure text-lg">RM 150,000</span></div>
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Enterprise</span><span class="font-bold text-azure text-lg">RM 320,000</span></div>
-</div>
-</div>
-<button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Request Scope</button>
-</div>
-
-<!-- Pillar 3 -->
-<div class="glass p-8 rounded-2xl border-white/50 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-<div>
-<div class="flex justify-between items-start mb-6">
-<span class="material-symbols-outlined text-azure text-3xl">precision_manufacturing</span>
-<div class="bg-azure/10 text-azure text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Pillar 3</div>
-</div>
-<h3 class="text-xl font-bold mb-2 font-headline">Enterprise AI &amp; Automation</h3>
-<p class="text-xs text-oxford-blue/50 mb-6 italic">LLM integration, autonomous agents, and process pipelines.</p>
-<div class="space-y-4 mb-6">
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Small / MVP</span><span class="font-bold text-azure text-lg">RM 50,000</span></div>
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Medium / Growth</span><span class="font-bold text-azure text-lg">RM 120,000</span></div>
-<div class="flex justify-between items-baseline"><span class="text-sm font-semibold">Enterprise</span><span class="font-bold text-azure text-lg">RM 250,000</span></div>
-</div>
-</div>
-<button class="w-full bg-white text-azure border border-azure/20 py-3 rounded-xl font-bold hover:bg-azure hover:text-white transition-all">Request Scope</button>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Section 2: Continuous Support & Retainers -->
-<section class="py-20 bg-white border-t border-timberwolf/20">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<h2 class="text-3xl font-bold font-headline mb-6 leading-tight">Continuous Operations &amp; <span class="text-azure">Managed Growth</span></h2>
-<p class="text-oxford-blue/60 mb-8 leading-relaxed">Technology is a living system. We offer ongoing maintenance, cloud operations, and marketing retainers to secure your systems and fuel acquisition.</p>
-
-<div class="space-y-6">
-<!-- Pillar 5 Retainers -->
-<div class="p-5 rounded-2xl bg-ghost-white border border-timberwolf/30">
-<h4 class="font-bold text-oxford-blue mb-3 flex items-center gap-2"><span class="material-symbols-outlined text-azure">cloud_done</span> Pillar 5: Cloud Operations Retainer</h4>
-<p class="text-xs text-oxford-blue/60 mb-4">Complete platform management with strict SLA guarantees.</p>
-<div class="space-y-2 text-sm text-oxford-blue/70">
-<div class="flex justify-between"><span>Small / MVP Infrastructure</span><span class="font-bold text-azure">RM 3,900 / mo</span></div>
-<div class="flex justify-between"><span>Medium / Growth Infrastructure</span><span class="font-bold text-azure">RM 8,700 / mo</span></div>
-<div class="flex justify-between"><span>Enterprise Infrastructure</span><span class="font-bold text-azure">RM 19,500 / mo</span></div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- Pillar 4 Subscriptions -->
-<div class="glass p-8 md:p-10 rounded-2xl border-azure/20 bg-azure/5">
-<div class="flex justify-between items-start mb-6">
-<div class="flex items-center gap-2">
-<div class="w-10 h-10 bg-azure rounded-lg flex items-center justify-center text-white">
-<span class="material-symbols-outlined">query_stats</span>
-</div>
-<h3 class="text-xl font-bold font-headline">Pillar 4: Growth Ads &amp; Marketing</h3>
-</div>
-<div class="text-[10px] font-black bg-primary text-white px-3 py-1 rounded-full uppercase tracking-tighter">Guarantee Included</div>
-</div>
-<p class="text-xs text-oxford-blue/70 mb-6">Structured acquisition loops to funnel high-intent users into your applications. Backed by a <strong>30-Day Money-Back Risk Reversal Guarantee</strong>.</p>
-<div class="space-y-4 mb-8">
-<div class="flex justify-between items-baseline py-3 border-b border-oxford-blue/5">
-<div>
-<p class="font-bold text-sm">Growth Kickstart</p>
-<p class="text-[10px] text-oxford-blue/40">Basic SEO and single network paid search</p>
-</div>
-<div class="text-right">
-<p class="font-bold text-azure">$155/mo</p>
-<p class="text-[9px] text-oxford-blue/40">+$45 setup</p>
-</div>
-</div>
-<div class="flex justify-between items-baseline py-3 border-b border-oxford-blue/5">
-<div>
-<p class="font-bold text-sm">Market Accelerator</p>
-<p class="text-[10px] text-oxford-blue/40">Multi-network advertising &amp; SEO content loops</p>
-</div>
-<div class="text-right">
-<p class="font-bold text-azure">$239/mo</p>
-<p class="text-[9px] text-oxford-blue/40">+$70 setup</p>
-</div>
-</div>
-<div class="flex justify-between items-baseline py-3">
-<div>
-<p class="font-bold text-sm">Omni-Channel Domination</p>
-<p class="text-[10px] text-oxford-blue/40">Full funnel tracking &amp; cross-channel campaigns</p>
-</div>
-<div class="text-right">
-<p class="font-bold text-azure">$359/mo</p>
-<p class="text-[9px] text-oxford-blue/40">+$100 setup</p>
-</div>
-</div>
-</div>
-<button class="w-full bg-azure text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-marian-blue transition-all">
-                    Talk to a Growth Specialist
-                    <span class="material-symbols-outlined">chat</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Tech Stack Logo Carousel -->
-<section class="py-12 bg-ghost-white border-y border-timberwolf/20">
-<div class="max-w-7xl mx-auto px-6">
-<p class="text-center text-xs font-bold text-oxford-blue/30 uppercase tracking-[0.2em] mb-8 flex items-center justify-center gap-2">
-<span class="w-1.5 h-1.5 bg-azure rounded-full"></span>
-            Strategic Partners &amp; Tech Stack
-        </p>
-<div class="flex flex-wrap justify-center items-center gap-12 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-<img alt="AWS" class="h-8 md:h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArDK0EjqTz7j_Qf09eV5HsB29hicsEXciLSCBsT85d7BefGF_8YmxVVWisA3URyDQ8w9vbYQ5uwIYp4y6oIuVHj-ogO18B5IHLEGEF6aFI_KuzzS5WlJvmc7_QByGvuR5GRKoe_l4HiY0N3VBXvEf9qDmgcIlix3sVG3Dyyxt_xuyIdkDgg4m5ckWNES9D5uyqLaPS8WTqQIvH-i_uh8Qyby9beymC7_9FccM93UYWKadaUqGhqFkpcXjLl-0mKquwzg2xm84MA3I"/>
-<img alt="Google Cloud" class="h-8 md:h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9ui9_qN4x6VIseWS4NVvt9b1moE8mHnr4y3Rx36NZpBWXabCh8Q3Pgh-3Xq1WoO_aZWJ7AxAz4gVF4ZCgh5xXm5tBn6mKXK_urHYRIb40zIwvKHlwuv_iCdEsVXvYeYoo5HscA5srbGnGWNPCljTY8vvQA8Fis-2bUoHtAQKZTGMceD9EnDhSa_Z1ocYFMZ04LyYLA1IUONmelGSE2GQ8XZdKMeGSI8czmbHgKapIszYJ3qOtJwm7ccYlkisqlH52BChJmgpuur0"/>
-<img alt="Next.js" class="h-8 md:h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuLDNLBRhgwTxHGbUwc5_FAwqSWIKxGjIr8yLz0LCntGHSIpb9Vg_irQ-jezJeEJojY2AF_-gfT3l4TentOJjfMZRZwK_X6e9c1cV-r6vcfpQ1sin2jAe4og0pWL1pYvihFPSNftXToI-6SqLubrWH61G9hfx3tBS0z0PexrPy4J4y5sqL2p8vAabnb8hXuLeCpR881jKo4fJdxiJGln-CSb67u7obZSC6bGqWGnIFRvn_LU1d5Xq0PK2yzA3U4WQedPgTiSH0mO4"/>
-<img alt="OpenAI" class="h-8 md:h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkzgZJJ7d9gKnm6qvJWBHgoZKwglDZZvU80W5b0RSY3KTd3xN02nWkORFvIQvubMvUOjdJ54syD49jq9Orj6JOuZtQQOoh6wQZteEylvOxlU9vqyxVUQpkEUI7a3irCLUM8iHFC-N2IvhuyBeKQNl1A630pSaRzNFwwuAJ9TVYtkJOgEOH2aCi41EiQHZfzbfYH-73fwQUCYmrZZN3QImZs3WV0i7llnLhAm24RmW1Jh67QJHee1YUi-OTWqtl-YxzlWpZVQAiqq0"/>
-<img alt="Stripe" class="h-8 md:h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkWG-4VyS5lzDspIjYAKhonVbsjr9ziCbYqntzqFWAIIK0H72a1vdbIRHG1rhXxxUiv7HXdD_KP_H2z0a7oziC8WeimanxWmO6hnK6rZifu29PqI3ozkk2yoM7C-9ND3wSL4NnGfVm3Y0HL2DkAmK9xOmgsi6-Tkwe0TuE0dwV1upm9EIt0l6Fa9Z4ukllWQgg5dSET44o6ard1Pu-zWvUoCnx773olTTKr5q6R70XLKZrKU8VrTkh00KKpKEVt3MMWDsvo0s9NUE"/>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-oxford-blue w-full py-12 border-t border-white/10">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-<div class="space-y-4">
-<div class="text-lg font-bold text-white flex items-center gap-2">
-<div class="w-6 h-6 bg-azure rounded flex items-center justify-center text-xs">X</div>
-                JXING
-            </div>
-<p class="font-body text-sm text-white/80 leading-relaxed">
-<div class="pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ghost/30">
-            <p>© 2026 JXING Tech. All Rights Reserved. Crafted by JXING Tech Group Sdn Bhd.</p>
-            <div class="flex items-center gap-8">
-                <a class="hover:text-white transition-colors" href="/privacy-policy/">Privacy Policy</a>
-                <a class="hover:text-white transition-colors" href="/terms-of-service/">Terms of Service</a>
-                <a class="hover:text-white transition-colors" href="/help/">Help &amp; Support</a>
-                <span class="text-white/10 hidden md:inline">|</span>
-                <div class="flex gap-3 items-center">
-                    <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
-                    <span class="text-white/10">|</span>
-                    <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
-                    <span class="text-white/10">|</span>
-                    <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+        <!-- Language Selector -->
+        <div class="relative inline-block text-left" id="lang-switcher">
+            <button type="button" class="p-2 hover:bg-black/5 dark:hover:bg-white/10 rounded-full transition-colors flex items-center gap-1" id="lang-btn" aria-expanded="false" aria-haspopup="true">
+                <span class="material-symbols-outlined text-lg">language</span>
+                <span id="current-lang-flag" class="text-xs">🇺🇸</span>
+                <span class="text-[10px] font-bold uppercase" id="current-lang-code">EN</span>
+            </button>
+            <div class="absolute right-0 mt-2 w-32 rounded-2xl shadow-xl glass dark:glass-dark ring-1 ring-black/5 focus:outline-none hidden z-[110]" id="lang-dropdown" role="menu" aria-orientation="vertical" aria-labelledby="lang-btn">
+                <div class="py-1 p-2 space-y-1" role="none">
+                    <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('en')">
+                        <span>🇺🇸</span> EN
+                    </button>
+                    <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('ms')">
+                        <span>🇲🇾</span> MS
+                    </button>
+                    <button class="w-full text-left px-3 py-1.5 rounded-xl text-[11px] font-semibold hover:bg-primary hover:text-white transition-colors flex items-center gap-2" role="menuitem" onclick="setLanguage('zh')">
+                        <span>🇨🇳</span> ZH
+                    </button>
                 </div>
             </div>
         </div>
+        <a href="/contact/" class="bg-azure text-white px-6 py-2.5 rounded-full font-semibold hover:bg-marian-blue transition-all active:scale-95 duration-200 flex items-center justify-center" data-i18n="nav_get_in_touch">
+            Get In Touch
+        </a>
+    </div>
 </div>
-<div class="space-y-4">
-<h4 class="text-white font-bold text-sm uppercase tracking-wider">Navigation</h4>
-<div class="flex flex-col space-y-2">
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/contact/">Contact Us</a>
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/case-studies/">Case Studies</a>
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/services/">Services</a>
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/company/">About JXING</a>
-</div>
-</div>
-<div class="space-y-4">
-<h4 class="text-white font-bold text-sm uppercase tracking-wider">Connect</h4>
-<div class="flex flex-col space-y-2">
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="https://www.linkedin.com/company/jxingtech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a class="text-white/60 hover:text-azure transition-colors text-sm" href="/contact/">Get In Touch</a>
-</div>
-</div>
-</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative pt-32 pb-12 overflow-hidden tech-grid dark:opacity-90">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-azure/10 text-azure border border-azure/20 font-bold text-xs tracking-widest mb-6">
+            <span class="w-2 h-2 rounded-full bg-azure animate-pulse"></span>
+            PRICING GUIDE
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold font-headline text-oxford-blue dark:text-white max-w-4xl mx-auto leading-tight mb-6">
+            Build Your <span class="text-azure">Digital Growth</span> Plan.
+        </h1>
+        <p class="text-lg md:text-xl text-oxford-blue/70 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            Select services, customize features, and request a tailored quote.
+        </p>
+    </div>
+</section>
+
+<!-- Calculator & Options Section -->
+<main class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left Side: Interactive Tabs and Options Grid -->
+        <div class="lg:col-span-8 space-y-8">
+            <!-- Tabs Menu -->
+            <div class="flex flex-wrap gap-2 border-b border-timberwolf/25 dark:border-slate-800 pb-4" id="category-tabs">
+                <!-- Javascript will inject categories here -->
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="cards-grid">
+                <!-- Javascript will inject active category cards here -->
+            </div>
+
+            <!-- Professional Services static section -->
+            <div class="space-y-6 pt-6">
+                <h3 class="text-2xl font-bold text-oxford-blue dark:text-white">Professional Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="pro-services-grid">
+                    <!-- Javascript will inject pro services here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Sticky Calculator Summary panel -->
+        <div class="lg:col-span-4 lg:sticky lg:top-24 space-y-6">
+            <div class="p-6 rounded-3xl border border-timberwolf/20 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xl shadow-marian-blue/5 space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-oxford-blue dark:text-white">Your Growth Plan</h3>
+                    <p class="text-[10px] text-zinc-400 font-mono mt-1" id="last-updated-text">Last updated: Loading...</p>
+                </div>
+
+                <!-- Selected items wrapper -->
+                <div class="border-t border-b border-timberwolf/10 dark:border-slate-800 py-4 space-y-3 max-h-60 overflow-y-auto" id="selected-items-list">
+                    <!-- Javascript will update selected list here -->
+                </div>
+
+                <!-- Totals -->
+                <div class="space-y-3 text-sm" id="calc-totals">
+                    <!-- Javascript will sum totals here -->
+                </div>
+
+                <div class="pt-2">
+                    <button onclick="requestQuote()" class="w-full py-4 bg-azure hover:bg-marian-blue text-white font-bold rounded-xl flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95 transition-all text-sm shadow-lg shadow-azure/20">
+                        <span>Request Quote &amp; Consult</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="p-5 rounded-2xl border border-timberwolf/35 dark:border-slate-800 bg-white/40 dark:bg-slate-900/40 text-xs text-oxford-blue/60 dark:text-slate-400 flex items-start gap-3 leading-relaxed">
+                <span class="material-symbols-outlined text-azure shrink-0 mt-0.5">info</span>
+                <span>Select multiple services to automatically bundle integrations. Our squad reviews every scoping intake within 24 hours.</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pricing FAQs Accordion -->
+    <section class="py-16 border-t border-timberwolf/25 dark:border-slate-800 mt-20">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <div class="text-center space-y-2">
+                <h3 class="text-3xl font-bold text-oxford-blue dark:text-white">Pricing FAQ</h3>
+                <p class="text-sm text-oxford-blue/60 dark:text-slate-400">Answers to common scoping and billing questions.</p>
+            </div>
+
+            <div class="space-y-4" id="faq-container">
+                <!-- Javascript will inject FAQ here -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-oxford-blue w-full py-12 border-t border-white/10 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+            <div class="text-lg font-bold text-white flex items-center gap-2">
+                <div class="w-6 h-6 bg-azure rounded flex items-center justify-center text-xs">X</div>
+                JXING
+            </div>
+            <p class="font-body text-sm text-white/80 leading-relaxed">
+                Strategic technology partner for full-stack engineering and AI growth.
+            </p>
+        </div>
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-sm uppercase tracking-wider">Navigation</h4>
+            <div class="flex flex-col space-y-2">
+                <a class="text-white/60 hover:text-azure transition-colors text-sm" href="/contact/">Contact Us</a>
+                <a class="text-white/60 hover:text-azure transition-colors text-sm" href="/case-studies/">Case Studies</a>
+                <a class="text-white/60 hover:text-azure transition-colors text-sm" href="/services/">Services</a>
+                <a class="text-white/60 hover:text-azure transition-colors text-sm" href="/company/">About JXING</a>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-sm uppercase tracking-wider">Connect</h4>
+            <div class="flex flex-col space-y-2">
+                <a class="text-white/60 hover:text-azure transition-colors text-sm" href="https://www.linkedin.com/company/jxingtech" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="text-white/60 hover:text-azure transition-colors text-sm" href="/contact/">Get In Touch</a>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <h4 class="text-white font-bold text-sm uppercase tracking-wider">Language</h4>
+            <div class="flex gap-3 items-center text-xs text-white/60">
+                <button class="hover:text-white transition-colors" onclick="setLanguage('en')">EN</button>
+                <span class="text-white/10">|</span>
+                <button class="hover:text-white transition-colors" onclick="setLanguage('ms')">MS</button>
+                <span class="text-white/10">|</span>
+                <button class="hover:text-white transition-colors" onclick="setLanguage('zh')">ZH</button>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/5 text-center text-xs text-white/30 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>Crafted by JXING Tech Group Sdn Bhd (202501026040). Copyright © 2026 JXING Tech. All Rights Reserved.</p>
+        <div class="flex gap-4">
+            <a class="hover:text-white" href="/privacy-policy/">Privacy Policy</a>
+            <a class="hover:text-white" href="/terms-of-service/">Terms of Service</a>
+        </div>
+    </div>
 </footer>
+
 <script>
-    // Smooth scroll and navbar interaction
+    // Categories and selection state
+    let activeCategory = 'website';
+    let selectedServices = [];
+    let pricingData = {};
+    let lastUpdated = '';
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+        // Load Pricing
+        pricingData = window.PricingData.getPricing();
+        lastUpdated = window.PricingData.getLastUpdated();
+        
+        // Render
+        renderTabs();
+        renderActiveCategory();
+        renderProServices();
+        updateSidebar();
+        renderFaqs();
+
+        // Update Last Updated Date label
+        document.getElementById('last-updated-text').textContent = `Pricing effective from ${lastUpdated}`;
+
+        // Initialize i18n
+        if (window.i18n && typeof window.i18n.init === 'function') {
+            window.i18n.init();
+        }
+    });
+
+    const categoryLabels = {
+        website: 'Website & E-Commerce',
+        automation: 'Workflow Automation',
+        seo: 'SEO & AI Integration',
+        ads: 'Performance Ads',
+        social: 'Social Media'
+    };
+
+    function renderTabs() {
+        const tabsContainer = document.getElementById('category-tabs');
+        tabsContainer.innerHTML = '';
+        
+        Object.keys(pricingData).forEach(cat => {
+            const btn = document.createElement('button');
+            btn.className = `px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition ${
+                activeCategory === cat
+                    ? "bg-azure text-white shadow-md shadow-azure/20"
+                    : "bg-white dark:bg-slate-900 border border-timberwolf/20 dark:border-slate-800 text-oxford-blue/60 dark:text-slate-400 hover:bg-white/80 dark:hover:bg-slate-800"
+            }`;
+            btn.textContent = categoryLabels[cat] || cat;
+            btn.onclick = () => {
+                activeCategory = cat;
+                renderTabs();
+                renderActiveCategory();
+            };
+            tabsContainer.appendChild(btn);
+        });
+    }
+
+    function renderActiveCategory() {
+        const grid = document.getElementById('cards-grid');
+        grid.innerHTML = '';
+
+        const items = pricingData[activeCategory] || [];
+        items.forEach(item => {
+            const isSelected = selectedServices.includes(item.id);
+            const card = document.createElement('div');
+            card.onclick = () => toggleService(item.id);
+            card.className = `p-6 rounded-2xl border cursor-pointer select-none transition-all duration-300 flex flex-col justify-between h-full hover:shadow-lg ${
+                isSelected 
+                    ? "border-azure bg-azure/5 dark:bg-azure/10 shadow-lg shadow-azure/5" 
+                    : "border-timberwolf/20 dark:border-slate-800 bg-white dark:bg-slate-900"
+            }`;
+
+            // Features list
+            const featuresList = item.features.map(f => `
+                <li class="flex items-start gap-2.5">
+                    <span class="material-symbols-outlined text-azure text-sm mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    <span>${f}</span>
+                </li>
+            `).join('');
+
+            card.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start gap-4">
+                        <h4 class="font-bold text-base text-oxford-blue dark:text-white leading-snug">${item.name}</h4>
+                        <div class="w-5 h-5 rounded-full border flex items-center justify-center shrink-0 transition-all ${
+                            isSelected ? "bg-azure border-azure text-white" : "border-timberwolf bg-slate-50 dark:border-slate-700 dark:bg-slate-800"
+                        }">
+                            ${isSelected ? '<span class="material-symbols-outlined text-xs font-black">check</span>' : ''}
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-oxford-blue dark:text-white font-mono">RM ${item.myrPrice.toLocaleString()}</span>
+                        <span class="text-[10px] text-oxford-blue/40 dark:text-slate-400 uppercase ml-1 font-mono tracking-wider">/ ${item.period}</span>
+                    </div>
+                    <ul class="space-y-2.5 text-xs text-oxford-blue/60 dark:text-slate-400 border-t border-timberwolf/10 dark:border-slate-800 pt-4">
+                        ${featuresList}
+                    </ul>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function renderProServices() {
+        const grid = document.getElementById('pro-services-grid');
+        grid.innerHTML = '';
+
+        const proData = pricingData.professional || [];
+        proData.forEach(item => {
+            const isSelected = selectedServices.includes(item.id);
+            const card = document.createElement('div');
+            card.onclick = () => toggleService(item.id);
+            card.className = `p-5 rounded-2xl border cursor-pointer select-none transition-all duration-300 flex flex-col justify-between hover:shadow-lg ${
+                isSelected 
+                    ? "border-azure bg-azure/5 dark:bg-azure/10 shadow-lg shadow-azure/5" 
+                    : "border-timberwolf/20 dark:border-slate-800 bg-white dark:bg-slate-900"
+            }`;
+
+            card.innerHTML = `
+                <div class="space-y-3">
+                    <div class="flex justify-between items-start gap-3">
+                        <h4 class="font-bold text-xs text-oxford-blue dark:text-white leading-normal">${item.name}</h4>
+                        <div class="w-4 h-4 rounded-full border flex items-center justify-center shrink-0 transition-all ${
+                            isSelected ? "bg-azure border-azure text-white" : "border-timberwolf bg-slate-50 dark:border-slate-700 dark:bg-slate-800"
+                        }">
+                            ${isSelected ? '<span class="material-symbols-outlined text-[10px] font-black">check</span>' : ''}
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-lg font-black text-oxford-blue dark:text-white font-mono">RM ${item.myrPrice.toLocaleString()}</span>
+                        <span class="text-[9px] text-oxford-blue/40 dark:text-slate-400 uppercase ml-1 font-mono tracking-wider">/ ${item.period}</span>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function toggleService(id) {
+        if (selectedServices.includes(id)) {
+            selectedServices = selectedServices.filter(sId => sId !== id);
+        } else {
+            selectedServices.push(id);
+        }
+        renderActiveCategory();
+        renderProServices();
+        updateSidebar();
+    }
+
+    function updateSidebar() {
+        const listContainer = document.getElementById('selected-items-list');
+        const totalsContainer = document.getElementById('calc-totals');
+        
+        listContainer.innerHTML = '';
+        
+        // Find all selected items
+        const allItems = [
+            ...Object.values(pricingData).flat()
+        ];
+        const selectedItems = allItems.filter(item => selectedServices.includes(item.id));
+
+        if (selectedItems.length === 0) {
+            listContainer.innerHTML = `<p class="text-xs text-oxford-blue/40 dark:text-slate-400 italic text-center py-6">No services selected. Choose options from the left to build your plan.</p>`;
+            totalsContainer.innerHTML = '';
+            return;
+        }
+
+        selectedItems.forEach(item => {
+            const div = document.createElement('div');
+            div.className = "flex justify-between items-start gap-4 text-xs py-1.5 border-b border-timberwolf/5 dark:border-slate-800/40 last:border-0";
+            div.innerHTML = `
+                <div>
+                    <h4 class="font-bold text-oxford-blue dark:text-white">${item.name}</h4>
+                    <span class="text-[9px] text-oxford-blue/40 dark:text-slate-400 font-mono uppercase tracking-wider">${item.period}</span>
+                </div>
+                <span class="font-black text-oxford-blue dark:text-white shrink-0 font-mono">RM ${item.myrPrice.toLocaleString()}</span>
+            `;
+            listContainer.appendChild(div);
+        });
+
+        // Calculate Totals
+        let oneTimeTotal = 0;
+        let monthlyTotal = 0;
+        let sessionTotal = 0;
+
+        selectedItems.forEach(item => {
+            if (item.period === 'one-time') oneTimeTotal += item.myrPrice;
+            else if (item.period === 'monthly') monthlyTotal += item.myrPrice;
+            else if (item.period === 'per session') sessionTotal += item.myrPrice;
+        });
+
+        let totalsHTML = '';
+        if (oneTimeTotal > 0) {
+            totalsHTML += `
+                <div class="flex justify-between items-center text-xs font-semibold py-1">
+                    <span class="text-oxford-blue/60 dark:text-slate-400">One-Time Setup:</span>
+                    <span class="font-black text-azure text-base font-mono">RM ${oneTimeTotal.toLocaleString()}</span>
+                </div>
+            `;
+        }
+        if (monthlyTotal > 0) {
+            totalsHTML += `
+                <div class="flex justify-between items-center text-xs font-semibold py-1">
+                    <span class="text-oxford-blue/60 dark:text-slate-400">Monthly Investment:</span>
+                    <span class="font-black text-azure text-base font-mono">RM ${monthlyTotal.toLocaleString()} / mo</span>
+                </div>
+            `;
+        }
+        if (sessionTotal > 0) {
+            totalsHTML += `
+                <div class="flex justify-between items-center text-xs font-semibold py-1">
+                    <span class="text-oxford-blue/60 dark:text-slate-400">Per Session:</span>
+                    <span class="font-black text-azure text-base font-mono">RM ${sessionTotal.toLocaleString()} / sess</span>
+                </div>
+            `;
+        }
+        totalsContainer.innerHTML = totalsHTML;
+    }
+
+    function renderFaqs() {
+        const container = document.getElementById('faq-container');
+        const faqs = [
+            {
+                q: "Can I switch plans later?",
+                a: "Yes, you can upgrade, downgrade, or restructure your digital growth configuration at any time. The adjustments will be applied starting from your next billing cycle."
+            },
+            {
+                q: "Is there a long-term contract?",
+                a: "No long-term commitments are required for our standard monthly plans. All SEO and ad campaigns run on a month-to-month basis so you can scale your budget flexibly."
+            },
+            {
+                q: "What payment methods do you accept?",
+                a: "We accept all major credit cards, bank transfers, and local digital wallets (FPX, GrabPay, Touch 'n Go) to make checkout simple."
+            }
+        ];
+
+        container.innerHTML = '';
+        faqs.forEach((faq, idx) => {
+            const div = document.createElement('div');
+            div.className = "border border-timberwolf/20 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 transition-all";
+            div.innerHTML = `
+                <button onclick="toggleFaq(${idx})" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-sm text-oxford-blue dark:text-white">
+                    <span>${faq.q}</span>
+                    <span class="material-symbols-outlined text-zinc-400 transition-transform duration-300" id="faq-icon-${idx}">expand_more</span>
+                </button>
+                <div class="hidden px-6 pb-5 pt-1 text-xs text-oxford-blue/60 dark:text-slate-400 leading-relaxed border-t border-timberwolf/5 dark:border-slate-800/40" id="faq-content-${idx}">
+                    ${faq.a}
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function toggleFaq(idx) {
+        const content = document.getElementById(`faq-content-${idx}`);
+        const icon = document.getElementById(`faq-icon-${idx}`);
+        
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+        } else {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+        }
+    }
+
+    function requestQuote() {
+        if (selectedServices.length === 0) {
+            alert('Please select at least one service to request a consult.');
+            return;
+        }
+        window.location.href = `/contact/?plan=${selectedServices.join(',')}`;
+    }
+
+    // Language switcher navbar dropdown
+    document.getElementById('lang-btn').addEventListener('click', function(e) {
+        e.stopPropagation();
+        const dropdown = document.getElementById('lang-dropdown');
+        dropdown.classList.toggle('hidden');
+        const expanded = !dropdown.classList.contains('hidden');
+        this.setAttribute('aria-expanded', expanded);
+    });
+
+    window.addEventListener('click', function() {
+        document.getElementById('lang-dropdown').classList.add('hidden');
+        document.getElementById('lang-btn').setAttribute('aria-expanded', 'false');
+    });
+
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('nav');
         if (window.scrollY > 20) {
@@ -357,4 +561,5 @@
         }
     });
 </script>
-</body></html>
+</body>
+</html>

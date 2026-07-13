@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <script src="/js/pricing-data.js"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pricing Admin Engine | JXING Tech</title>
+    
+    <!-- Google Fonts: Poppins & Public Sans -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              'azure': '#007DEB',
+              'primary': '#007DEB',
+              'marian-blue': '#003F88',
+              'oxford-blue': '#0A1640',
+              'ghost-white': '#F0F3F9',
+              'timberwolf': '#D3D3D3',
+            },
+            fontFamily: {
+              'headline': ['Poppins', 'sans-serif'],
+              'body': ['Public Sans', 'sans-serif'],
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-slate-950 text-white font-body min-h-screen">
+
+<!-- Password Protection Modal -->
+<div id="login-overlay" class="fixed inset-0 bg-slate-950 z-[200] flex items-center justify-center p-6">
+    <div class="w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6 shadow-2xl">
+        <div class="text-center space-y-2">
+            <div class="inline-flex items-center justify-center w-12 h-12 bg-azure/10 text-azure rounded-2xl mb-2">
+                <span class="material-symbols-outlined text-2xl">lock</span>
+            </div>
+            <h1 class="text-2xl font-bold font-headline">Pricing Admin Engine</h1>
+            <p class="text-xs text-slate-400">Enter authorization key to unlock dashboard mutation logs.</p>
+        </div>
+        
+        <div class="space-y-4">
+            <div class="space-y-1.5">
+                <label class="text-xs font-semibold text-slate-300 ml-1">Authorization Key</label>
+                <input type="password" id="auth-key" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-white outline-none focus:border-azure focus:ring-1 focus:ring-azure/50 transition" placeholder="••••••••" onkeydown="if(event.key === 'Enter') checkAuth()"/>
+            </div>
+            <p id="login-error" class="text-red-400 text-xs hidden flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm">error</span>
+                Invalid authorization key. Please try again.
+            </p>
+            <button onclick="checkAuth()" class="w-full bg-azure hover:bg-marian-blue text-white py-3.5 rounded-xl font-bold transition flex items-center justify-center gap-2 text-sm shadow-lg shadow-azure/10">
+                Unlock Dashboard
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Main Admin Panel Wrapper -->
+<div id="admin-panel" class="hidden flex flex-col md:flex-row min-h-screen">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="w-full md:w-64 border-r border-slate-800 bg-slate-900/50 p-6 flex flex-col justify-between">
+        <div class="space-y-8">
+            <div class="flex items-center gap-2.5 text-azure">
+                <span class="material-symbols-outlined text-2xl font-bold">database</span>
+                <span class="font-bold text-lg text-white font-headline">ADMIN ENGINE</span>
+            </div>
+
+            <nav class="flex flex-col gap-1.5">
+                <button onclick="switchTab('website')" id="tab-website" class="tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition bg-azure text-white">
+                    <span class="material-symbols-outlined text-base">language</span>
+                    <span>Website &amp; E-Commerce</span>
+                </button>
+                <button onclick="switchTab('automation')" id="tab-automation" class="tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition text-slate-400 hover:bg-slate-800/50">
+                    <span class="material-symbols-outlined text-base">precision_manufacturing</span>
+                    <span>Workflow Automation</span>
+                </button>
+                <button onclick="switchTab('seo')" id="tab-seo" class="tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition text-slate-400 hover:bg-slate-800/50">
+                    <span class="material-symbols-outlined text-base">search</span>
+                    <span>SEO &amp; AI Integration</span>
+                </button>
+                <button onclick="switchTab('ads')" id="tab-ads" class="tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition text-slate-400 hover:bg-slate-800/50">
+                    <span class="material-symbols-outlined text-base">ads_click</span>
+                    <span>Performance Ads</span>
+                </button>
+                <button onclick="switchTab('social')" id="tab-social" class="tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition text-slate-400 hover:bg-slate-800/50">
+                    <span class="material-symbols-outlined text-base">visibility</span>
+                    <span>Social Media</span>
+                </button>
+                <button onclick="switchTab('professional')" id="tab-professional" class="tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition text-slate-400 hover:bg-slate-800/50">
+                    <span class="material-symbols-outlined text-base">medical_services</span>
+                    <span>Professional Services</span>
+                </button>
+            </nav>
+        </div>
+
+        <div class="space-y-3 pt-6 border-t border-slate-800">
+            <button onclick="resetDefaults()" class="w-full py-2.5 border border-slate-800 hover:bg-slate-800 text-slate-400 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition">
+                <span class="material-symbols-outlined text-sm">restart_alt</span>
+                Reset Defaults
+            </button>
+            <button onclick="exitDashboard()" class="w-full py-2.5 border border-slate-800 hover:bg-slate-800 text-red-400 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition">
+                <span class="material-symbols-outlined text-sm">logout</span>
+                Exit Dashboard
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Panel Content -->
+    <main class="flex-grow p-8 space-y-6 max-w-6xl">
+        <!-- Toast message alert -->
+        <div id="toast-message" class="hidden p-4 bg-emerald-950/30 border border-emerald-500/30 text-emerald-400 text-xs rounded-xl flex items-center gap-2 animate-pulse">
+            <span class="material-symbols-outlined text-sm">check_circle</span>
+            <span id="toast-text">Asset operation completed successfully</span>
+        </div>
+
+        <div class="flex justify-between items-center">
+            <div>
+                <h2 class="text-2xl font-bold font-headline" id="active-title">Website &amp; E-Commerce</h2>
+                <p class="text-slate-400 text-xs mt-1" id="last-updated-lbl">Last updated: Loaded...</p>
+            </div>
+            <button onclick="openForm()" class="bg-azure hover:bg-marian-blue text-white px-4 py-2.5 rounded-xl font-bold text-xs flex items-center gap-1.5 transition shadow-lg shadow-azure/10">
+                <span class="material-symbols-outlined text-sm">add</span>
+                Add New Service
+            </button>
+        </div>
+
+        <!-- CRUD List Table -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="bg-slate-950 text-slate-400 font-semibold border-b border-slate-800">
+                            <th class="p-4">Name</th>
+                            <th class="p-4">Price (MYR)</th>
+                            <th class="p-4">Billing Period</th>
+                            <th class="p-4">Features</th>
+                            <th class="p-4 text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="services-table-body" class="divide-y divide-slate-800 text-slate-300">
+                        <!-- Javascript will inject list here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Modal Form overlay for Add/Edit -->
+<div id="form-overlay" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-[150] flex items-center justify-center p-6">
+    <div class="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6 shadow-2xl">
+        <div>
+            <h3 class="text-xl font-bold font-headline" id="form-title">Add Service Item</h3>
+            <p class="text-xs text-slate-400 mt-1">Configure pricing data structure mutation values.</p>
+        </div>
+
+        <form id="service-form" onsubmit="saveItem(event)" class="space-y-4 text-xs">
+            <input type="hidden" id="form-item-id"/>
+            <div class="space-y-1.5">
+                <label class="font-semibold text-slate-300 ml-1">Service Name</label>
+                <input type="text" id="form-item-name" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-white outline-none focus:border-azure transition"/>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-1.5">
+                    <label class="font-semibold text-slate-300 ml-1">Price (MYR)</label>
+                    <input type="number" id="form-item-price" required min="0" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-white outline-none focus:border-azure transition"/>
+                </div>
+                <div class="space-y-1.5">
+                    <label class="font-semibold text-slate-300 ml-1">Billing Period</label>
+                    <select id="form-item-period" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-white outline-none focus:border-azure transition appearance-none">
+                        <option value="one-time">one-time</option>
+                        <option value="monthly">monthly</option>
+                        <option value="per session">per session</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="space-y-1.5">
+                <label class="font-semibold text-slate-300 ml-1">Features (One per line)</label>
+                <textarea id="form-item-features" required rows="4" placeholder="Enter key features of the service..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-white outline-none focus:border-azure transition"></textarea>
+            </div>
+
+            <div class="flex gap-3 justify-end pt-4">
+                <button type="button" onclick="closeForm()" class="px-5 py-2.5 border border-slate-800 hover:bg-slate-800 rounded-xl font-bold transition text-slate-400">Cancel</button>
+                <button type="submit" class="bg-azure hover:bg-marian-blue text-white px-6 py-2.5 rounded-xl font-bold transition shadow-lg shadow-azure/10">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    const SECURITY_KEY = "jxingadmin";
+    let activeTab = 'website';
+    let pricingData = {};
+
+    function checkAuth() {
+        const input = document.getElementById('auth-key').value;
+        if (input === SECURITY_KEY) {
+            sessionStorage.setItem('jxing_admin_auth', 'true');
+            document.getElementById('login-overlay').classList.add('hidden');
+            document.getElementById('admin-panel').classList.remove('hidden');
+            loadData();
+        } else {
+            document.getElementById('login-error').classList.remove('hidden');
+        }
+    }
+
+    // Auto-login check
+    if (sessionStorage.getItem('jxing_admin_auth') === 'true') {
+        document.getElementById('login-overlay').classList.add('hidden');
+        document.getElementById('admin-panel').classList.remove('hidden');
+        loadData();
+    }
+
+    function exitDashboard() {
+        sessionStorage.removeItem('jxing_admin_auth');
+        window.location.reload();
+    }
+
+    function loadData() {
+        pricingData = window.PricingData.getPricing();
+        document.getElementById('last-updated-lbl').textContent = `Last updated: ${window.PricingData.getLastUpdated()}`;
+        renderList();
+    }
+
+    const tabLabels = {
+        website: 'Website & E-Commerce',
+        automation: 'Workflow Automation',
+        seo: 'SEO & AI Integration',
+        ads: 'Performance Ads',
+        social: 'Social Media',
+        professional: 'Professional Services'
+    };
+
+    function switchTab(tab) {
+        activeTab = tab;
+        // Toggle active style in side menu
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.className = "tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition text-slate-400 hover:bg-slate-800/50";
+        });
+        document.getElementById(`tab-${tab}`).className = "tab-btn w-full text-left px-4 py-2.5 rounded-xl text-xs font-semibold flex items-center gap-2.5 transition bg-azure text-white";
+        
+        document.getElementById('active-title').textContent = tabLabels[tab];
+        renderList();
+    }
+
+    function renderList() {
+        const tbody = document.getElementById('services-table-body');
+        tbody.innerHTML = '';
+        
+        const list = pricingData[activeTab] || [];
+        if (list.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="5" class="p-6 text-center text-slate-500 italic">No services listed in this category.</td></tr>`;
+            return;
+        }
+
+        list.forEach((item, index) => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="p-4 font-bold text-white">${item.name}</td>
+                <td class="p-4 font-mono">RM ${item.myrPrice.toLocaleString()}</td>
+                <td class="p-4 uppercase font-mono text-[10px]"><span class="px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-400">${item.period}</span></td>
+                <td class="p-4 text-slate-400 text-[11px] leading-relaxed max-w-xs truncate">${item.features.join(', ')}</td>
+                <td class="p-4 text-right space-x-1.5 shrink-0">
+                    <button onclick="editItem('${item.id}')" class="p-2 border border-slate-800 hover:bg-slate-800 rounded-lg hover:text-white transition" aria-label="Edit">
+                        <span class="material-symbols-outlined text-sm">edit</span>
+                    </button>
+                    <button onclick="deleteItem('${item.id}')" class="p-2 border border-slate-800 hover:bg-red-950/30 hover:border-red-900 rounded-lg text-red-400 transition" aria-label="Delete">
+                        <span class="material-symbols-outlined text-sm">delete</span>
+                    </button>
+                </td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // Modal forms helper
+    function openForm() {
+        document.getElementById('form-title').textContent = "Add Service Item";
+        document.getElementById('form-item-id').value = '';
+        document.getElementById('service-form').reset();
+        document.getElementById('form-overlay').classList.remove('hidden');
+    }
+
+    function closeForm() {
+        document.getElementById('form-overlay').classList.add('hidden');
+    }
+
+    function showToast(text) {
+        const toast = document.getElementById('toast-message');
+        document.getElementById('toast-text').textContent = text;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+
+    function editItem(id) {
+        const item = pricingData[activeTab].find(i => i.id === id);
+        if (!item) return;
+
+        document.getElementById('form-title').textContent = "Edit Service Item";
+        document.getElementById('form-item-id').value = item.id;
+        document.getElementById('form-item-name').value = item.name;
+        document.getElementById('form-item-price').value = item.myrPrice;
+        document.getElementById('form-item-period').value = item.period;
+        document.getElementById('form-item-features').value = item.features.join('\n');
+        
+        document.getElementById('form-overlay').classList.remove('hidden');
+    }
+
+    function deleteItem(id) {
+        if (!confirm('Are you sure you want to remove this item?')) return;
+        pricingData[activeTab] = pricingData[activeTab].filter(i => i.id !== id);
+        saveAndReload("Service item removed successfully");
+    }
+
+    function saveItem(e) {
+        e.preventDefault();
+        const id = document.getElementById('form-item-id').value;
+        const name = document.getElementById('form-item-name').value;
+        const price = parseFloat(document.getElementById('form-item-price').value);
+        const period = document.getElementById('form-item-period').value;
+        const features = document.getElementById('form-item-features').value.split('\n').map(f => f.trim()).filter(f => f.length > 0);
+
+        if (!pricingData[activeTab]) pricingData[activeTab] = [];
+
+        if (id) {
+            // Edit mode
+            const index = pricingData[activeTab].findIndex(i => i.id === id);
+            if (index !== -1) {
+                pricingData[activeTab][index] = { id, name, myrPrice: price, period, features };
+            }
+        } else {
+            // Add mode
+            const newId = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            pricingData[activeTab].push({ id: newId, name, myrPrice: price, period, features });
+        }
+
+        closeForm();
+        saveAndReload(id ? "Service item updated successfully" : "Service item added successfully");
+    }
+
+    function saveAndReload(msg) {
+        window.PricingData.savePricing(pricingData);
+        loadData();
+        showToast(msg);
+    }
+
+    function resetDefaults() {
+        if (!confirm('Reset all prices and additions to original settings? This will overwrite custom configurations.')) return;
+        pricingData = window.PricingData.resetPricing();
+        loadData();
+        showToast("Pricing matrix reverted to default definitions");
+    }
+</script>
+</body>
+</html>
