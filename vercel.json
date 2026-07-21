@@ -1,150 +1,150 @@
 {
   "trailingSlash": true,
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/services/website-solutions",
-      "destination": "/services/"
+      "source": "/services/website-solutions/",
+      "destination": "/services/custom-web-apps/",
+      "permanent": true
     },
     {
-      "source": "/services/automation-workflow",
-      "destination": "/services/"
+      "source": "/services/website-solutions/:path*",
+      "destination": "/services/custom-web-apps/",
+      "permanent": true
     },
     {
-      "source": "/services/growth-seo",
-      "destination": "/services/"
+      "source": "/services/automation-workflow/",
+      "destination": "/services/ai-workflow-automation/",
+      "permanent": true
     },
     {
-      "source": "/services/performance-ads",
-      "destination": "/services/"
+      "source": "/services/automation-workflow/:path*",
+      "destination": "/services/ai-workflow-automation/",
+      "permanent": true
     },
     {
-      "source": "/services/social-media",
-      "destination": "/services/"
+      "source": "/services/growth-seo/",
+      "destination": "/services/seo-aio-growth/",
+      "permanent": true
     },
     {
-      "source": "/services/professional-services",
-      "destination": "/services/"
+      "source": "/services/growth-seo/:path*",
+      "destination": "/services/seo-aio-growth/",
+      "permanent": true
     },
     {
-      "source": "/services/website-solutions/conversion-landing-page",
-      "destination": "/services/"
+      "source": "/services/performance-ads/",
+      "destination": "/services/seo-aio-growth/",
+      "permanent": true
     },
     {
-      "source": "/services/website-solutions/corporate-website",
-      "destination": "/services/"
+      "source": "/services/performance-ads/:path*",
+      "destination": "/services/seo-aio-growth/",
+      "permanent": true
     },
     {
-      "source": "/services/website-solutions/basic-ecommerce",
-      "destination": "/services/"
+      "source": "/services/social-media/",
+      "destination": "/services/seo-aio-growth/",
+      "permanent": true
     },
     {
-      "source": "/services/website-solutions/ecommerce-plus",
-      "destination": "/services/"
+      "source": "/services/social-media/:path*",
+      "destination": "/services/seo-aio-growth/",
+      "permanent": true
     },
     {
-      "source": "/services/automation-workflow/automation-starter",
-      "destination": "/services/"
+      "source": "/services/professional-services/maintenance-support/",
+      "destination": "/services/cloud-operations/",
+      "permanent": true
     },
     {
-      "source": "/services/automation-workflow/business-process",
-      "destination": "/services/"
+      "source": "/services/professional-services/seo-audit/",
+      "destination": "/services/seo-aio-growth/",
+      "permanent": true
     },
     {
-      "source": "/services/automation-workflow/telephony-ai",
-      "destination": "/services/"
+      "source": "/services/professional-services/",
+      "destination": "/services/strategy-audits/",
+      "permanent": true
     },
     {
-      "source": "/services/growth-seo/seo-standard",
-      "destination": "/services/"
+      "source": "/services/professional-services/:path*",
+      "destination": "/services/strategy-audits/",
+      "permanent": true
     },
     {
-      "source": "/services/growth-seo/seo-plus",
-      "destination": "/services/"
+      "source": "/case-studies/back2basics/",
+      "destination": "/case-studies/",
+      "permanent": true
     },
     {
-      "source": "/services/growth-seo/seo-enterprise",
-      "destination": "/services/"
+      "source": "/case-studies/borneo-international-marathon/",
+      "destination": "/case-studies/",
+      "permanent": true
     },
     {
-      "source": "/services/performance-ads/starter-ads",
-      "destination": "/services/"
+      "source": "/case-studies/thurai-dental/",
+      "destination": "/case-studies/",
+      "permanent": true
     },
     {
-      "source": "/services/performance-ads/growth-ads",
-      "destination": "/services/"
+      "source": "/case-studies/gibb-and-co-lawyers/",
+      "destination": "/case-studies/",
+      "permanent": true
     },
     {
-      "source": "/services/performance-ads/scale-ads",
-      "destination": "/services/"
-    },
-    {
-      "source": "/services/social-media/social-visibility",
-      "destination": "/services/"
-    },
-    {
-      "source": "/services/professional-services/strategy-consultation",
-      "destination": "/services/"
-    },
-    {
-      "source": "/services/professional-services/seo-audit",
-      "destination": "/services/"
-    },
-    {
-      "source": "/services/professional-services/maintenance-support",
-      "destination": "/services/"
-    },
-    {
-      "source": "/case-studies/back2basics",
-      "destination": "/case-studies/"
-    },
-    {
-      "source": "/case-studies/borneo-international-marathon",
-      "destination": "/case-studies/"
-    },
-    {
-      "source": "/case-studies/thurai-dental",
-      "destination": "/case-studies/"
-    },
-    {
-      "source": "/case-studies/gibb-and-co-lawyers",
-      "destination": "/case-studies/"
-    },
-    {
-      "source": "/case-studies/evo-house-singapore",
-      "destination": "/case-studies/"
-    },
-    {
-      "source": "/company",
-      "destination": "/"
-    },
-    {
-      "source": "/news",
-      "destination": "/"
-    },
-    {
-      "source": "/career",
-      "destination": "/"
-    },
-    {
-      "source": "/help",
-      "destination": "/"
-    },
-    {
-      "source": "/privacy-policy",
-      "destination": "/"
-    },
-    {
-      "source": "/terms-of-service",
-      "destination": "/"
+      "source": "/case-studies/evo-house-singapore/",
+      "destination": "/case-studies/",
+      "permanent": true
     }
   ],
   "headers": [
     {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
-          "key": "X-Robots-Tag",
-          "value": "index, follow"
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https: data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:"
         }
       ]
     }

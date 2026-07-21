@@ -1,42 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.jxingtech.com</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.jxingtech.com/company</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/pricing</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/case-studies</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/news</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/contact</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/career</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/help</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/privacy-policy</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/terms-of-service</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/website-solutions</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/automation-workflow</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/growth-seo</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/performance-ads</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/social-media</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/professional-services</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/website-solutions/conversion-landing-page</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/website-solutions/corporate-website</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/website-solutions/basic-ecommerce</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/website-solutions/ecommerce-plus</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/automation-workflow/automation-starter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/automation-workflow/business-process</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/automation-workflow/telephony-ai</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/growth-seo/seo-standard</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/growth-seo/seo-plus</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/growth-seo/seo-enterprise</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/performance-ads/starter-ads</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/performance-ads/growth-ads</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/performance-ads/scale-ads</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/social-media/social-visibility</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/professional-services/strategy-consultation</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/professional-services/seo-audit</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/services/professional-services/maintenance-support</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/case-studies/back2basics</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/case-studies/borneo-international-marathon</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/case-studies/thurai-dental</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/case-studies/gibb-and-co-lawyers</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-<url><loc>https://www.jxingtech.com/case-studies/evo-house-singapore</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jxingtech.com</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.jxingtech.com/services</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.jxingtech.com/services/custom-web-apps</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.jxingtech.com/services/ai-workflow-automation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jxingtech.com/services/cloud-operations</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jxingtech.com/services/seo-aio-growth</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jxingtech.com/services/strategy-audits</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jxingtech.com/case-studies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jxingtech.com/pricing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.jxingtech.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.jxingtech.com/company</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.jxingtech.com/news</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.jxingtech.com/career</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.jxingtech.com/help</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.jxingtech.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://www.jxingtech.com/terms-of-service</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
