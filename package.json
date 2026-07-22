@@ -4,6 +4,7 @@
   "private": true,
   "description": "JXING Tech website v2 with AI Digital Architect",
   "scripts": {
+    "prepare": "node scripts/generate-service-pages.js && node scripts/prepare-site.js && node scripts/reposition-growth-partner.js",
     "test": "node --test tests/*.test.js",
     "audit": "node scripts/audit-site.js",
     "check": "npm test && npm run audit"

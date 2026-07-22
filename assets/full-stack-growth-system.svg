@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">JXING full-stack growth system</title>
+  <desc id="desc">A web platform connects product analytics to AI and predictive intelligence, performance marketing, organic growth, and managed cloud operations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0A1640"/><stop offset="1" stop-color="#003F88"/></linearGradient>
+    <linearGradient id="web" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#007DEB"/><stop offset="1" stop-color="#59C3C3"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".05"/></pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#59C3C3"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#020617" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1200" height="620" rx="30" fill="url(#bg)"/>
+  <rect width="1200" height="620" rx="30" fill="url(#grid)"/>
+  <text x="62" y="72" fill="#59C3C3" font-family="Poppins,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="3">ENGINEERING-LED FULL-STACK GROWTH</text>
+  <text x="62" y="116" fill="#fff" font-family="Poppins,Arial,sans-serif" font-size="30" font-weight="700">One connected product-to-growth system</text>
+
+  <path d="M382 295H470" stroke="#59C3C3" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M730 295H818" stroke="#59C3C3" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 370V430" stroke="#59C3C3" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M600 220V170" stroke="#59C3C3" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="66" y="220" width="316" height="150" rx="22" fill="#101E4D" stroke="#007DEB" stroke-width="2"/>
+    <circle cx="112" cy="268" r="22" fill="#007DEB"/>
+    <path d="M101 268l9 9 16-19" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="148" y="262" fill="#fff" font-family="Poppins,Arial,sans-serif" font-size="21" font-weight="700">Full-Stack Web Platform</text>
+    <text x="100" y="310" fill="#cbd5e1" font-family="Poppins,Arial,sans-serif" font-size="15">Applications • Commerce • Portals</text>
+    <text x="100" y="338" fill="#cbd5e1" font-family="Poppins,Arial,sans-serif" font-size="15">Customer journeys • Integrations</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="220" width="260" height="150" rx="22" fill="url(#web)"/>
+    <text x="600" y="272" text-anchor="middle" fill="#fff" font-family="Poppins,Arial,sans-serif" font-size="22" font-weight="700">Product &amp; Growth Data</text>
+    <text x="600" y="308" text-anchor="middle" fill="#e6f6ff" font-family="Poppins,Arial,sans-serif" font-size="15">Events • Attribution • CRM</text>
+    <text x="600" y="336" text-anchor="middle" fill="#e6f6ff" font-family="Poppins,Arial,sans-serif" font-size="15">Revenue • Behaviour • Content</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="818" y="220" width="316" height="150" rx="22" fill="#101E4D" stroke="#59C3C3" stroke-width="2"/>
+    <circle cx="864" cy="268" r="22" fill="#59C3C3"/>
+    <path d="M853 277l6-10 7 5 9-15" fill="none" stroke="#0A1640" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="900" y="262" fill="#fff" font-family="Poppins,Arial,sans-serif" font-size="21" font-weight="700">AI &amp; Predictive Intelligence</text>
+    <text x="852" y="310" fill="#cbd5e1" font-family="Poppins,Arial,sans-serif" font-size="15">Forecasts • Lead quality • Churn</text>
+    <text x="852" y="338" fill="#cbd5e1" font-family="Poppins,Arial,sans-serif" font-size="15">Next-best actions • Human review</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="390" y="82" width="420" height="88" rx="20" fill="#101E4D" stroke="#F99C00" stroke-width="2"/>
+    <text x="600" y="120" text-anchor="middle" fill="#F99C00" font-family="Poppins,Arial,sans-serif" font-size="18" font-weight="700">PERFORMANCE + ORGANIC GROWTH</text>
+    <text x="600" y="148" text-anchor="middle" fill="#cbd5e1" font-family="Poppins,Arial,sans-serif" font-size="14">Paid acquisition • SEO/AIO/GEO • Conversion experiments</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="390" y="430" width="420" height="98" rx="20" fill="#101E4D" stroke="#94a3b8" stroke-width="2"/>
+    <text x="600" y="470" text-anchor="middle" fill="#fff" font-family="Poppins,Arial,sans-serif" font-size="19" font-weight="700">CLOUD &amp; LIFECYCLE OPERATIONS</text>
+    <text x="600" y="500" text-anchor="middle" fill="#cbd5e1" font-family="Poppins,Arial,sans-serif" font-size="14">Monitoring • Maintenance • Releases • Improvement backlog</text>
+  </g>
+
+  <text x="62" y="576" fill="#94a3b8" font-family="Poppins,Arial,sans-serif" font-size="13">Web development is the foundation. Intelligence and growth connect to the same measurable customer journey.</text>
+</svg>
